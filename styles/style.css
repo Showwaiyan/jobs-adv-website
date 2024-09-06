@@ -1,0 +1,20 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variable */
+:root {
+  /* Color */
+  --main-color: #00a9ff;
+  --secondary-color: #89cff3;
+  --third-color: #a0e9ff;
+  --forth-color: #cdf5fd;
+
+  /* Font */
+  --roboto-font: "Roboto", sans-serif;
+  --poppins-font: "Poppins", sans-serif;
+  --inter-font: "Inter", sans-serif;
+}
