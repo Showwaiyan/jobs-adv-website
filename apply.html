@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+</head>
+<body>
+    <h1> Job Application Form </h1>
+    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST">
+
+    <!-- Job Reference Number -->
+     <label for="jrn"> Job Reference Number: </label>
+     <input type="text"  id="jrn" name="jrn" maxlength="5" pattern="[A-Za-z0-9]{5}" required>
+     <br><br>
+
+     <!-- First Name -->
+     <label for="fn"> First Name: </label>
+     <input type="text" id="fn" name="fn" maxlength="20" pattern="{A-Za-z0-9}{1,20}" required>
+     <br><br>
+
+     <!-- last Name -->
+     <label for="ln">Last Name: </label>
+     <input type="text" id="ln" name="ln" maxlength="20" pattern="{A-Za-z0-9}{1,20}" required>
+     <br><br>
+
+     <!-- Date-of-birth -->
+     <label for="dob">Date of Birth:</label>
+     <input type="date" id="dob" name="dob" pattern="\d{2}/\d{2}/\d{4}" required>
+     <br><br>
+
+     <!-- Gender -->
+     <fieldset>
+        <legend>Gender</legend>
+        <label>
+            <input type="radio" name="gender" value="male" required> Male
+        </label>
+        <label>
+            <input type="radio" name="gender" value="female" required> Female
+        </label>
+        <label>
+            <input type="radio" name="gender" value="other" required> Other
+        </label>
+     </fieldset>
+     <br><br>
+
+     <!-- Street Address -->
+      <label for="sa">Street Address: </label>
+      <input type="text" id="sa" name="sa" maxlength="40" required>
+      <br><br>
+
+     <!-- Suburb/town -->
+     <label for="st">Suburb/town: </label>
+     <input type="text" id="st" name="st" maxlength="40" required>
+     <br><br>
+
+     <!-- State -->
+     <label for="state">State:</label>
+     <select id="state" name="state" required>
+         <option value="VIC">VIC</option>
+         <option value="NSW">NSW</option>
+         <option value="QLD">QLD</option>
+         <option value="NT">NT</option>
+         <option value="WA">WA</option>
+         <option value="SA">SA</option>
+         <option value="TAS">TAS</option>
+         <option value="ACT">ACT</option>
+     </select>
+     <br><br>
+
+     <!-- Postcode -->
+     <label for="postcode">Postcode:</label>
+     <input type="text" id="postcode" name="postcode" maxlength="4" pattern="\d{4}" required>
+     <br><br>
+
+     <!-- Email Address -->
+     <label for="email">Email Address:</label>
+     <input type="email" id="email" name="email" required>
+     <br><br>
+
+    <!-- Phone Number -->
+     <label for="phone">Phone Number:</label>
+     <input type="tel" id="phone" name="phone" maxlength="12" pattern="[0-9\s]{8,12}" placeholder="Enter phone number" required>
+     <br><br>
+
+     <!-- Skills -->
+     <fieldset>
+        <legend>Skills:</legend>
+        <label><input type="checkbox" name="skills" value="programming" required> Programming</label>
+        <label><input type="checkbox" name="skills" value="projectManagement" required> Project Management</label>
+        <label><input type="checkbox" name="skills" value="design" required> Design</label>
+        <label><input type="checkbox" name="skills" value="otherSkills"> Other skills...</label>
+    </fieldset>
+    <br><br>
+
+    <!-- Other Skills (Textarea) -->
+    <label for="otherSkillsText">Other Skills:</label>
+    <textarea id="otherSkillsText" name="otherSkillsText" rows="4" cols="50"></textarea>
+    <br><br>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Apply">
+</form>
+</body> 
+</html>
+
+
+
