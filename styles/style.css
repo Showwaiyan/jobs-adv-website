@@ -68,17 +68,18 @@ header ul li a .text {
   /* top: -30%; */
 }
 header ul li a span.icon img {
-  width: 32px;
+  width: 42px;
 }
+
 header ul li.active a span.text {
-  top: -30%;
+  top: -10%;
 }
 header ul li.active a span.icon {
   display: flex;
   justify-content: center;
 
   position: absolute;
-  bottom: -200%;
+  bottom: -160%;
 }
 
 /* typography */
@@ -108,7 +109,7 @@ header ul li {
   cursor: pointer;
 }
 header ul li.active a span.icon {
-  padding: 2.5rem;
+  padding: 2.0rem;
   background-color: white;
   border-radius: 100%;
 }
@@ -119,6 +120,10 @@ header ul li a .text {
   border-radius: 0.9rem;
 }
 
+/* hover state */
 header ul li:not(.active):hover a .text {
   opacity: 1;
+}
+header ul li:not(.active):hover a .icon {
+  opacity: 0;
 }
