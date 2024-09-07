@@ -18,3 +18,107 @@
   --poppins-font: "Poppins", sans-serif;
   --inter-font: "Inter", sans-serif;
 }
+
+body {
+  background-color: var(--main-color);
+}
+
+/* NavBar Css */
+
+/* layout */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+header section.logo {
+  width: 128px;
+  height: 90px;
+}
+header section img {
+  width: auto;
+  height: 100%;
+}
+header ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1%;
+
+  width: 70%;
+}
+header ul li {
+  display: flex;
+  justify-content: center;
+  width: 10%;
+}
+header ul li a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  width: 100%;
+}
+header ul li a .text {
+  width: 60%;
+
+  position: absolute;
+  /* top: -30%; */
+}
+header ul li a span.icon img {
+  width: 32px;
+}
+header ul li.active a span.text {
+  top: -30%;
+}
+header ul li.active a span.icon {
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  bottom: -200%;
+}
+
+/* typography */
+html {
+  font-size: 16px;
+}
+
+header ul li a .text{
+  font-family: var(--roboto-font);
+  text-decoration: none;
+  text-align: center;
+  opacity: 0;
+}
+header ul li.active a .text{
+  opacity: 1;
+  z-index: 2;
+}
+
+/* style */
+header {
+  background-color: white;
+}
+header ul {
+  list-style-type: none;
+}
+header ul li {
+  cursor: pointer;
+}
+header ul li.active a span.icon {
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 100%;
+}
+header ul li a .text {
+  color: white;
+  padding: 0.5rem;
+  background-color: var(--main-color);
+  border-radius: 0.9rem;
+}
+
+header ul li:not(.active):hover a .text {
+  opacity: 1;
+}
