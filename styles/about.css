@@ -1,0 +1,122 @@
+/* Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+/* Variable */
+:root {
+  /* Color */
+  --main-color: #00a9ff;
+  --secondary-color: #89cff3;
+  --third-color: #a0e9ff;
+  --forth-color: #cdf5fd;
+
+  /* Font */
+  --roboto-font: "Roboto", sans-serif;
+  --poppins-font: "Poppins", sans-serif;
+  --inter-font: "Inter", sans-serif;
+}
+/* container */
+#container {
+  margin: auto;
+  margin-top: 20px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border: 3px solid var(--secondary-color);
+  border-radius: 10px;
+}
+
+/* about header */
+#header-about {
+  background-color: var(--main-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+#about-lists{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+#about-lists img{
+  height: 200px;
+  border: 3px solid var(--main-color);
+  float: left;
+  border-radius: 10px;
+}
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+dl dt {
+  font-weight: bold;
+}
+dl dt dd{
+  margin-left: 0;
+} 
+/* time table */
+#time-table{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+#time-table th{
+  padding: 0.5rem;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+#time-table td{
+  width: 300px;
+  padding: 1rem;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  text-align: center;
+  background-color: var(--forth-color);
+}
+/* outer division for cards */
+#cards{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+/* pesonal cards for each member */
+#person1,#person2,#person3{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1rem;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  background-color: var(--forth-color);
+  box-shadow: var(--forth-color) 0px 0px 7px;
+}
+#cards img{
+  width: 200px;
+  align-self: center;
+  border: 3px dotted var(--main-color);
+  border-radius: 50%;
+}
+#cards p,h2{
+  text-align: center;
+}
+#about-footer{
+  margin-top: 10px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
