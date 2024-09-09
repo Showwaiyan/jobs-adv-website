@@ -13,8 +13,94 @@
   --third-color: #a0e9ff;
   --forth-color: #cdf5fd;
 
+  --main-font-color: white;
+
   /* Font */
   --roboto-font: "Roboto", sans-serif;
   --poppins-font: "Poppins", sans-serif;
   --inter-font: "Inter", sans-serif;
 }
+
+/* typography */
+html {
+  /* default font size to all elements */
+  /* we will use rem value for html elements */
+  /* ,which is inheritance value of root parents that is html itself */
+  font-size: 18px;
+}
+
+/* ----------------------------- */
+/* index body strat*/
+/* layout */
+body.index-html {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+/* typography */
+
+/* style */
+
+/* index body end*/
+
+/* header start*/
+/* layout */
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* typography */
+
+/* style */
+header.navbar {
+  background-color: var(--secondary-color);
+  padding: 0.5rem;
+}
+/* header end */
+
+/* company name start*/
+/* layout */
+
+/* typography */
+header.navbar .company-name {
+  font-family: var(--inter-font);
+  font-size: 3rem;
+  color: var(--main-font-color);
+}
+header.navbar .company-name span {
+  color: var(--main-color);
+}
+
+/* style */
+header.navbar .company-name {
+  padding: 0 1rem;
+}
+/* company name end*/
+
+/* navbar start*/
+/* layout */
+ul.navbar-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 45%;
+}
+
+/* typography */
+a.navbar-list__link {
+  font-family: var(--inter-font);
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: white;
+}
+
+/* style */
+ul.navbar-list li {
+  list-style-type: none;
+}
+/* navbar end*/
