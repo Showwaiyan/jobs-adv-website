@@ -104,3 +104,37 @@ ul.navbar-list li {
   list-style-type: none;
 }
 /* navbar end*/
+
+/* main start */
+/* layout */
+main.index-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 90vh;
+}
+main.index-main h2 {
+  width: 50%;
+}
+
+/* typography */
+main.index-main h2 {
+  font-family: var(--poppins-font);
+  font-weight: 300;
+  color: var(--main-font-color);
+
+  text-align: center;
+}
+
+/* style */
+main.index-main {
+  background-color: var(--main-color);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("images/banner.jpg");
+  background-size: cover;
+  background-position-y: 35%;
+
+  padding: 0 5rem;
+}
+/* main end */
