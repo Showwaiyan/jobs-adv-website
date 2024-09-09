@@ -29,13 +29,17 @@ html {
   font-size: 18px;
 }
 
-/* ----------------------------- */
+/* from body to every element */
+/* we use flexbox layout to make easily layout and */
+/* to be responsive */
+
 /* index body strat*/
 /* layout */
 body.index-body {
   display: flex;
   flex-direction: column;
 
+  /* to get the fullheight of the devices' viewport */
   min-height: 100vh;
 }
 
@@ -96,7 +100,7 @@ a.navbar-list__link {
   font-family: var(--inter-font);
   font-size: 1.1rem;
   text-decoration: none;
-  color: white;
+  color: var(--main-font-color);
 }
 
 /* style */
@@ -116,6 +120,7 @@ main.index-main {
   height: 90vh;
 }
 main.index-main h2 {
+  /* h2 to be multiple line title */
   width: 50%;
 }
 
@@ -131,8 +136,14 @@ main.index-main h2 {
 /* style */
 main.index-main {
   background-color: var(--main-color);
+
+  /* in case of h2 to obtain obvious visual */
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("images/banner.jpg");
+
+  /* background image to be fully cover */
   background-size: cover;
+
+  /* making background image center */
   background-position-y: 35%;
 
   padding: 0 5rem;
