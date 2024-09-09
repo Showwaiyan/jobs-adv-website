@@ -32,7 +32,7 @@ html {
 /* ----------------------------- */
 /* index body strat*/
 /* layout */
-body.index-html {
+body.index-body {
   display: flex;
   flex-direction: column;
 
