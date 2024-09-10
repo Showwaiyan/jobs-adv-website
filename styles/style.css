@@ -20,6 +20,28 @@
   --inter-font: "Inter", sans-serif;
 }
 
+/* typography */
+html {
+  /* default font size to all elements */
+  /* we will use rem value for html elements */
+  /* ,which is inheritance value of root parents that is html itself */
+  font-size: 18px;
+}
+
+/* jobs body strat*/
+/* layout */
+body.jobs-body {
+  /* to get the fullheight of the devices' viewport */
+  min-height: 100vh;
+  position: relative;
+}
+
+/* typography */
+
+/* style */
+
+/* jobs body end*/
+
 /* header start*/
 /* layout */
 header.navbar {
@@ -79,3 +101,128 @@ ul.navbar-list li {
   list-style-type: none;
 }
 /* navbar end*/
+
+/* jobs main start */
+/* layout */
+
+/* typography */
+
+/* style */
+main.jobs-main {
+  padding: 1rem;
+}
+/* jobs main end */
+
+/* Job Card start */
+/* layout */
+article.job {
+  display: flex;
+}
+article.job .company-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article.job .company-logo img{
+  width: 128px;
+}
+article.job .job-main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+/* typography */
+article.job .job-main-info {
+  font-family: var(--roboto-font);
+  color: var(--main-font-color);
+}
+article.job .job-main-info a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+/* style */
+article.job {
+  background-color: var(--main-color);
+
+  /* testing width and height*/
+  width: 40%;
+  height: auto;
+}
+article.job .company-logo {
+  background-color: var(--secondary-color);
+}
+article.job .job-main-info {
+  padding: 1.3rem;
+}
+article.job .job-main-info a {
+  background-color: var(--main-font-color);
+  padding: 0.3rem;
+}
+
+/* Job info popup start*/
+/* function */
+.position-overview, .requirement {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+.position-overview:target, .requirement:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* layout */
+.position-overview, .requirement {
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.info-close-btn {
+  float: right;
+}
+
+/* typogrpahy */
+.position-overview, .requirement {
+  color: var(--main-font-color);
+  line-height: 1.5rem;
+}
+.position-overview h3, .requirement h3, .requirement h4 {
+  font-family: var(--roboto-font);
+}
+.position-overview p {
+  font-family: var(--poppins-font);
+}
+.position-overview ul, .requirement ol, .requirement ul {
+  padding-left: 1.5rem;
+}
+.position-overview ul li, .requirement ol li, .requirement ul li {
+  font-family: var(--inter-font);
+}
+.info-close-btn {
+  font-family: var(--inter-font);
+  color: var(--main-font-color);
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-decoration: none;  
+}
+
+/* style */
+.position-overview,.requirement {
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  padding: 2rem;
+}
+.position-overview h3, .requirement h3 {
+  clear: right;
+}
+.position-overview hr {
+  border: 1px solid var(--main-font-color);
+  margin: 1rem 0;
+}
+/* Job info popup end */
+/* Job Card end */

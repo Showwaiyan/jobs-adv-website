@@ -4,85 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Position Descriptions</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        header {
-            text-align: center;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            border-top: 1px solid #ddd; */
-        }
-        aside {
-            background-color: #f9f9f9;
-            padding: 10px;
-            margin-top: 20px;
-            border: 3px solid #ddd; */
-        }
-        section {
-            margin-top: 20px;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        #jd{
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body class="jobs-body">
 
-<header>
-    <h1><em>Byte Me</em> is hiring!</h1>
-    <h1 id="jd">Job Descriptions</h1>
-</header>
+    <header class="navbar">
+        <!-- Company Name -->
+        <h1 class="company-name">ByteMe<span>.</span></h1>
 
+        <!-- Navbar -->
+        <ul class="navbar-list">
+            <li class="navbar-list__item">
+                <a href="#" class="navbar-list__link">
+                    <span>Home</span>
+                    <!-- <span><img src="" alt="home-icon"></span> -->
+                </a>
+            </li>
+
+            <li class="navbar-list__item">
+                <a href="#" class="navbar-list__link">
+                    <span>Jobs</span>
+                    <!-- <span><img src="" alt="jobs-icon"></span> -->
+                </a>
+            </li>
+
+            <li class="navbar-list__item">
+                <a href="#" class="navbar-list__link">
+                    <span>Apply</span>
+                    <!-- <span><img src="" alt="apply-icon"></span> -->
+                </a>
+            </li>
+
+            <li class="navbar-list__item">
+                <a href="#" class="navbar-list__link">
+                    <span>About</span>
+                    <!-- <span><img src="" alt="about-icon"></span> -->
+                </a>
+            </li>
+
+            <li class="navbar-list__item">
+                <a href="#" class="navbar-list__link">
+                    <span>Enhance</span>
+                    <!-- <span><img src="" alt="enchencement-icon"></span> -->
+                </a>
+            </li>
+        </ul>    
+
+   </header> 
+
+   <main class="jobs-main">
 <!-- System Administrator Position Description -->
-<section>
-    <h2>System Administrator</h2>
-    <h3>Position Reference: SA123</h3>
-    <p><strong>Company:</strong> Byte Me Sdn Bhd.</p>
-    <p><strong>Salary Range:</strong> RM 6000 - RM 8000</p>
-    <p><strong>Reports To:</strong> IT Manager</p>
+        <article class="job">
+            <div class="company-logo">
+                <img src="styles/images/bytemelogo.png" alt="company-logo">
+            </div>
 
-    <h3>Position Overview</h3>
-    <p>The System Administrator will be responsible for managing and maintaining the company’s server infrastructure, ensuring optimal performance, security, and stability across all systems.</p>
+            <section class="job-main-info">
+                <section class="job-basic-info">
+                    <h2>System Administrator</h2>
+                    <h3>Position Reference: SA123</h3>
+                    <p><strong>Company:</strong> Byte Me Sdn Bhd.</p>
+                    <p><strong>Salary Range:</strong> RM 6000 - RM 8000</p>
+                    <p><strong>Reports To:</strong> IT Manager</p>
+                </section>
 
-    <h3>Key Responsibilities</h3>
-    <ul>
-        <li>Manage and monitor all installed systems and infrastructure.</li>
-        <li>Install, configure, test, and maintain operating systems, application software, and system management tools.</li>
-        <li>Ensure security through access controls, backups, and firewalls.</li>
-        <li>Troubleshoot hardware and software issues as they arise.</li>
-        <li>Monitor system performance and ensure reliability and availability.</li>
-        <li>Perform regular backup operations and implement appropriate processes for data protection and disaster recovery.</li>
-    </ul>
+                <a href="#pos-overview" class="job-info-btn">Position Overview</a>
+ 
+                <a href="#requirement" class="job-info-btn">Requirement</a>
+            </section>
 
-    <h3>Required Qualifications, Skills, and Knowledge</h3>
-    <h4>Essential</h4>
-    <ol>
-        <li>Bachelor’s degree in Computer Science or a related field.</li>
-        <li>At least 3 years of experience in system administration.</li>
-        <li>Proficiency in Linux and Windows server environments.</li>
-        <li>Experience with virtualization (e.g., VMware or Hyper-V).</li>
-        <li>Strong understanding of network infrastructure and security.</li>
-    </ol>
-    
-    <h4>Preferable</h4>
-    <ul>
-        <li>Experience with cloud platforms (AWS, Azure).</li>
-        <li>Certifications such as LFCSA, RHCSA, CompTIA, MCSE, or AWS Certified Solutions Architect.</li>
-        <li>Knowledge of scripting and programming languages such as Bash,Python, C#.</li>
-    </ul>
-</section>
+           <section class="position-overview" id="pos-overview">
+                <a href="#" class="info-close-btn">&times;</a>
+                <h3>Position Overview</h3>
+                <p>The System Administrator will be responsible for managing and maintaining the company’s server infrastructure, ensuring optimal performance, security, and stability across all systems.</p>
+
+                <hr>
+
+                <h3>Key Responsibilities</h3>
+                <ul>
+                    <li>Manage and monitor all installed systems and infrastructure.</li>
+                    <li>Install, configure, test, and maintain operating systems, application software, and system management tools.</li>
+                    <li>Ensure security through access controls, backups, and firewalls.</li>
+                    <li>Troubleshoot hardware and software issues as they arise.</li>
+                    <li>Monitor system performance and ensure reliability and availability.</li>
+                    <li>Perform regular backup operations and implement appropriate processes for data protection and disaster recovery.</li>
+                </ul>
+
+            </section>
+
+            <section class="requirement" id="requirement">
+                <a href="#" class="info-close-btn">&times;</a>
+                <h3>Required Qualifications, Skills, and Knowledge</h3>
+                <br>
+                <h4>Essential</h4>
+
+                <ol>
+                    <li>Bachelor’s degree in Computer Science or a related field.</li>
+                    <li>At least 3 years of experience in system administration.</li>
+                    <li>Proficiency in Linux and Windows server environments.</li>
+                    <li>Experience with virtualization (e.g., VMware or Hyper-V).</li>
+                    <li>Strong understanding of network infrastructure and security.</li>
+                </ol>
+                <br> 
+                <h4>Preferable</h4>
+                <ul>
+                    <li>Experience with cloud platforms (AWS, Azure).</li>
+                    <li>Certifications such as LFCSA, RHCSA, CompTIA, MCSE, or AWS Certified Solutions Architect.</li>
+                    <li>Knowledge of scripting and programming languages such as Bash,Python, C#.</li>
+                </ul>
+
+            </section>
+       </article>
+   </main>
+
 
 <!-- DevOps Engineer Position Description -->
-<section>
+<!-- <section>
     <h2>DevOps Engineer</h2>
     <h3>Position Reference: DO456</h3>
     <p><strong>Company:</strong> Byte Me Sdn Bhd.</p>
@@ -117,10 +154,10 @@
         <li>Experience with monitoring tools (Prometheus, Grafana).</li>
         <li>Familiarity with scripting and programming languages like Python, Ruby, or Shell.</li>
     </ul>
-</section>
+</section> -->
 
 <!-- Aside for additional job hunting tips -->
-<aside>
+<!-- <aside>
     <h3>Job Hunting Tips</h3>
     <p>Looking for a job in IT? Make sure to:</p>
     <ul>
@@ -129,12 +166,12 @@
         <li>Build a portfolio showcasing your projects and skills.</li>
         <li>Network with professionals in the industry.</li>
     </ul>
-</aside>
+</aside> -->
 
 <!-- Footer -->
-<footer>
+<!-- <footer>
     <p>&copy; 2024 Byte Me Tech Careers. All rights reserved.</p>
-</footer>
+</footer> -->
 
 </body>
 </html>
