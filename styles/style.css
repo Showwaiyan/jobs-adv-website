@@ -20,97 +20,62 @@
   --inter-font: "Inter", sans-serif;
 }
 
-body {
-font-family: 'Arial', sans-serif;
-margin: 0;
-padding: 0;
-line-height: 1.6;
-background-color: #f4f4f4;
-color: #333;
+/* header start*/
+/* layout */
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header {
-background-color: #007bff;
-color: #fff;
-padding: 20px 0;
-text-align: center;
-border-bottom: 5px solid #0056b3;
+/* typography */
+
+/* style */
+header.navbar {
+  background-color: var(--main-color);
+  padding: 0.5rem;
+}
+/* header end */
+
+/* company name start*/
+/* layout */
+
+/* typography */
+header.navbar .company-name {
+  font-family: var(--inter-font);
+  font-size: 3rem;
+  color: var(--main-font-color);
+}
+header.navbar .company-name span {
+  color: var(--secondary-color);
 }
 
-h1, h2, h3, h4 {
-margin: 10px 0;
+/* style */
+header.navbar .company-name {
+  padding: 0 1rem;
+}
+/* company name end*/
+
+/* navbar start*/
+/* layout */
+ul.navbar-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 45%;
 }
 
-h1 {
-font-size: 2.5em;
-text-transform: uppercase;
+/* typography */
+a.navbar-list__link {
+  font-family: var(--inter-font);
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--main-font-color);
 }
 
-h2 {
-font-size: 2em;
-color: #0056b3;
+/* style */
+ul.navbar-list li {
+  list-style-type: none;
 }
-
-h3 {
-font-size: 1.5em;
-color: #444;
-}
-
-h4 {
-font-size: 1.2em;
-font-weight: bold;
-}
-
-section {
-background-color: #fff;
-margin: 20px auto;
-padding: 20px;
-max-width: 800px;
-border-radius: 8px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-p, ul, ol {
-margin: 10px 0;
-}
-
-ul, ol {
-padding-left: 20px;
-}
-
-ul li, ol li {
-margin-bottom: 8px;
-}
-
-strong {
-font-weight: bold;
-}
-
-#jd {
-text-decoration: underline;
-}
-
-aside {
-background-color: #f9f9f9;
-margin: 20px auto;
-padding: 15px;
-max-width: 800px;
-border-left: 5px solid #007bff;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-font-size: 1.1em;
-}
-
-footer {
-text-align: center;
-padding: 10px 0;
-background-color: #007bff;
-color: white;
-position: relative;
-bottom: 0;
-width: 100%;
-}
-
-footer p {
-margin: 0;
-font-size: 0.9em;
-}
+/* navbar end*/
