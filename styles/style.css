@@ -8,12 +8,11 @@
 /* Variable */
 :root {
   /* Color */
-  --main-color: #00a9ff;
-  --secondary-color: #89cff3;
-  --third-color: #a0e9ff;
-  --forth-color: #cdf5fd;
+  --main-color: #16325B;
+  --secondary-color: #227B94;
+  --third-color: #78B7D0;
 
-  --main-font-color: white;
+  --main-font-color: #FEFAE0;
 
   /* Font */
   --roboto-font: "Roboto", sans-serif;
@@ -61,7 +60,7 @@ header.navbar {
 
 /* style */
 header.navbar {
-  background-color: var(--secondary-color);
+  background-color: var(--main-color);
   padding: 0.5rem;
 }
 /* header end */
@@ -76,7 +75,7 @@ header.navbar .company-name {
   color: var(--main-font-color);
 }
 header.navbar .company-name span {
-  color: var(--main-color);
+  color: var(--secondary-color);
 }
 
 /* style */
@@ -138,7 +137,7 @@ main.index-main {
   background-color: var(--main-color);
 
   /* in case of h2 to obtain obvious visual */
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("images/banner.jpg");
+  background: linear-gradient(0deg, rgba(60, 61, 55, 0.5), rgba(60, 61, 55, 0.8)), url("images/banner.jpg");
 
   /* background image to be fully cover */
   background-size: cover;
@@ -202,7 +201,7 @@ footer.index-footer h4 {
 
 /* style */
 footer.index-footer {
-  background-color: var(--secondary-color);
+  background-color: var(--main-color);
 }
 footer.index-footer .index-footer-description{
   padding: 2rem;
