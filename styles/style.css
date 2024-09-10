@@ -137,7 +137,7 @@ main.index-main {
   background-color: var(--main-color);
 
   /* in case of h2 to obtain obvious visual */
-  background: linear-gradient(0deg, rgba(60, 61, 55, 0.5), rgba(60, 61, 55, 0.8)), url("images/banner.jpg");
+  background: linear-gradient(0deg, rgba(60, 61, 55, 0.5), rgba(60, 61, 55, 0.7)), url("images/banner.jpg");
 
   /* background image to be fully cover */
   background-size: cover;
@@ -146,6 +146,9 @@ main.index-main {
   background-position-y: 35%;
 
   padding: 0 5rem;
+}
+main.index-main img {
+  filter: drop-shadow(0 0 90px var(--main-font-color));
 }
 /* main end */
 
