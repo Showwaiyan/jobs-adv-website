@@ -149,8 +149,206 @@ main.index-main {
 }
 main.index-main img {
   filter: drop-shadow(0 0 90px var(--main-font-color));
+  
 }
 /* main end */
+
+/* article customers start */
+article.index-customers{
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+article.index-customers h2{
+  text-align: center;
+  font-family: var(--poppins-font);
+  color: var(--main-color);
+  padding: 10px;
+  font-size: 2em;
+}
+article.index-customers section.customers { 
+  margin-top: 30px;
+  display: inline-block;
+  animation: move 15s linear infinite;
+}
+article.index-customers img {
+  height: 17vh;
+  margin-right: 20px;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* article customers end */
+
+/* article services/what we do start */
+article.index-services{
+  width: 100%;
+  background-color: var(--main-color);
+  justify-content: center;
+}
+section.services{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.computer-image{
+  background-image: url("../images/software.jpg");
+  background-size: cover ;
+  height: 20rem;
+  border-radius: 0.5rem;
+}
+.ai-image{
+  background-image: url("../images/ai.jpg");
+  background-size: cover ;
+  height: 20rem;
+  border-radius: 0.5rem;
+}
+
+.cloud-image{
+  background-image: url("../images/cloud.jpg");
+  background-size: cover ;
+  height: 20rem;
+  border-radius: 0.5rem;
+}
+#software,#ai,#cloud{
+  color: var(--main-font-color);
+  height: auto;
+  width: 25vw;
+  border-radius: 0.7rem;
+  background-color: var(--secondary-color);
+  padding: 1.5rem;
+}
+article.index-services h2{
+  text-align: center;
+  font-family: var(--poppins-font);
+  color: var(--main-font-color);
+  padding: 0.5rem;
+  font-size: 1.7em;
+}
+section.services h3{
+  text-align: center;
+  font-family: var(--poppins-font);
+  color: var(--main-font-color);
+  padding: 0.5rem;
+}
+
+section.services p{
+  margin-bottom: 1.6rem;
+  text-align: left;
+  font-family: var(--poppins-font);
+  color: var(--main-font-color);
+}
+section.services a{
+  margin-left: 30%;
+  text-decoration: none;
+  color: white;
+  background-color: var(--main-color);
+  width: 2rem;
+  padding: 0.7rem;
+  border-radius: 0.4rem;
+}
+article.index-services img{
+  margin-left: 30%;
+  border-radius: 0.7rem;
+  margin-bottom: 1.4rem;
+}
+/* article what we do end */
+
+/* article about start */
+article.index-about-us h2{
+  text-align: center;
+  font-family: var(--poppins-font);
+  color: var(--main-font-color);
+  padding: 10px;
+  width: 50%;
+}
+article.index-about-us{
+  background-color: var(--secondary-color);
+  justify-content: center;
+}
+article.index-about-us section.about{
+  overflow: hidden;
+}
+article.index-about-us section.about img{
+  border-radius: 0.7rem;
+  margin-bottom: 1.4rem;
+  margin-left: 10vw;
+  object-fit: cover;
+}
+article.index-about-us section.about p{
+  font-family: var(--inter-font);
+  color: var(--main-font-color);
+  padding: 10px;
+  width: 50%;
+  font-size: 1em;
+  float: left;
+  text-indent: 30px;
+  margin-left: 50px;
+}
+p#about-learn-more a{
+  text-decoration: none;
+  color: white;
+  background-color: var(--main-color);
+  width: 5rem;
+  padding: 0.9rem;
+  border-radius: 0.5rem;
+}
+p#about-learn-more{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+p#about-learn-more a:hover{
+  box-shadow: 5px 5px 20px rgba(0, 0, 0,0.5);
+}
+/* article about end */
+
+/* testomonial start */
+article.index-testimonial{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--main-font-color);
+}
+article.index-testimonial h2{
+  text-align: center;
+  font-family: var(--poppins-font);
+  color: var(--main-color);
+  padding: 10px;
+  font-size: 2em;
+}
+article.index-testimonial section.testimonial{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  margin-left: 3rem;
+}
+article.index-testimonial section.testimonial div.testominial-card{
+  background-color: aliceblue;
+}
+article.index-testimonial section.testimonial div.testominial-card p.name,p.position{
+  text-align: center;
+}
+article.index-testimonial section.testimonial div.testominial-card div.testominial-card-image{
+  display: flex;
+  justify-content: center;
+}
+article.index-testimonial section.testimonial img{
+  width: 15rem;
+  border-radius: 50%;
+}
+/* testomonial end */
 
 /* footer start */
 /* layout */
