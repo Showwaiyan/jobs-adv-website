@@ -153,6 +153,7 @@ article.job .main-info-wrapper .job-main-info .job-basic-info h2 {
   text-decoration: underline;
 }
 article.job .main-info-wrapper .job-main-info .job-basic-info p {
+  font-size: 0.8rem;
   font-family: var(--inter-font);
 }
 article.job .main-info-wrapper .job-main-info .job-basic-info p strong {
