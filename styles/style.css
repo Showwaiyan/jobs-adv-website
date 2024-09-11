@@ -175,8 +175,8 @@ article.job {
   padding: 1.5rem;
   border-radius: 8px;
 }
-article.job .main-info-wrapper .company-logo img {
-  border: 2px solid var(--main-font-color);
+article.job .main-info-wrapper .company-logo {
+  border-right: 2px solid var(--main-font-color);
 }
 article.job .main-info-wrapper .job-main-info {
   padding: 1.3rem;
