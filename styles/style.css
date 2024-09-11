@@ -384,14 +384,14 @@ footer.index-footer .index-footer-description ul.menu-list .menu-list__item {
   color: var(--main-font-color);
 }
 footer.index-footer .index-footer-description ul.menu-list .menu-list__item a,
-footer.index-footer .index-footer-description .index-footer__jobs p {
+footer.index-footer .index-footer-description .index-footer__address p {
   font-family: var(--inter-font);
   font-size: 1.2rem;
   text-decoration: none;
   color: var(--main-font-color);
 }
-footer.index-footer .index-footer-description .index-footer__jobs p {
-  font-size: 0.8rem;
+footer.index-footer .index-footer-description .index-footer__address p {
+  font-size: 0.9rem;
 }
 footer.index-footer h4 {
   font-family: var(--inter-font);
