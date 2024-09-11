@@ -102,7 +102,7 @@ ul.navbar-list li {
 }
 /* navbar end*/
 
-/* jobs main start */
+/* Jobs main start */
 /* layout */
 
 /* typography */
@@ -111,55 +111,83 @@ ul.navbar-list li {
 main.jobs-main {
   padding: 1rem;
 }
-/* jobs main end */
+/* Jobs main end */
 
 /* Job Card start */
 /* layout */
 article.job {
   display: flex;
+  display: inline-block;
+  flex-direction: column;
 }
-article.job .company-logo {
+article.job .main-info-wrapper .company-logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-article.job .company-logo img{
+article.job .main-info-wrapper .company-logo img{
   width: 128px;
 }
-article.job .job-main-info {
+article.job .main-info-wrapper {
+  display: flex;
+}
+article.job .main-info-wrapper .job-main-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
 }
+article.job .main-info-wrapper .job-main-info .job-btn-wrapper {
+  display: flex;
+  align-items: start;
+  gap: 1.5rem;
+}
+
 
 /* typography */
-article.job .job-main-info {
+article.job .main-info-wrapper .job-main-info {
   font-family: var(--roboto-font);
   color: var(--main-font-color);
 }
-article.job .job-main-info a {
+article.job .main-info-wrapper .job-main-info .job-basic-info h2 {
+  text-decoration: underline;
+}
+article.job .main-info-wrapper .job-main-info .job-basic-info p {
+  font-family: var(--inter-font);
+}
+article.job .main-info-wrapper .job-main-info .job-basic-info p strong {
+ font-family: var(--roboto-font);
+}
+article.job .main-info-wrapper .job-main-info .job-btn-wrapper a,
+article.job #job-apply-btn {
   text-decoration: none;
   color: var(--main-color);
+  font-size: 0.8rem;
+}
+article.job #job-apply-btn {
+  color: var(--main-font-color);
+  font-size: 1rem;
 }
 
 /* style */
 article.job {
-  background-color: var(--main-color);
-
-  /* testing width and height*/
-  width: 40%;
-  height: auto;
-}
-article.job .company-logo {
   background-color: var(--secondary-color);
+  padding: 1.5rem;
+  border-radius: 8px;
 }
-article.job .job-main-info {
+article.job .main-info-wrapper .company-logo img {
+  border: 2px solid var(--main-font-color);
+}
+article.job .main-info-wrapper .job-main-info {
   padding: 1.3rem;
 }
-article.job .job-main-info a {
+article.job .main-info-wrapper .job-main-info .job-btn-wrapper a {
   background-color: var(--main-font-color);
   padding: 0.3rem;
+}
+article.job #job-apply-btn {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--main-font-color);
 }
 
 /* Job info popup start*/
@@ -213,7 +241,7 @@ article.job .job-main-info a {
 
 /* style */
 .position-overview,.requirement {
-  background-color: var(--secondary-color);
+  background-color: var(--main-color);
   border-radius: 20px;
   padding: 2rem;
 }
