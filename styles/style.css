@@ -313,39 +313,74 @@ p#about-learn-more a:hover{
 /* article about end */
 
 /* testomonial start */
+/* layout */
 article.index-testimonial{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: var(--main-font-color);
+  justify-content: center; 
+}
+article.index-testimonial section.testimonial{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 3rem; 
+}
+article.index-testimonial section.testimonial div.testimonial-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 60%;
+}
+article.index-testimonial section.testimonial div.testimonial-card:nth-child(2) {
+  align-self: center;
+}
+article.index-testimonial section.testimonial div.testimonial-card:last-child {
+  align-self: flex-end;
+}
+div.testimonial-card .testimonial-card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+div.testimonial-card-description .name-and-position {
+  align-self: flex-end;
+}
+article.index-testimonial section.testimonial .testimonial-card-image img{
+  width: 5rem;
+}
+
+/* typography */
+article.index-testimonial {
+  font-family: var(--inter-font);
+  color: var(--main-font-color);
+  text-align: justify;
 }
 article.index-testimonial h2{
   text-align: center;
   font-family: var(--poppins-font);
   color: var(--main-color);
-  padding: 10px;
-  font-size: 2em;
+  font-size: 2em; 
+}
+
+/* style */
+article.index-testimonial{
+ background-color: var(--main-font-color);
+}
+article.index-testimonial h2{
+ padding: 10px;
 }
 article.index-testimonial section.testimonial{
-  display: flex;
-  justify-content: space-evenly;
-  gap: 3rem;
+  padding: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: 2.5rem;
-  margin-left: 3rem;
 }
-article.index-testimonial section.testimonial div.testominial-card{
-  background-color: aliceblue;
+article.index-testimonial section.testimonial div.testimonial-card {
+  background-color: var(--main-color);
+  border-radius: 10px;
+  padding: 2rem;
 }
-article.index-testimonial section.testimonial div.testominial-card p.name,p.position{
-  text-align: center;
-}
-article.index-testimonial section.testimonial div.testominial-card div.testominial-card-image{
-  display: flex;
-  justify-content: center;
-}
-article.index-testimonial section.testimonial img{
-  width: 15rem;
+article.index-testimonial section.testimonial div.testimonial-card-image img{
+  border: 3px solid var(--main-font-color);
   border-radius: 50%;
 }
 /* testomonial end */
