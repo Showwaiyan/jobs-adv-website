@@ -31,6 +31,8 @@ html {
 /* jobs body strat*/
 /* layout */
 body.jobs-body {
+  display: flex;
+  flex-direction: column;
   /* to get the fullheight of the devices' viewport */
   min-height: 100vh;
   position: relative;
@@ -107,8 +109,7 @@ ul.navbar-list li {
 main.jobs-main {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-  justify-content: center;
-  align-items: flex-start;
+  grid-auto-rows: 30vh;
   gap: 2rem;
   min-height: 100vh;
 }
@@ -203,7 +204,7 @@ article.job #job-apply-btn {
   opacity: 0;
   z-index: 1;
   width: 80%;
-  max-height: 50vh;
+  max-height: 60vh;
 }
 .position-overview:target, .requirement:target {
   visibility: visible;
@@ -213,7 +214,7 @@ article.job #job-apply-btn {
 /* layout */
 .position-overview, .requirement {
   display: inline-block;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
