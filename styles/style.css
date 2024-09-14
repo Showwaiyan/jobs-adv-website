@@ -118,6 +118,7 @@ h1.hiring-title {
 h1.hiring-title {
   padding: 0.5rem 0;
   padding-left: 1rem;
+  background-color: var(--main-font-color);
 }
 
 /* title end */
@@ -137,6 +138,7 @@ main.jobs-main {
 /* style */
 main.jobs-main {
   padding: 1rem;
+  background-color: var(--main-font-color);
 }
 /* Jobs main end */
 
@@ -281,6 +283,43 @@ article.job #job-apply-btn {
 }
 /* Job info popup end */
 /* Job Card end */
+
+/* aside/job-hunitng-tips start */
+/* layout */
+aside#job-hunting-tips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+aside#job-hunting-tips .job-hunting-description{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* typography */
+aside#job-hunting-tips {
+  font-size: 1.5rem;
+  color: var(--main-font-color);
+}
+aside#job-hunting-tips .job-hunting-description h3{
+  font-family: var(--roboto-font);
+}
+aside#job-hunting-tips .job-hunting-description p {
+  font-family: var(--poppins-font);
+}
+aside#job-hunting-tips .job-hunting-description ul li {
+  font-family: var(--inter-font);
+}
+
+/* style */
+aside#job-hunting-tips {
+  background: linear-gradient(0deg, rgba(22,50,91,0.5),rgba(22,50,91,0.5)), url("/styles/images/jobhuntingtips.jpg");
+  background-size: cover;
+}
+
+/* aside/job-hunitng-tips end */
 
 /* footer start */
 /* layout */
