@@ -104,6 +104,24 @@ ul.navbar-list li {
 }
 /* navbar end*/
 
+/* title start */
+/* layout */
+
+/* typography */
+h1.hiring-title {
+  font-family: var(--roboto-font);
+  color: var(--main-color);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+/* style */
+h1.hiring-title {
+  padding: 0.5rem 0;
+  padding-left: 1rem;
+}
+
+/* title end */
+
 /* Jobs main start */
 /* layout */
 main.jobs-main {
