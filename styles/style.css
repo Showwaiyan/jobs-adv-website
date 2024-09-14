@@ -315,7 +315,7 @@ aside#job-hunting-tips .job-hunting-description ul li {
 
 /* style */
 aside#job-hunting-tips {
-  background: linear-gradient(0deg, rgba(22,50,91,0.5),rgba(22,50,91,0.5)), url("/styles/images/jobhuntingtips.jpg");
+  background: linear-gradient(0deg, rgba(34,123,148,0.5),rgba(34,123,148,0.5)), url("/styles/images/jobhuntingtips.jpg");
   background-size: cover;
 }
 
