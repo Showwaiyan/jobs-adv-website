@@ -87,12 +87,16 @@ header.navbar .company-name {
 /* navbar start*/
 /* layout */
 nav {
-  width: 45%;
+  width: 48%;
+  z-index: 100;
 }
 ul.navbar-list {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+ul.navbar-list li {
+  position: relative;
 }
 
 /* typography */
@@ -107,6 +111,7 @@ a.navbar-list__link {
 ul.navbar-list li {
   list-style-type: none;
 }
+
 /* navbar end*/
 
 /* main start */
@@ -125,11 +130,10 @@ main.index-main h2 {
 }
 
 /* typography */
-main.index-main h2 {
+main.index-main h2,p {
   font-family: var(--poppins-font);
   font-weight: 300;
   color: var(--main-font-color);
-
   text-align: center;
 }
 
@@ -249,13 +253,13 @@ section.services p{
   color: var(--main-font-color);
 }
 section.services a{
-  margin-left: 30%;
   text-decoration: none;
   color: white;
   background-color: var(--main-color);
   width: 2rem;
   padding: 0.7rem;
   border-radius: 0.4rem;
+  border: 3px solid var(--main-color);
 }
 article.index-services img{
   margin-left: 30%;
@@ -456,3 +460,30 @@ footer.index-footer h4 {
   padding: 0.4rem 0;
 }
 /* footer end */
+
+/* all hover states */
+ul.navbar-list li::after{
+  content: '';
+  bottom: -1.8rem;
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 0.3rem;
+  background-color: var(--main-font-color);
+  transition: width 0.4s ease, left 0.4s ease;
+}
+ul.navbar-list li:hover::after{
+  width: 100%;
+  left: 0;
+}
+ul.navbar-list li.active::after{
+  width: 100%;
+  left: 0;
+}
+/* services buttons hovers */
+section.services a:hover::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  border : 2px solid var(--main-font-color);
+}
