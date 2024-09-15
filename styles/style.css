@@ -153,7 +153,7 @@ main.main-form-left ul li{
   width: 50%;
   height: auto;
   font-family: var(--roboto-font);
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/html.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/styles/images/banner.jpg') no-repeat center center/cover;
 }
 #form-right{
   width: 50%;
@@ -193,6 +193,7 @@ main.main-form-left ul li{
   scroll-margin-top: 200px;
   border-radius: 0.5rem;
   height: 70vh;
+  overflow-y: auto;
 }
 .apply-personal:target{
   display: block;
@@ -207,10 +208,10 @@ body:not(:has(:target)) #step1 {
   display: block;
 }
 #step1 .navigation a{
-  margin-top: 11rem;
+  /* margin-top: 11rem; */
 }
 #step3 .navigation a{
-  margin-top: 9rem;
+  /* margin-top: 9rem; */
 }
 .navigation{
   display: flex;
