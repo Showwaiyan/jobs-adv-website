@@ -8,16 +8,19 @@
 /* Variable */
 :root {
   /* Color */
-  --main-color: #00a9ff;
-  --secondary-color: #89cff3;
-  --third-color: #a0e9ff;
-  --forth-color: #cdf5fd;
+  --main-color: #16325B;
+  --secondary-color: #227B94;
+  --third-color: #78B7D0;
+
+  --main-font-color: #FEFAE0;
 
   /* Font */
   --roboto-font: "Roboto", sans-serif;
   --poppins-font: "Poppins", sans-serif;
   --inter-font: "Inter", sans-serif;
 }
+
+
 /* container */
 #container {
   margin: auto;
