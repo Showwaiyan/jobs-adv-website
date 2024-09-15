@@ -196,7 +196,9 @@ article.index-customers img {
 article.index-services{
   width: 100%;
   background-color: var(--main-color);
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 section.services{
   display: flex;
@@ -225,6 +227,9 @@ section.services{
   border-radius: 0.5rem;
 }
 #software,#ai,#cloud{
+  display: flex;
+  flex-direction:column;
+  flex-wrap:wrap ;
   color: var(--main-font-color);
   height: auto;
   width: 25vw;
@@ -252,14 +257,15 @@ section.services p{
   font-family: var(--poppins-font);
   color: var(--main-font-color);
 }
-section.services a{
+section.services a.service-button{
   text-decoration: none;
+  text-align: center;
   color: white;
   background-color: var(--main-color);
-  width: 2rem;
+  width: 100%;
   padding: 0.7rem;
   border-radius: 0.4rem;
-  border: 3px solid var(--main-color);
+  position:relative;
 }
 article.index-services img{
   margin-left: 30%;
@@ -313,7 +319,7 @@ p#about-learn-more{
   margin-bottom: 20px;
 }
 p#about-learn-more a:hover{
-  box-shadow: 5px 5px 20px rgba(0, 0, 0,0.5);
+  border:2px solid var(--main-font-color);
 }
 /* article about end */
 
@@ -481,9 +487,21 @@ ul.navbar-list li.active::after{
   left: 0;
 }
 /* services buttons hovers */
-section.services a:hover::after{
+section.services a.service-button::before{
   content: '';
   position: absolute;
-  width: 100%;
-  border : 2px solid var(--main-font-color);
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border:2px solid var(--main-color);
+  border-radius: 0.4rem;
+  /* transition: transform 0.4s ease; */
+}
+section.services a.service-button:hover::before,
+section.services a.service-button:focus::before{
+  top: calc(2px* -2);
+  left: calc(2px* -2);
+  bottom: calc(2px* -2);
+  right: calc(2px* -2);
 }
