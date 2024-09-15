@@ -48,6 +48,66 @@ body {
   background-color: var(--secondary-color);
 }
 
+/* header start*/
+/* layout */
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* typography */
+
+/* style */
+header.navbar {
+  background-color: var(--main-color);
+  padding: 0.5rem;
+}
+/* header end */
+
+/* company name start*/
+/* layout */
+
+/* typography */
+header.navbar .company-name {
+  font-family: var(--inter-font);
+  font-size: 3rem;
+  color: var(--main-font-color);
+}
+header.navbar .company-name span {
+  color: var(--secondary-color);
+}
+
+/* style */
+header.navbar .company-name {
+  padding: 0 1rem;
+}
+/* company name end*/
+
+/* navbar start*/
+/* layout */
+nav {
+  width: 45%;
+}
+ul.navbar-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* typography */
+a.navbar-list__link {
+  font-family: var(--inter-font);
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--main-font-color);
+}
+
+/* style */
+ul.navbar-list li {
+  list-style-type: none;
+}
+/* navbar end*/
 
 /* about main start */
 /* layout */
