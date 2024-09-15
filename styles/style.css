@@ -86,12 +86,13 @@ header.navbar .company-name {
 
 /* navbar start*/
 /* layout */
+nav {
+  width: 45%;
+}
 ul.navbar-list {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
-  width: 45%;
 }
 
 /* typography */
