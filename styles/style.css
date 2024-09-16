@@ -62,33 +62,36 @@ body#index-body {
 }
 
 .enhancements-card-right {
+  display: flex;
+  flex-direction: row-reverse;
   padding: 15px; 
-  width: 50%; 
+  width: 100%; 
   margin-right: 0; 
   margin-left: auto; 
   text-align: left; 
 }
 .enhancements-card-right:hover {
   border-color: #007bff; 
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
 .enhancements-card-left {
+  
+  display: flex;
   padding: 15px; 
-  width: 50%; 
-  margin-right: auto; 
+  width: 100%; 
   margin-left: 0;
-  text-align: left; 
+  text-align: left;
 }
 .enhancements-card-left:hover {
   border-color: #007bff; 
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   font-family:var(--poppins-font);
-  /* justify-content: flex-end;  */
+  justify-content: flex-end; 
   padding: 0;
   background-color: #FEFAE0;
   color: #333;
@@ -109,9 +112,9 @@ a:hover {
 }
 
 .enhance-section {
-  background-color: #16325B;
-  margin: 20px;
+  background-color: #16325B; 
   padding: 20px;
+  margin-right: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -124,4 +127,11 @@ a:hover {
 .enhance-section p {
   font-size: 1.1em;
   line-height: 1.6;
+}
+
+.enhance-img img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
