@@ -49,7 +49,9 @@ body#index-body {
 /* style */
 
 /* enhancement body end*/
-
+article.enhancement{
+  display: inline-block;
+}
 #enchancements-title{
   text-align: center; 
   padding: 10px; 
@@ -66,17 +68,18 @@ body#index-body {
   flex-direction: row-reverse;
   padding: 15px; 
   width: 100%; 
-  margin-right: 0; 
+  margin-right: 0;
   margin-left: auto; 
   text-align: left; 
+  justify-content: space-between;
 }
 .enhancements-card-right:hover {
   border-color: #007bff; 
   /* transform: scale(1.05); */
 }
 .enhancements-card-left {
-  
   display: flex;
+  justify-content: space-between;
   padding: 15px; 
   width: 100%; 
   margin-left: 0;
@@ -97,26 +100,26 @@ body {
   color: #333;
 }
 
+.enhance-section {
+  background-color: #16325B; 
+  padding: 20px;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
 .enhance-section h3,h4,p {
   color: #FEFAE0;
 }
 
-a {
+.enhance-section a {
   color: #2980b9;
   text-decoration: none;
   text-align: right;
 }
 
-a:hover {
+.enhance-section a:hover {
   text-decoration: underline;
-}
-
-.enhance-section {
-  background-color: #16325B; 
-  padding: 20px;
-  margin-right: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .enhance-section h3 {
@@ -128,8 +131,13 @@ a:hover {
   font-size: 1.1em;
   line-height: 1.6;
 }
-
+.enhance-img{
+  max-width: 50%;
+  height: auto;
+}
 .enhance-img img{
+  margin-left: 0,5rem;
+  margin-right: 0.5rem;
   max-width: 100%;
   height: auto;
   border-radius: 8px;
