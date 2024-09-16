@@ -52,7 +52,6 @@ body#index-body {
 
 #enchancements-title{
   text-align: center; 
-  border: px solid #333; 
   padding: 10px; 
   width: fit-content; 
   margin: 20px auto; 
@@ -63,34 +62,33 @@ body#index-body {
 }
 
 .enhancements-card-right {
-  border: 2px #333; 
   padding: 15px; 
-  width: 900px; 
+  width: 50%; 
   margin-right: 0; 
   margin-left: auto; 
   text-align: left; 
 }
 .enhancements-card-right:hover {
   border-color: #007bff; 
-  transform: scale(1.1); 
+  transform: scale(1.05);
 }
 .enhancements-card-left {
-  border: 2px #333; 
   padding: 15px; 
-  width: 900px; 
+  width: 50%; 
   margin-right: auto; 
   margin-left: 0;
   text-align: left; 
 }
 .enhancements-card-left:hover {
   border-color: #007bff; 
-  transform: scale(1.1); 
+  transform: scale(1.05);
 }
 
 body {
-  /* display: flex; */
-  font-family: Arial, sans-serif;
-  justify-content: flex-end; 
+  display: flex;
+  flex-direction: column;
+  font-family:var(--poppins-font);
+  /* justify-content: flex-end;  */
   padding: 0;
   background-color: #FEFAE0;
   color: #333;
@@ -115,7 +113,7 @@ a:hover {
   margin: 20px;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .enhance-section h3 {
