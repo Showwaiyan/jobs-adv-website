@@ -8,13 +8,122 @@
 /* Variable */
 :root {
   /* Color */
-  --main-color: #00a9ff;
-  --secondary-color: #89cff3;
-  --third-color: #a0e9ff;
-  --forth-color: #cdf5fd;
+  --main-color: #16325B;
+  --secondary-color: #227B94;
+  --third-color: #78B7D0;
+
+  --main-font-color: #FEFAE0;
 
   /* Font */
   --roboto-font: "Roboto", sans-serif;
   --poppins-font: "Poppins", sans-serif;
   --inter-font: "Inter", sans-serif;
+}
+
+/* typography */
+html {
+  /* default font size to all elements */
+  /* we will use rem value for html elements */
+  /* ,which is inheritance value of root parents that is html itself */
+  font-size: 18px;
+}
+
+/* from body to every element */
+/* we use flexbox layout to make easily layout and */
+/* to be responsive */
+
+/* enhancement body strat*/
+/* layout */
+body#index-body {
+  display: flex;
+  flex-direction: column;
+
+  /* to get the fullheight of the devices' viewport */
+  min-height: 100vh;
+
+  background-color: var(--main-font-color);
+}
+
+/* typography */
+
+/* style */
+
+/* enhancement body end*/
+
+#enchancements-title{
+  text-align: center; 
+  border: px solid #333; 
+  padding: 10px; 
+  width: fit-content; 
+  margin: 20px auto; 
+  font-size: 1.7em; 
+  font-weight: bold; 
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+.enhancements-card-right {
+  border: 2px #333; 
+  padding: 15px; 
+  width: 900px; 
+  margin-right: 0; 
+  margin-left: auto; 
+  text-align: left; 
+}
+.enhancements-card-right:hover {
+  border-color: #007bff; 
+  transform: scale(1.1); 
+}
+.enhancements-card-left {
+  border: 2px #333; 
+  padding: 15px; 
+  width: 900px; 
+  margin-right: auto; 
+  margin-left: 0;
+  text-align: left; 
+}
+.enhancements-card-left:hover {
+  border-color: #007bff; 
+  transform: scale(1.1); 
+}
+
+body {
+  /* display: flex; */
+  font-family: Arial, sans-serif;
+  justify-content: flex-end; 
+  padding: 0;
+  background-color: #FEFAE0;
+  color: #333;
+}
+
+.enhance-section h3,h4,p {
+  color: #FEFAE0;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+  text-align: right;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.enhance-section {
+  background-color: #16325B;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.enhance-section h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.enhance-section p {
+  font-size: 1.1em;
+  line-height: 1.6;
 }
