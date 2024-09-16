@@ -19,7 +19,7 @@
   --inter-font: "Inter", sans-serif;
 }
 
-/* typography */
+/*base Typography */
 html {
   /* default font size to all elements */
   /* we will use rem value for html elements */
@@ -27,47 +27,28 @@ html {
   font-size: 18px;
 }
 
-/* from body to every element */
-/* we use flexbox layout to make easily layout and */
-/* to be responsive */
-
-/* index body strat*/
-/* layout */
-body.apply-body {
-  display: flex;
-  flex-direction: column;
-
-  /* to get the fullheight of the devices' viewport */
-  min-height: 100vh;
-}
-
-/* typography */
-
-/* style */
-
-/* index body end*/
-
-/* header start*/
-/* layout */
+/* Navbar start */
+  /* Layout start*/
 header.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-/* typography */
-
-/* style */
-header.navbar {
-  background-color: var(--main-color);
-  padding: 0.5rem;
+nav {
+  width: 48%;
+  z-index: 100;
 }
-/* header end */
+ul.navbar-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+ul.navbar-list li {
+  position: relative;
+}
+  /* Layout end */
 
-/* company name start*/
-/* layout */
-
-/* typography */
+  /* Typography start*/
 header.navbar .company-name {
   font-family: var(--inter-font);
   font-size: 3rem;
@@ -76,25 +57,6 @@ header.navbar .company-name {
 header.navbar .company-name span {
   color: var(--secondary-color);
 }
-
-/* style */
-header.navbar .company-name {
-  padding: 0 1rem;
-}
-/* company name end*/
-
-/* navbar start*/
-/* layout */
-nav {
-  width: 45%;
-}
-ul.navbar-list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-/* typography */
 a.navbar-list__link {
   font-family: var(--inter-font);
   font-size: 1.1rem;
@@ -102,33 +64,69 @@ a.navbar-list__link {
   color: var(--main-font-color);
 }
 
-/* style */
+  /* Typography end */
+
+  /* Style start*/
+header.navbar {
+  background-color: var(--main-color);
+  padding: 0.5rem;
+}
+header.navbar .company-name {
+  padding: 0 1rem;
+}
 ul.navbar-list li {
   list-style-type: none;
 }
-/* navbar end*/
-/* form page background */
-body.apply-body {
-  background: linear-gradient(rgba(22, 50, 91, 0.5), rgba(22, 50, 91, 0.5));
+  /* Style end */
+
+  /* Hover state start */
+ul.navbar-list li::after{
+  content: '';
+  bottom: -1.8rem;
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 0.3rem;
+  background-color: var(--main-font-color);
+  transition: width 0.4s ease, left 0.4s ease;
 }
-/* form start */
-h2#applyhere{
-  text-align: center;
-  color: #333;
-  padding: 10px;
+ul.navbar-list li:hover::after{
+  width: 100%;
+  left: 0;
 }
-#form-container{
-  /* margin-left: 17vh; */
-  /* margin-top: 5vh; */
+ul.navbar-list li.active::after{
+  width: 100%;
+  left: 0;
+}
+  /* Hover state end */
+/* Navbar end */
+
+/* ----------apply.html start---------- */
+/* Layout start*/
+
+  /* apply body start */
+body#apply-body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+  /* apply body end */
+
+  /* Form container start */
+#form-container {
   display: flex;
   flex-direction: row;
   width: 80vw;
   align-items: stretch;
   align-self: center;
-  padding: 3rem;
 }
-section.section-form-left img {
-  filter: drop-shadow(0 0 70px var(--main-font-color));
+  /* Form container end */
+
+  /* Form-left start */
+#form-left {
+  width: 50%;
+  height: auto; 
 }
 section.section-form-left{
   align-items: center;
@@ -137,74 +135,21 @@ section.section-form-left{
   justify-content: center;
   gap: 1rem;
 }
-section.section-form-left h2{
-  color: var(--main-font-color);;
-}
-section.section-form-left h3{
-  margin-top:2rem;
-  color: var(--main-font-color);
-  text-align: center;
-}
-section.section-form-left p{
-  color: var(--main-font-color);
-  text-align: center;
-}
-section.section-form-left ul{
-  list-style-type: none;
-}
-section.section-form-left ul li{
-  text-align: center;
-  color: var(--main-font-color);
-  padding: 0.5rem;
-}
-#form-left{
-  width: 50%;
-  height: auto;
-  font-family: var(--roboto-font);
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/styles/images/banner.jpg') no-repeat center center/cover;
-  overflow: hidden;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-}
-#form-right{
+  /* Form-left end */
+
+  /* Form-right start */
+#form-right {
+  display: flex;
   width: 50%;
   height: 100%;
-  background:linear-gradient(45deg,var(--main-color), var(--secondary-color));
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  display: flex;
-}
-#form-right h2{
-  font-family: var(--roboto-font);
-  color: var(--main-font-color);
-  padding-bottom: 1.2rem;
-  text-decoration: underline;
 }
 #form-right form{
-  margin: auto;
-  padding: 2rem 1rem;
-  width: 80%;
-  overflow: hidden;
+ width: 80%;
 }
-#form-right form p {
-  text-align: left;
-  margin-bottom: 1rem;
-  color: #333;
-}
-#form-right label {
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #333;
-  font-family: var(--inter-font);
-}   
 .apply-personal,.apply-contact,.apply-skill{
   display: none;
   width: auto;
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 0.5rem;
   height: 70vh;
-  overflow-y: auto;
 }
 .apply-personal:target{
   display: block;
@@ -215,9 +160,6 @@ section.section-form-left ul li{
 .apply-skill:target{
   display: block;
 }
-body:not(:has(:target)) #step1 {
-  display: block;
-}
 .navigation{
   display: flex;
   flex-direction: column;
@@ -225,31 +167,158 @@ body:not(:has(:target)) #step1 {
   position: relative;
   align-items: center;
 }
-.navigation a{
-  display: inline-block;
-  padding: 0.7rem;
-  background-color: #16325B;
-  color: white;
+.navigation a {
   width: 100%;
-  text-align: center;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-top: 1rem;
-  font-family: var(--poppins-font);
 }
-/* input editions */
 #form-right input[type="text"],input[type="email"],input[type="tel"],input[type="password"],select,textarea {
   width: 100%;
+}
+#form-right select {
+  width: 100%;
+}#form-right input[type="submit"] {
+  display: block;
+  width: 100%;
+}
+  /* Form-right end */
+/* Layout end */
+
+/* Typography start*/
+  /* Form-left start */
+#form-left {
+  font-family: var(--roboto-font);
+}
+h2#applyhere{
+  text-align: center;
+  color: #333;
+  padding: 10px;
+}
+section.section-form-left h2{
+  color: var(--main-font-color);;
+}
+section.section-form-left h3{
+  color: var(--main-font-color);
+  text-align: center;
+}
+section.section-form-left p{
+  color: var(--main-font-color);
+  text-align: center;
+}
+section.section-form-left ul li{
+  text-align: center;
+  color: var(--main-font-color);
+}
+  /* Form-left end */
+
+  /* Form-right start */
+#form-right h2 {
+  font-family: var(--roboto-font);
+  color: var(--main-font-color); 
+  text-decoration: underline;
+}
+#form-right form p {
+  text-align: left;
+  color: var(--main-color);
+}
+#form-right label {
+  font-weight: bold;
+  color: var(--main-color);
+  font-family: var(--inter-font);
+}
+.navigation a {
+  font-family: var(--poppins-font);
+  text-decoration: none;
+  text-align: center;
+  color: var(--main-font-color);
+}
+#form-right fieldset legend{
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--main-color);
+  font-family: var(--poppins-font);
+}
+#form-right input[type="submit"] {
+  color: var(--main-font-color);
+  font-size: 16px;
+}
+  /* Form-right end */
+/* Typography end */
+
+/* Style start*/
+  /* apply body start */
+body#apply-body {
+  background: linear-gradient(rgba(22, 50, 91, 0.5), rgba(22, 50, 91, 0.5));
+}
+  /* apply body end */
+
+  /* Form container start */
+#form-container {
+  padding: 3rem;
+}
+  /* Form container end */
+
+  /* Form-left start */
+#form-left {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/styles/images/banner.jpg') no-repeat center center/cover;
+  overflow: hidden;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+section.section-form-left img {
+  filter: drop-shadow(0 0 70px var(--main-font-color));
+}
+section.section-form-left h3{
+  margin-top:2rem;
+}
+section.section-form-left ul{
+  list-style-type: none;
+}
+section.section-form-left ul li{
+  padding: 0.5rem;
+}
+  /* Form-left end */
+
+  /* Form-right start */
+#form-right {
+  background:linear-gradient(45deg,var(--main-color), var(--secondary-color));
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem; 
+}
+#form-right h2 {
+ padding-bottom: 1.2rem;
+}
+#form-right form {
+  margin: auto;
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+#form-right form p {
+  margin-bottom: 1rem;
+}
+#form-right label {
+  margin-bottom: 8px;
+}
+.apply-personal,.apply-contact,.apply-skill{
+  background-color: var(--main-font-color);
+  padding: 2rem;
+  border-radius: 0.5rem; 
+  overflow-y: auto;
+}
+.navigation a {
+  display: inline-block;
+  padding: 0.7rem;
+  background-color: var(--main-color); 
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+#form-right input[type="text"],input[type="email"],input[type="tel"],input[type="password"],select,textarea {
   border: none;
   padding: 0.7rem;
   border-bottom: 3px solid var(--secondary-color);
 }
 #form-right input[type="date"]{
   border: 2px double var(--secondary-color);
-  font-size: 0.9rem;
 }
 #form-right select{
-  width: 100%;
   padding: 0.7rem;
   border-radius: 0.3rem;
 }
@@ -259,27 +328,29 @@ body:not(:has(:target)) #step1 {
   border-radius: 5px;
   margin-bottom: 20px;
 }
-#form-right fieldset legend{
-  font-weight: bold;
-  font-size: 1rem;
-  color: var(--main-color);
-  font-family: var(--poppins-font);
-}
-
-/* Submit Button */
 #form-right input[type="submit"] {
-background-color: #16325B;
-color: white;
-border: none;
-padding: 12px 20px;
-border-radius: 5px;
-cursor: pointer;
-font-size: 16px;
-display: block;
-width: 100%;
-margin-top: 20px;
-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
+  /* Form-right end */
+
+
+/* Style end */
+
+/* Hover State start */
 #form-right input[type="submit"]:hover {
-background-color: #227B94;
+  background-color: var(--secondary-color);
 }
+/* Hover State end */
+
+/* Function and State start */
+body:not(:has(:target)) #step1 {
+  display: block;
+}
+/* Function and State end */
+/* ----------apply.html end---------- */
