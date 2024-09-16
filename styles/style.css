@@ -20,7 +20,7 @@
   --inter-font: "Inter", sans-serif;
 }
 
-/* typography */
+/* base Typography */
 html {
   /* default font size to all elements */
   /* we will use rem value for html elements */
@@ -28,43 +28,28 @@ html {
   font-size: 18px;
 }
 
-/* jobs body strat*/
-/* layout */
-body.jobs-body {
-  display: flex;
-  flex-direction: column;
-  /* to get the fullheight of the devices' viewport */
-  min-height: 100vh;
-  position: relative;
-}
-
-/* typography */
-
-/* style */
-
-/* jobs body end*/
-
-/* header start*/
-/* layout */
+/* Navbar start */
+  /* Layout start*/
 header.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-/* typography */
-
-/* style */
-header.navbar {
-  background-color: var(--main-color);
-  padding: 0.5rem;
+nav {
+  width: 48%;
+  z-index: 100;
 }
-/* header end */
+ul.navbar-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+ul.navbar-list li {
+  position: relative;
+}
+  /* Layout end */
 
-/* company name start*/
-/* layout */
-
-/* typography */
+  /* Typography start*/
 header.navbar .company-name {
   font-family: var(--inter-font);
   font-size: 3rem;
@@ -73,24 +58,6 @@ header.navbar .company-name {
 header.navbar .company-name span {
   color: var(--secondary-color);
 }
-
-/* style */
-header.navbar .company-name {
-  padding: 0 1rem;
-}
-/* company name end*/
-
-/* navbar start*/
-/* layout */
-ul.navbar-list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
-  width: 45%;
-}
-
-/* typography */
 a.navbar-list__link {
   font-family: var(--inter-font);
   font-size: 1.1rem;
@@ -98,33 +65,135 @@ a.navbar-list__link {
   color: var(--main-font-color);
 }
 
-/* style */
+  /* Typography end */
+
+  /* Style start*/
+header.navbar {
+  background-color: var(--main-color);
+  padding: 0.5rem;
+}
+header.navbar .company-name {
+  padding: 0 1rem;
+}
 ul.navbar-list li {
   list-style-type: none;
 }
-/* navbar end*/
+  /* Style end */
 
-/* title start */
-/* layout */
-
-/* typography */
-h1.hiring-title {
-  font-family: var(--roboto-font);
-  color: var(--main-color);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-}
-/* style */
-h1.hiring-title {
-  padding: 0.5rem 0;
-  padding-left: 1rem;
+  /* Hover state start */
+ul.navbar-list li::after{
+  content: '';
+  bottom: -1.8rem;
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 0.3rem;
   background-color: var(--main-font-color);
+  transition: width 0.4s ease, left 0.4s ease;
 }
+ul.navbar-list li:hover::after{
+  width: 100%;
+  left: 0;
+}
+ul.navbar-list li.active::after{
+  width: 100%;
+  left: 0;
+}
+  /* Hover state end */
+/* Navbar end */
 
-/* title end */
 
-/* Jobs main start */
-/* layout */
+/* Footer start */
+  /* Layout start */
+footer.index-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer.index-footer .index-footer-description{
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+}
+footer.index-footer .index-footer-description > * {
+  width: 30%;
+}
+footer.index-footer .index-footer-description .index-footer__social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+  /* Layout end */
+
+  /* Typography start */
+footer.index-footer .index-footer-description section  h3 {
+  font-family: var(--poppins-font);
+  font-size: 1.5rem;
+  color: var(--main-font-color);
+}
+footer.index-footer .index-footer-description ul.menu-list .menu-list__item {
+  /* for list style type square to be bigger */
+  font-size: 1em;
+  color: var(--main-font-color);
+}
+footer.index-footer .index-footer-description ul.menu-list .menu-list__item a,
+footer.index-footer .index-footer-description .index-footer__address p {
+  font-family: var(--inter-font);
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--main-font-color);
+}
+footer.index-footer .index-footer-description .index-footer__address p {
+  font-size: 0.9rem;
+}
+footer.index-footer h4 {
+  font-family: var(--inter-font);
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: var(--main-font-color);
+}
+  /* Typography end */
+
+  /* Style start */
+footer.index-footer {
+  background-color: var(--main-color);
+}
+footer.index-footer .index-footer-description{
+  padding: 2rem;
+} 
+footer.index-footer .index-footer-description ul.menu-list .menu-list__item {
+  list-style-type: square;
+}
+hr {
+  width: 80%;
+  border-style: solid;
+  border-width: 1px;
+  color: var(--main-font-color);
+}
+footer.index-footer h4 {
+  padding: 0.4rem 0;
+}
+  /* Style end */
+
+  /* Hover state start */
+
+  /* Hover state end */
+/* Footer end */
+
+/* ----------jobs.html start---------- */
+/* Layout start*/
+
+  /* jobs body start*/
+body#jobs-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+  /* jobs body end */
+
+  /* Jobs main start */
 main.jobs-main {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
@@ -132,18 +201,9 @@ main.jobs-main {
   gap: 2rem;
   min-height: 100vh;
 }
+  /* Jobs main end */
 
-/* typography */
-
-/* style */
-main.jobs-main {
-  padding: 1rem;
-  background-color: var(--main-font-color);
-}
-/* Jobs main end */
-
-/* Job Card start */
-/* layout */
+  /* Job card start */
 article.job {
   display: flex;
   flex-direction: column;
@@ -164,9 +224,37 @@ article.job .main-info-wrapper .job-main-info .job-btn-wrapper {
   align-items: start;
   gap: 0.5rem;
 }
+  /* Job card end */
 
+  /* Job popup start */
+.position-overview, .requirement {
+  display: inline-block;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.info-close-btn {
+  float: right;
+}
+  /* Job popup end */
+  /* Job hunting tips start */
+aside#job-hunting-tips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+aside#job-hunting-tips .job-hunting-description{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-/* typography */
+  /* Job hunting tips end */
+/* Layout end */
+
+/* Typography strat*/
+  /* Job card start */
 article.job .main-info-wrapper .job-main-info {
   font-family: var(--roboto-font);
   color: var(--main-font-color);
@@ -194,55 +282,9 @@ article.job #job-apply-btn {
   color: var(--main-font-color);
   font-size: 0.7rem;
 }
+  /* Job card end */
 
-/* style */
-article.job {
-  background-color: var(--secondary-color);
-  padding: 1rem;
-  border-radius: 8px;
-}
-article.job .main-info-wrapper {
-  border-left: 2px solid var(--main-font-color);
-}
-article.job .main-info-wrapper .job-main-info {
-  padding: 1rem;
-}
-article.job .main-info-wrapper .job-main-info .job-btn-wrapper a {
-  background-color: var(--main-font-color);
-  padding: 0.3rem;
-}
-article.job #job-apply-btn {
-  background-color: var(--secondary-color);
-  border: 2px solid var(--main-font-color);
-}
-
-/* Job info popup start*/
-/* function */
-.position-overview, .requirement {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 1;
-  width: 80%;
-  max-height: 60vh;
-}
-.position-overview:target, .requirement:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* layout */
-.position-overview, .requirement {
-  display: inline-block;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-.info-close-btn {
-  float: right;
-}
-
-/* typogrpahy */
+  /* Job info popup start */
 .position-overview, .requirement {
   color: var(--main-font-color);
   line-height: 1.5rem;
@@ -266,8 +308,63 @@ article.job #job-apply-btn {
   font-size: 2.5rem;
   text-decoration: none;  
 }
+  /* Job info popup end */
 
-/* style */
+  /* Job hunting tips start */
+aside#job-hunting-tips {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+aside#job-hunting-tips .job-hunting-description h3{
+  font-family: var(--roboto-font);
+}
+aside#job-hunting-tips .job-hunting-description p {
+  font-family: var(--poppins-font);
+}
+aside#job-hunting-tips .job-hunting-description ul li {
+  font-family: var(--inter-font);
+}
+  /* Job hunting tips end */
+/* Typography end*/
+
+/* Style start*/
+  /* Jobs body start */
+body#jobs-body {
+  background-color: var(--secondary-color);
+}
+  /* Jobs body end */
+
+  /* Jobs main start */
+main.jobs-main {
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(34,123,148,0.5),rgba(34,123,148,0.5)), url("/styles/images/jobhuntingtips.jpg");
+  background-size: cover;
+}
+  /* Jobs main end */
+
+  /* Job card start */
+article.job {
+  background-color: var(--main-color);
+  padding: 1rem;
+  border-radius: 8px;
+}
+article.job .main-info-wrapper {
+  border-left: 2px solid var(--main-font-color);
+}
+article.job .main-info-wrapper .job-main-info {
+  padding: 1rem;
+}
+article.job .main-info-wrapper .job-main-info .job-btn-wrapper a {
+  background-color: var(--main-font-color);
+  padding: 0.3rem;
+}
+article.job #job-apply-btn {
+  background-color: var(--main-color);
+  border: 2px solid var(--main-font-color);
+}
+  /* Job card end */
+
+  /* Job popup info start */
 .position-overview,.requirement {
   background-color: var(--main-color);
   border-radius: 20px;
@@ -281,113 +378,30 @@ article.job #job-apply-btn {
   border: 1px solid var(--main-font-color);
   margin: 1rem 0;
 }
-/* Job info popup end */
-/* Job Card end */
+  /* Job popup info end */
 
-/* aside/job-hunitng-tips start */
-/* layout */
+  /* Job hunting tips start */
 aside#job-hunting-tips {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
+  background-color: var(--main-font-color);
 }
-aside#job-hunting-tips .job-hunting-description{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+  /* Job hunting tips end */
+/* Style end*/
 
-/* typography */
-aside#job-hunting-tips {
-  font-size: 1.5rem;
-  color: var(--main-font-color);
-}
-aside#job-hunting-tips .job-hunting-description h3{
-  font-family: var(--roboto-font);
-}
-aside#job-hunting-tips .job-hunting-description p {
-  font-family: var(--poppins-font);
-}
-aside#job-hunting-tips .job-hunting-description ul li {
-  font-family: var(--inter-font);
-}
+/* Function and State start*/
+  /* Job info popup start*/
+  .position-overview, .requirement {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1; /*To be as an overlay on other elements */
+    width: 80%;
+    max-height: 60vh;
+  }
+  .position-overview:target, .requirement:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  /* Job info popup end */
 
-/* style */
-aside#job-hunting-tips {
-  background: linear-gradient(0deg, rgba(34,123,148,0.5),rgba(34,123,148,0.5)), url("/styles/images/jobhuntingtips.jpg");
-  background-size: cover;
-}
-
-/* aside/job-hunitng-tips end */
-
-/* footer start */
-/* layout */
-footer.index-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-footer.index-footer .index-footer-description{
-  display: flex;
-  justify-content: space-evenly;
-  width: 80%;
-}
-footer.index-footer .index-footer-description > * {
-  width: 30%;
-}
-footer.index-footer .index-footer-description .index-footer__social-link {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-/* typography */
-footer.index-footer .index-footer-description section  h3 {
-  font-family: var(--poppins-font);
-  font-size: 1.5rem;
-  color: var(--main-font-color);
-}
-footer.index-footer .index-footer-description ul.menu-list .menu-list__item {
-  /* for list style type square to be bigger */
-  font-size: 1em;
-  color: var(--main-font-color);
-}
-footer.index-footer .index-footer-description ul.menu-list .menu-list__item a,
-footer.index-footer .index-footer-description .index-footer__address p {
-  font-family: var(--inter-font);
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: var(--main-font-color);
-}
-footer.index-footer .index-footer-description .index-footer__address p {
-  font-size: 0.9rem;
-}
-footer.index-footer h4 {
-  font-family: var(--inter-font);
-  font-size: 0.7rem;
-  font-weight: 300;
-  color: var(--main-font-color);
-}
-
-/* style */
-footer.index-footer {
-  background-color: var(--main-color);
-}
-footer.index-footer .index-footer-description{
-  padding: 2rem;
-} 
-footer.index-footer .index-footer-description ul.menu-list .menu-list__item {
-  list-style-type: square;
-}
-hr {
-  width: 80%;
-  border-style: solid;
-  border-width: 1px;
-  color: var(--main-font-color);
-}
-footer.index-footer h4 {
-  padding: 0.4rem 0;
-}
-/* footer end */
+/* Function and State end*/
+/* ----------jobs.html end---------- */
