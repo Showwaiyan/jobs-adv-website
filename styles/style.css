@@ -228,6 +228,7 @@ section.services{
   flex-wrap: wrap;
   height: auto;
   width: 25vw; 
+  justify-content: space-between;
 }
 article.index-services h2{
   text-align: center;
