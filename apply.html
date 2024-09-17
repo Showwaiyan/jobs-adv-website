@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body id="apply-body">
+    <header class="navbar">
+        <!-- Company Name -->
+        <h1 class="company-name">ByteMe<span>.</span></h1>
+
+        <!-- Navbar -->
+        <nav>
+            <ul class="navbar-list">
+                <li class="navbar-list__item">
+                    <a href="index.html" class="navbar-list__link">
+                        Home
+                    </a>
+                </li>
+
+                <li class="navbar-list__item">
+                    <a href="jobs.html" class="navbar-list__link">
+                        Jobs
+                    </a>
+                </li>
+
+                <li class="navbar-list__item active">
+                    <a href="apply.html" class="navbar-list__link">
+                        Apply
+                    </a>
+                </li>
+
+                <li class="navbar-list__item">
+                    <a href="about.html" class="navbar-list__link">
+                        About
+                    </a>
+                </li>
+
+                <li class="navbar-list__item">
+                    <a href="enhancement.html" class="navbar-list__link">
+                        Enhancement
+                    </a>
+                </li>
+            </ul> 
+        </nav>
+   </header> 
+
+   <article id="form-container">
+        <section id="form-left">
+            <section class="section-form-left">
+                <img src="/images/bytemelogo.png" alt="">
+                <h2>Ready to Join Us?</h2>
+
+                <p>We’re excited to have you apply!</p>
+                <p>Fill out the form below to get started on your journey with us.</p>
+
+                <h3>Why Apply?</h3>
+                <ul>
+                    <li>Be part of a dynamic and innovative community.</li>
+                    <li>Unlock opportunities to grow and make an impact.</li>
+                    <li>Shape your career with us!</li>
+                </ul>
+            </section>
+        </section>
+        <section id="form-right">
+            <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST">
+                <h2 id="applyhere">Apply Here</h2>
+                <!-- Job Reference Number -->
+                <section id="step1" class="apply-personal">
+                    <section class="form-section">
+                        <p>
+                            <label for="jrn"> Job Reference Number: </label>
+                            <input type="text" id="jrn" name="jrn" maxlength="5" pattern="[A-Za-z0-9]{5}" required>
+                        </p>
+                        <!-- First Name -->
+                        <p>
+                            <label for="fn"> First Name: </label>
+                            <input type="text" id="fn" name="fn" maxlength="20" pattern="{A-Za-z0-9}{1,20}" required>
+                        </p>
+                        <p>
+                            <!-- last Name -->
+                            <label for="ln">Last Name: </label>
+                            <input type="text" id="ln" name="ln" maxlength="20" pattern="{A-Za-z0-9}{1,20}" required>
+                        </p>
+                        <!-- Date-of-birth -->
+
+                        <p><label for="dob">Date of Birth:</label>
+                            <input type="date" id="dob" name="dob" pattern="\d{2}/\d{2}/\d{4}" required>
+                        </p>
+
+                        <!-- Gender -->
+                        <fieldset>
+                            <legend>Gender</legend>
+                            <label>
+                                <input type="radio" name="gender" value="male" required> Male
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="female" required> Female
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="other" required> Other
+                            </label>
+                        </fieldset>
+                    </section>
+                    <section class="navigation">
+                        <a href="#step2">Next</a>
+                    </section>
+                </section>
+
+                <!-- Street Address -->
+                <section id="step2" class="apply-contact">
+                    <p>
+                        <label for="sa">Street Address: </label>
+                        <input type="text" id="sa" name="sa" maxlength="40" required>
+                    </p>
+
+
+                    <!-- Suburb/town -->
+                    <p><label for="st">Suburb/town: </label>
+                        <input type="text" id="st" name="st" maxlength="40" required>
+                    </p>
+
+                    <!-- State -->
+                    <p>
+                        <label for="state">State:</label>
+                        <select id="state" name="state" required>
+                            <option value="VIC">VIC</option>
+                            <option value="NSW">NSW</option>
+                            <option value="QLD">QLD</option>
+                            <option value="NT">NT</option>
+                            <option value="WA">WA</option>
+                            <option value="SA">SA</option>
+                            <option value="TAS">TAS</option>
+                            <option value="ACT">ACT</option>
+                        </select>
+                    </p>
+
+                    <!-- Postcode -->
+                    <p>
+                        <label for="postcode">Postcode:</label>
+                        <input type="text" id="postcode" name="postcode" maxlength="4" pattern="\d{4}" required>
+                    </p>
+
+                    <!-- Email Address -->
+                    <p>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+
+                    <!-- Phone Number -->
+                    <p>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" maxlength="12" pattern="[0-9\s]{8,12}" required>
+                    </p>
+                    <section class="navigation">
+                        <a href="#step1">Previous</a>
+                        <a href="#step3">Next</a>
+                    </section>
+                </section>
+                <!-- Skills -->
+                <section id="step3" class="apply-skill">
+
+                    <fieldset>
+                        <legend>Skills:</legend>
+                        <p><label><input type="checkbox" name="skills[]" value="programming" required>
+                                Programming</label></p>
+                        <p><label><input type="checkbox" name="skills[]" value="projectManagement" required> Project
+                                Management</label></p>
+                        <p><label><input type="checkbox" name="skills[]" value="design" required> Design</label></p>
+                        <p><label><input type="checkbox" name="skills[]" value="otherSkills"> Other skills...</label>
+                        </p>
+                    </fieldset>
+
+
+                    <!-- Other Skills (Textarea) -->
+                    <p><label for="otherSkillsText">Other Skills:</label></p>
+                    <textarea id="otherSkillsText" name="otherSkillsText" rows="4" cols="50"></textarea>
+
+                    <section class="navigation">
+                        <a href="#step2">Previous</a>
+                    </section>
+                    <!-- Submit Button -->
+                    <input type="submit" value="Apply">
+                </section>
+            </form>
+        </section>
+    </article>
+
+</body>
+
+</html>

@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 /* Variable */
 :root {
   /* Color */
@@ -776,3 +775,258 @@ aside#job-hunting-tips {
 
 /* Function and State end*/
 /* ----------jobs.html end---------- */
+
+
+/* ----------apply.html start---------- */
+/* Layout start*/
+
+  /* apply body start */
+body#apply-body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+  /* apply body end */
+
+  /* Form container start */
+#form-container {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  align-items: stretch;
+  align-self: center;
+}
+  /* Form container end */
+
+  /* Form-left start */
+#form-left {
+  width: 50%;
+  height: auto; 
+}
+section.section-form-left{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+  /* Form-left end */
+
+  /* Form-right start */
+#form-right {
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+#form-right form{
+ width: 80%;
+}
+.apply-personal,.apply-contact,.apply-skill{
+  display: none;
+  width: auto;
+  height: 70vh;
+}
+.apply-personal:target{
+  display: block;
+}
+.apply-contact:target{
+  display: block;
+}
+.apply-skill:target{
+  display: block;
+}
+.navigation{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+.navigation a {
+  width: 100%;
+}
+#form-right input[type="text"],input[type="email"],input[type="tel"],input[type="password"],select,textarea {
+  width: 100%;
+}
+#form-right select {
+  width: 100%;
+}#form-right input[type="submit"] {
+  display: block;
+  width: 100%;
+}
+  /* Form-right end */
+/* Layout end */
+
+/* Typography start*/
+  /* Form-left start */
+#form-left {
+  font-family: var(--roboto-font);
+}
+h2#applyhere{
+  text-align: center;
+  color: #333;
+  padding: 10px;
+}
+section.section-form-left h2{
+  color: var(--main-font-color);;
+}
+section.section-form-left h3{
+  color: var(--main-font-color);
+  text-align: center;
+}
+section.section-form-left p{
+  color: var(--main-font-color);
+  text-align: center;
+}
+section.section-form-left ul li{
+  text-align: center;
+  color: var(--main-font-color);
+}
+  /* Form-left end */
+
+  /* Form-right start */
+#form-right h2 {
+  font-family: var(--roboto-font);
+  color: var(--main-font-color); 
+  text-decoration: underline;
+}
+#form-right form p {
+  text-align: left;
+  color: var(--main-color);
+}
+#form-right label {
+  font-weight: bold;
+  color: var(--main-color);
+  font-family: var(--inter-font);
+}
+.navigation a {
+  font-family: var(--poppins-font);
+  text-decoration: none;
+  text-align: center;
+  color: var(--main-font-color);
+}
+#form-right fieldset legend{
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--main-color);
+  font-family: var(--poppins-font);
+}
+#form-right input[type="submit"] {
+  color: var(--main-font-color);
+  font-size: 16px;
+}
+  /* Form-right end */
+/* Typography end */
+
+/* Style start*/
+  /* apply body start */
+body#apply-body {
+  background: linear-gradient(rgba(22, 50, 91, 0.5), rgba(22, 50, 91, 0.5));
+}
+  /* apply body end */
+
+  /* Form container start */
+#form-container {
+  padding: 3rem;
+}
+  /* Form container end */
+
+  /* Form-left start */
+#form-left {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/styles/images/banner.jpg') no-repeat center center/cover;
+  overflow: hidden;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+section.section-form-left img {
+  filter: drop-shadow(0 0 70px var(--main-font-color));
+}
+section.section-form-left h3{
+  margin-top:2rem;
+}
+section.section-form-left ul{
+  list-style-type: none;
+}
+section.section-form-left ul li{
+  padding: 0.5rem;
+}
+  /* Form-left end */
+
+  /* Form-right start */
+#form-right {
+  background:linear-gradient(45deg,var(--main-color), var(--secondary-color));
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem; 
+}
+#form-right h2 {
+ padding-bottom: 1.2rem;
+}
+#form-right form {
+  margin: auto;
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+#form-right form p {
+  margin-bottom: 1rem;
+}
+#form-right label {
+  margin-bottom: 8px;
+}
+.apply-personal,.apply-contact,.apply-skill{
+  background-color: var(--main-font-color);
+  padding: 2rem;
+  border-radius: 0.5rem; 
+  overflow-y: auto;
+}
+.navigation a {
+  display: inline-block;
+  padding: 0.7rem;
+  background-color: var(--main-color); 
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+#form-right input[type="text"],input[type="email"],input[type="tel"],input[type="password"],select,textarea {
+  border: none;
+  padding: 0.7rem;
+  border-bottom: 3px solid var(--secondary-color);
+}
+#form-right input[type="date"]{
+  border: 2px double var(--secondary-color);
+}
+#form-right select{
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+}
+#form-right fieldset{
+  border: 2px double var(--secondary-color);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+#form-right input[type="submit"] {
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+  /* Form-right end */
+
+
+/* Style end */
+
+/* Hover State start */
+#form-right input[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
+/* Hover State end */
+
+/* Function and State start */
+body:not(:has(:target)) #step1 {
+  display: block;
+}
+/* Function and State end */
+/* ----------apply.html end---------- */
