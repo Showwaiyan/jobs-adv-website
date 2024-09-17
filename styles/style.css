@@ -458,6 +458,7 @@ section.services a.service-button{
 
   /* article customer start */
 article.index-customers{
+  background-color: var(--main-font-color);
   overflow: hidden;
   white-space: nowrap;
 }
@@ -1030,3 +1031,209 @@ body:not(:has(:target)) #step1 {
 }
 /* Function and State end */
 /* ----------apply.html end---------- */
+
+/* ----------about.html start---------- */
+/* Layout start */
+  /* about body start */
+body#about-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+  /* about body end */
+
+  /* about main start */
+main#about-main {
+  display: flex;
+  flex-direction: column;
+}
+  /* about main end */
+
+  /* group and course info start */
+.group-and-course-info {
+  display: flex;
+  justify-content: center;
+}
+  /* group and course info end */
+
+  /* time table start */
+#time-table {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; 
+}
+#time-table td {
+  width: 100px;
+}
+  /* time table end */
+
+  /* person card start */
+#person-cards, #person-cards .person .person-image {
+  display: flex;
+  justify-content: center;
+}
+#person-cards {
+  gap: 2rem;
+}
+#person-cards .person {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+#person-cards .person .person-image img {
+  width: 6rem;
+}
+.person-description{
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+  /* person card end */
+/* Layout end */
+
+/* Typography start */
+
+  /* about body start */
+body#about-body {
+  color: var(--main-font-color);
+}
+  /* about body end */
+
+  /* group and course info start */
+.group-and-course-info #about-lists dt, .group-and-course-info #lecturers h3 {
+  font-family: var(--roboto-font);
+}
+.group-and-course-info #about-lists dd, .group-and-course-info #lecturers li {
+  font-family: var(--inter-font);
+}
+  /* group and course info end */
+
+  /* time table start */
+#time-table th {
+  font-family: var(--roboto-font);
+  text-align: center;
+  font-weight: bold;
+}
+#time-table td {
+  font-family: var(--poppins-font);
+  font-size: 0.8em;
+  text-align: center;
+  color: var(--main-font-color);
+}
+  /* time table end */
+
+  /* person card start */
+#person-cards .person .person-description h2 {
+  font-family: var(--roboto-font);
+}
+#person-cards .person .person-description p {
+  font-family: var(--inter-font);
+}
+  /* person card end */
+/* Typography end */
+
+/* Style start */
+  
+  /* about body start */
+body {
+  background-color: var(--secondary-color);
+}
+  /* about body end */
+
+  /* group and course info start */
+.group-and-course-info {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.group-and-course-info #lecturers {
+  border-left: 2px solid var(--main-font-color);
+  padding-left: 2rem;
+}
+
+#about-lists{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+#about-lists img{
+  height: 300px;
+  border: 3px solid var(--main-font-color);
+  float: right;
+  border-radius: 10px;
+}
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+dl dt{
+  font-weight: bold;
+}
+ 
+section#lecturers{
+  display: flex;
+  flex-direction: ROW;
+  gap: 10rem;
+  padding: 1rem;
+  justify-content: center;
+}
+#lecturers ol{
+  float: left;
+}
+#lecturers ul li{
+  list-style-type: none;
+}
+#lecturers li{
+  margin-bottom: 0.7em
+}
+#lecturers h3{
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+  /* group and course info end */
+
+  /* time table start */
+#time-table{
+  padding: 1rem;
+  background-color: var(--main-color);
+}
+#time-table th{
+  padding: 0.5rem;
+}
+#time-table td{
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+}
+th.hide{
+  visibility: hidden;
+}
+div.hide{
+  visibility: hidden;
+}
+  /* time table end */
+
+  /* person card start */
+#person-cards {
+  margin: 3rem 0;
+}
+.person {
+  background-color: var(--main-color);
+  padding: 2rem;
+  border-radius: 10px;
+}
+#person-cards .person .person-description h2 {
+  margin-bottom: 0.5rem;
+}
+#person-cards .person .person-image img {
+  border: 2px solid var(--main-font-color);
+  border-radius: 50%;
+}
+  /* person card end */
+/* Style end */
+/* ----------about.html end---------- */
