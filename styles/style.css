@@ -974,7 +974,7 @@ section.section-form-left ul li{
   margin-bottom: 8px;
 }
 .apply-personal,.apply-contact,.apply-skill{
-  background-color: var(--main-font-color);
+  background-color: white;
   padding: 2rem;
   border-radius: 0.5rem; 
   overflow-y: auto;
