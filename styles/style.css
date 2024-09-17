@@ -8,11 +8,11 @@
 /* Variable */
 :root {
   /* Color */
-  --main-color: #16325B;
-  --secondary-color: #227B94;
-  --third-color: #78B7D0;
+  --main-color: #16325b;
+  --secondary-color: #227b94;
+  --third-color: #78b7D0;
 
-  --main-font-color: #FEFAE0;
+  --main-font-color: #fefae0;
 
   /* Font */
   --roboto-font: "Roboto", sans-serif;
@@ -550,3 +550,229 @@ article.index-customers section.customers {
 }
 /* Animation end */
 /* ----------index.html end---------- */
+
+
+/* ----------jobs.html start---------- */
+/* Layout start*/
+
+  /* jobs body start*/
+body#jobs-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+  /* jobs body end */
+
+  /* Jobs main start */
+main.jobs-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  grid-auto-rows: 30vh;
+  gap: 2rem;
+  min-height: 100vh;
+}
+  /* Jobs main end */
+
+  /* Job card start */
+article.job {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+article.job .main-info-wrapper {
+  display: flex;
+}
+article.job .main-info-wrapper .job-main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+article.job .main-info-wrapper .job-main-info .job-btn-wrapper {
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+}
+  /* Job card end */
+
+  /* Job popup start */
+.position-overview, .requirement {
+  display: inline-block;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.info-close-btn {
+  float: right;
+}
+  /* Job popup end */
+  /* Job hunting tips start */
+aside#job-hunting-tips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+aside#job-hunting-tips .job-hunting-description{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+  /* Job hunting tips end */
+/* Layout end */
+
+/* Typography strat*/
+  /* Job card start */
+article.job .main-info-wrapper .job-main-info {
+  font-family: var(--roboto-font);
+  color: var(--main-font-color);
+}
+article.job .main-info-wrapper .job-main-info {
+  font-size: 0.9rem;
+}
+article.job .main-info-wrapper .job-main-info .job-basic-info h2 {
+  text-decoration: underline;
+}
+article.job .main-info-wrapper .job-main-info .job-basic-info p {
+  font-size: 0.8rem;
+  font-family: var(--inter-font);
+}
+article.job .main-info-wrapper .job-main-info .job-basic-info p strong {
+ font-family: var(--roboto-font);
+}
+article.job .main-info-wrapper .job-main-info .job-btn-wrapper a,
+article.job #job-apply-btn {
+  text-decoration: none;
+  color: var(--main-color);
+  font-size: 0.7rem;
+}
+article.job #job-apply-btn {
+  color: var(--main-font-color);
+  font-size: 0.7rem;
+}
+  /* Job card end */
+
+  /* Job info popup start */
+.position-overview, .requirement {
+  color: var(--main-font-color);
+  line-height: 1.5rem;
+}
+.position-overview h3, .requirement h3, .requirement h4 {
+  font-family: var(--roboto-font);
+}
+.position-overview p {
+  font-family: var(--poppins-font);
+}
+.position-overview ul, .requirement ol, .requirement ul {
+  padding-left: 1.5rem;
+}
+.position-overview ul li, .requirement ol li, .requirement ul li {
+  font-family: var(--inter-font);
+}
+.info-close-btn {
+  font-family: var(--inter-font);
+  color: var(--main-font-color);
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-decoration: none;  
+}
+  /* Job info popup end */
+
+  /* Job hunting tips start */
+aside#job-hunting-tips {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+aside#job-hunting-tips .job-hunting-description h3{
+  font-family: var(--roboto-font);
+}
+aside#job-hunting-tips .job-hunting-description p {
+  font-family: var(--poppins-font);
+}
+aside#job-hunting-tips .job-hunting-description ul li {
+  font-family: var(--inter-font);
+}
+  /* Job hunting tips end */
+/* Typography end*/
+
+/* Style start*/
+  /* Jobs body start */
+body#jobs-body {
+  background-color: var(--secondary-color);
+}
+  /* Jobs body end */
+
+  /* Jobs main start */
+main.jobs-main {
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(34,123,148,0.5),rgba(34,123,148,0.5)), url("/styles/images/jobhuntingtips.jpg");
+  background-size: cover;
+}
+  /* Jobs main end */
+
+  /* Job card start */
+article.job {
+  background-color: var(--main-color);
+  padding: 1rem;
+  border-radius: 8px;
+}
+article.job .main-info-wrapper {
+  border-left: 2px solid var(--main-font-color);
+}
+article.job .main-info-wrapper .job-main-info {
+  padding: 1rem;
+}
+article.job .main-info-wrapper .job-main-info .job-btn-wrapper a {
+  background-color: var(--main-font-color);
+  padding: 0.3rem;
+}
+article.job #job-apply-btn {
+  background-color: var(--main-color);
+  border: 2px solid var(--main-font-color);
+}
+  /* Job card end */
+
+  /* Job popup info start */
+.position-overview,.requirement {
+  background-color: var(--main-color);
+  border-radius: 20px;
+  padding: 2rem;
+  overflow-y: auto;
+}
+.position-overview h3, .requirement h3 {
+  clear: right;
+}
+.position-overview hr {
+  border: 1px solid var(--main-font-color);
+  margin: 1rem 0;
+}
+  /* Job popup info end */
+
+  /* Job hunting tips start */
+aside#job-hunting-tips {
+  background-color: var(--main-font-color);
+}
+  /* Job hunting tips end */
+/* Style end*/
+
+/* Function and State start*/
+  /* Job info popup start*/
+  .position-overview, .requirement {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1; /*To be as an overlay on other elements */
+    width: 80%;
+    max-height: 60vh;
+  }
+  .position-overview:target, .requirement:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  /* Job info popup end */
+
+/* Function and State end*/
+/* ----------jobs.html end---------- */
