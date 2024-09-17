@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
-<body class="index-body">
+<body id="index-body">
    <header class="navbar">
         <!-- Company Name -->
         <h1 class="company-name">ByteMe<span>.</span></h1>
@@ -22,36 +22,31 @@
             <ul class="navbar-list">
                 <li class="navbar-list__item active" >
                     <a href="#" class="navbar-list__link ">
-                        <span>Home</span>
-                        <!-- <span><img src="" alt="home-icon"></span> -->
+                        Home
                     </a>
                 </li>
 
                 <li class="navbar-list__item ">
                     <a href="#" class="navbar-list__link">
-                        <span>Jobs</span>
-                        <!-- <span><img src="" alt="jobs-icon"></span> -->
+                        Jobs
                     </a>
                 </li>
 
                 <li class="navbar-list__item">
                     <a href="#" class="navbar-list__link">
-                        <span>Apply</span>
-                        <!-- <span><img src="" alt="apply-icon"></span> -->
+                        Apply
                     </a>
                 </li>
 
                 <li class="navbar-list__item">
                     <a href="#" class="navbar-list__link">
-                        <span>About</span>
-                        <!-- <span><img src="" alt="about-icon"></span> -->
+                        About
                     </a>
                 </li>
 
                 <li class="navbar-list__item">
                     <a href="#" class="navbar-list__link">
-                        <span>Enhancement</span>
-                        <!-- <span><img src="" alt="enchencement-icon"></span> -->
+                        Enhancement
                     </a>
                 </li>
             </ul> 
@@ -62,13 +57,13 @@
    </header> 
 
    <!-- Comapany logo and description Visual -->
-   <main class="index-main">
+   <main id="index-main">
         <img class="logo" src="images/bytemelogo.png" alt="company-logo">
         <h2>Innovating Tomorrow, Today</h2>  
         <p>At ByteMe, we harness the power of cutting-edge technology to deliver intelligent, seamless solutions that drive your business forward. From AI-powered platforms to digital transformation, we create technology that empowers innovation, efficiency, and success.</p> 
    </main>
 
-   <!-- company jobs short section -->
+   <!-- company services short section -->
 
    <article class="index-services">
     <h2>What we do</h2>
@@ -79,7 +74,7 @@
             <p>Our team of expert developers is dedicated to creating high-quality software solutions for businesses of all sizes. 
                 Whether you're a startup looking to build your first app or an enterprise, 
                 we've got you covered.Boost efficiency with tailored software solutions designed to meet your specific needs.</p>
-                <a href="#" class="service-button">Learn More</a>
+            <a href="#" class="service-button">Learn More</a>
         </div>
         <div id="ai">
             <div class="ai-image"></div>
@@ -88,7 +83,7 @@
                 Our team of AI experts can help you harness the power of machine learning 
                 and deep learning to drive innovation and transform your organization.
                 Enhance decision-making with actionable insights derived from advanced AI and ML technologies.</p>
-                <a href="#" class="service-button">Consult With Us</a>
+            <a href="#" class="service-button">Consult With Us</a>
         </div>
         <div id="cloud">
             <div class="cloud-image"></div>
@@ -97,7 +92,7 @@
                 Our team of cloud experts can help you migrate your applications and data to the cloud, 
                 enabling you to scale your business and reduce costs.
                 Optimize performance and reduce costs with scalable cloud infrastructure tailored for your business.</p>
-                <a href="#" class="service-button">Discover Now</a>
+            <a href="#" class="service-button">Discover Now</a>
         </div>  
     </section>
 
@@ -125,23 +120,25 @@
    </article>
    <!-- company about section -->
    <article class="index-about-us">
-        <h2 class="about-us">About Us</h2>
-        <section class="about">
-            
-            <p>
-                At ByteMe, we are passionate about driving innovation and transforming the digital landscape. Founded with the mission to create cutting-edge solutions for the evolving needs of businesses and consumers, we specialize in providing high-quality software development, AI integration, and custom technology services.
-            <p>
+        <section class="about-us-description">
+            <h2 class="about-us">About Us</h2>
+                
+                <p>
+                    At ByteMe, we are passionate about driving innovation and transforming the digital landscape. 
+                    Founded with the mission to create cutting-edge solutions for the evolving needs of businesses and consumers, 
+                    we specialize in providing high-quality software development, AI integration, and custom technology services.
 
-            <p>
-                Our team of highly skilled engineers, designers, and developers is dedicated to solving complex problems with innovative technologies. Whether you're a startup looking to build your first app or a large enterprise seeking to enhance your digital infrastructure, ByteMe is your partner for all things tech.
-            </p>
-            <p id="about-learn-more">
-                <a href="#" class="service-button">Learn More</a>
-            </p>
-            <a href=https://www.youtube.com/watch?v=HZHHBwzmJLk" target="blank">
-                <img src="https://img.youtube.com/vi/HZHHBwzmJLk/hqdefault.jpg" alt="youtube thuumbnail">
-            </a>
+                <p>
+                    Our team of highly skilled engineers, designers, 
+                    and developers is dedicated to solving complex problems with innovative technologies.
+                    Whether you're a startup looking to build your first app or a large enterprise seeking to enhance your digital infrastructure,
+                    ByteMe is your partner for all things tech.
+                </p>
+                <a href="#" class="service-button" id="about-learn-more">Learn More</a>
         </section>
+        <a href=https://www.youtube.com/watch?v=HZHHBwzmJLk" target="blank" class="about-us-image">
+            <img src="https://img.youtube.com/vi/HZHHBwzmJLk/hqdefault.jpg" alt="youtube thuumbnail">
+        </a>
    </article>
 
 
