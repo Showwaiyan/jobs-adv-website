@@ -234,7 +234,11 @@ main#about-main {
 #person-cards .person .person-image img {
   width: 6rem;
 }
-
+.person-description{
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
 
   /* person card end */
 /* Layout end */
