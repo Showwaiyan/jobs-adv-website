@@ -1062,7 +1062,7 @@ main#about-main {
 }
 dl {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   gap: 1rem;
 }
 #about-lists img {
@@ -1390,8 +1390,10 @@ body#enhancement-body {
   }
   .index-services .services {
     padding: 1rem;
+    flex-direction: row;
+    align-items: stretch;
   }
-  #software,#ai,#cloud {
+  div#software,div#ai,div#cloud {
     width: 33%;
   }
   article.index-customers section.customers { 
@@ -1439,6 +1441,30 @@ body#enhancement-body {
   /* apply.html end */ 
   
   /* about.html start */
+  main#about-main {
+    align-items: center;
+  }
+  .group-and-course-info {
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+  }
+  .group-and-course-info #lecturers {
+    border-left: none;
+  }
+  dl {
+    justify-content: center;
+  }
+  #time-table table {
+    scale: 0.75;
+  }
+  #person-cards {
+    font-size: 0.7rem;
+    padding: 0 1rem;
+  }
+  #person-cards .person {
+    padding: 1rem;
+  }
   /* about.html end */ 
 
   /* enhancement.html start */
@@ -1447,7 +1473,7 @@ body#enhancement-body {
 /* Tablet end */
 
 /* Mobile start */
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 767px){
 
   /* general start */
   html {
@@ -1476,13 +1502,8 @@ body#enhancement-body {
   footer.index-footer .index-footer-description .index-footer__address p {
     font-size: 1rem;
   }
-  footer.index-footer .index-footer-description .index-footer__social-link .social-media-links{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   .social-media-links a img {
-    width: 25px;
+    width: 22px;
   }
     /* footer end */
   /* general end */
@@ -1548,6 +1569,25 @@ body#enhancement-body {
   /* apply.html end */ 
   
   /* about.html start */
+  .group-and-course-info {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #about-lists img {
+    width: 100%;
+    height: auto;
+  }
+  .group-and-course-info #lecturers {
+    border-left: none;
+  }
+  #time-table table {
+    transform: rotate(90deg);
+    scale: 0.5;
+  } 
+  #person-cards {
+    flex-direction: column;
+    padding: 1rem;
+  }
   /* about.html end */ 
 
   /* enhancement.html start */
