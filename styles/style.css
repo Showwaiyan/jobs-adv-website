@@ -1054,6 +1054,20 @@ main#about-main {
   display: flex;
   justify-content: center;
 }
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+#about-lists img {
+  float: right;
+}
+section#lecturers{
+  display: flex;
+  flex-direction: ROW;
+  justify-content: center;
+  gap: 10rem;
+}
   /* group and course info end */
 
   /* time table start */
@@ -1089,7 +1103,6 @@ main#about-main {
   flex-direction: column;
   gap: 0.4rem;
 }
-
   /* person card end */
 /* Layout end */
 
@@ -1107,6 +1120,9 @@ body#about-body {
 }
 .group-and-course-info #about-lists dd, .group-and-course-info #lecturers li {
   font-family: var(--inter-font);
+}
+dl dt{
+  font-weight: bold;
 }
   /* group and course info end */
 
@@ -1153,34 +1169,18 @@ body {
 }
 
 #about-lists{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
   padding: 1rem;
+}
+#about-lists dl {
+  margin-bottom: 1rem;
 }
 #about-lists img{
   height: 300px;
   border: 3px solid var(--main-font-color);
-  float: right;
   border-radius: 10px;
-}
-dl {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-dl dt{
-  font-weight: bold;
-}
- 
+} 
 section#lecturers{
-  display: flex;
-  flex-direction: ROW;
-  gap: 10rem;
   padding: 1rem;
-  justify-content: center;
 }
 #lecturers ol{
   float: left;
@@ -1192,7 +1192,6 @@ section#lecturers{
   margin-bottom: 0.7em
 }
 #lecturers h3{
-  text-decoration: underline;
   margin-bottom: 20px;
 }
   /* group and course info end */
@@ -1272,7 +1271,6 @@ body#enhancement-body {
   font-family:var(--poppins-font);
 }
   /* enhancement body end */
-
 
   /* enhancement container start */
 #enchancements-title{
