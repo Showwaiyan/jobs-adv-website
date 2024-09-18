@@ -616,7 +616,7 @@ article.job .main-info-wrapper .job-main-info .job-btn-wrapper {
   /* Job popup start */
 .position-overview, .requirement {
   display: inline-block;
-  top: 40%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
@@ -758,6 +758,7 @@ article.job #job-apply-btn {
   padding: 2rem;
   overflow-y: auto;
   border: 2px solid var(--main-font-color);
+  transition: opacity 1s ease-in-out;
 }
 .position-overview h3, .requirement h3 {
   clear: right;
