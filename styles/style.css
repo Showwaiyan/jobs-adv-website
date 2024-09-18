@@ -741,6 +741,7 @@ article.job #job-apply-btn {
   border-radius: 20px;
   padding: 2rem;
   overflow-y: auto;
+  border: 2px solid var(--main-font-color);
 }
 .position-overview h3, .requirement h3 {
   clear: right;
