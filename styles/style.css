@@ -1419,12 +1419,14 @@ body#enhancement-body {
   .testimonial-card-description p {
     font-size: 1.1rem;
   }
- 
+  article.index-testimonial section.testimonial div.testimonial-card {
+    width: 100%;
+  } 
   /* index.html end */
 
   /* jobs.html start */
   main.jobs-main {
-    grid-auto-rows: 15vh;
+    grid-auto-rows: 20vh;
   }
   article.job .main-info-wrapper .job-main-info {
     font-size: 1rem;
@@ -1438,6 +1440,23 @@ body#enhancement-body {
   /* jobs.html end */ 
 
   /* apply.html start */
+  #form-container {
+    flex-direction: column;
+    width: 90%;
+  }
+  #form-left, #form-right {
+    width: 100%;
+  }
+  #form-left {
+    height: 60vh;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    font-size: 1.3rem;
+  }
+  #form-right {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+  }
   /* apply.html end */ 
   
   /* about.html start */
@@ -1468,6 +1487,7 @@ body#enhancement-body {
   /* about.html end */ 
 
   /* enhancement.html start */
+
   /* enhancement.html end */ 
 }
 /* Tablet end */
@@ -1566,6 +1586,25 @@ body#enhancement-body {
   /* jobs.html end */ 
 
   /* apply.html start */
+  #form-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+  }
+  #form-left, #form-right {
+    width: 100%;
+  }
+  #form-left {
+    height: 100vh;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    font-size: 1.2rem;
+  }
+  #form-right {
+    height: 100vh;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+  }
   /* apply.html end */ 
   
   /* about.html start */
@@ -1591,7 +1630,7 @@ body#enhancement-body {
   /* about.html end */ 
 
   /* enhancement.html start */
-  /* enhancement.html end */  /* index.html end */ 
+  /* enhancement.html end */
 }
 /* Mobile end */
 
