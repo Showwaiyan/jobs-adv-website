@@ -618,7 +618,7 @@ aside#job-hunting-tips {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 30vh;
 }
 aside#job-hunting-tips .job-hunting-description{
   display: flex;
@@ -1370,10 +1370,10 @@ body#enhancement-body {
   }
 
     /* footer start */
-  footer.index-footer .index-footer-description .index-footer__address p {
-    font-size: 1.1rem;
+  footer.index-footer article.index-footer-description .index-footer__address p {
+    font-size: 1.2rem;
   }
-  .social-media-links a img {
+  div.social-media-links a img {
     width: 40px;
   }
     /* footer end */
@@ -1418,6 +1418,18 @@ body#enhancement-body {
   /* index.html end */
 
   /* jobs.html start */
+  main.jobs-main {
+    grid-auto-rows: 15vh;
+  }
+  article.job .main-info-wrapper .job-main-info {
+    font-size: 1rem;
+  }
+  aside#job-hunting-tips {
+    height: 20vh;
+  }
+  .position-overview, .requirement {
+    width: 70%;
+  }
   /* jobs.html end */ 
 
   /* apply.html start */
@@ -1456,10 +1468,10 @@ body#enhancement-body {
     width: 100%;
   }
   footer.index-footer .index-footer-description .index-footer__address p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .social-media-links a img {
-    width: 23px;
+    width: 25px;
   }
     /* footer end */
   /* general end */
@@ -1511,6 +1523,14 @@ body#enhancement-body {
   /* index.html end */
 
   /* jobs.html start */
+  main.jobs-main {
+    grid-auto-rows: 20vh;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  }
+  aside#job-hunting-tips {
+    font-size: 1.2rem;
+    padding: 0 1.5rem;
+  }
   /* jobs.html end */ 
 
   /* apply.html start */
