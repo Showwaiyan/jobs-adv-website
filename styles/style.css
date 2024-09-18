@@ -1487,7 +1487,6 @@ body#enhancement-body {
   /* about.html end */ 
 
   /* enhancement.html start */
-
   /* enhancement.html end */ 
 }
 /* Tablet end */
@@ -1621,7 +1620,7 @@ body#enhancement-body {
   }
   #time-table table {
     transform: rotate(90deg);
-    scale: 0.5;
+    scale: 0.3;
   } 
   #person-cards {
     flex-direction: column;
