@@ -152,6 +152,9 @@ footer.index-footer h4 {
   font-weight: 300;
   color: var(--main-font-color);
 }
+section.index-footer__address a{
+  text-decoration-color: var(--main-font-color);
+}
   /* Typography end */
 
   /* Style start */
@@ -567,7 +570,7 @@ body#jobs-body {
   /* Jobs main start */
 main.jobs-main {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
   grid-auto-rows: 30vh;
   gap: 2rem;
   min-height: 100vh;
@@ -589,6 +592,11 @@ article.job .main-info-wrapper .job-main-info {
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+}
+article.job .job-basic-info{
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 article.job .main-info-wrapper .job-main-info .job-btn-wrapper {
   display: flex;
@@ -776,6 +784,13 @@ aside#job-hunting-tips {
   /* Job info popup end */
 
 /* Function and State end*/
+
+/* Hover state starts */
+div.job-btn-wrapper a#job-apply-btn:hover {
+  background-color: var(--main-font-color);
+  color: var(--main-color);
+}
+/* Hover state ends */
 /* ----------jobs.html end---------- */
 
 
@@ -891,7 +906,6 @@ section.section-form-left ul li{
 #form-right h2 {
   font-family: var(--roboto-font);
   color: var(--main-font-color); 
-  text-decoration: underline;
 }
 #form-right form p {
   text-align: left;
@@ -1236,6 +1250,13 @@ div.hide{
 }
   /* person card end */
 /* Style end */
+
+/* Hover state start */
+#time-table td:hover{
+  background-color: var(--main-font-color);
+  color: var(--main-color);
+}
+/* Hover state end */
 /* ----------about.html end---------- */
 
 /* ----------enhancement.html start---------- */
