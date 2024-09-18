@@ -1370,6 +1370,9 @@ body#enhancement-body {
   }
 
     /* footer start */
+  footer.index-footer article.index-footer-description section h3 {
+    font-size: 1.5rem;
+  }
   footer.index-footer article.index-footer-description .index-footer__address p {
     font-size: 1.2rem;
   }
@@ -1463,12 +1466,20 @@ body#enhancement-body {
   }
     /* navbar end */
 
-    /* footer start */
+    /* footer start */ 
   footer.index-footer .index-footer-description {
     width: 100%;
   }
+  footer.index-footer .index-footer-description section h3 {
+    font-size: 1.2rem;
+  }
   footer.index-footer .index-footer-description .index-footer__address p {
     font-size: 1rem;
+  }
+  footer.index-footer .index-footer-description .index-footer__social-link .social-media-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .social-media-links a img {
     width: 25px;
