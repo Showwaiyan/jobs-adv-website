@@ -54,9 +54,14 @@ header.navbar .company-name {
   font-size: 3rem;
   color: var(--main-font-color);
 }
+header.navbar .company-name a{
+  text-decoration: none;
+  color: var(--main-font-color);
+}
 header.navbar .company-name span {
   color: var(--secondary-color);
 }
+
 a.navbar-list__link {
   font-family: var(--inter-font);
   font-size: 1.1rem;
@@ -488,6 +493,9 @@ a#about-learn-more {
   background-color: var(--main-color);
   padding: 0.9rem;
   border-radius: 0.5rem;
+}
+a.about-us-image img{
+  border-radius: 0.7rem;
 }
   /* article about end */
 
