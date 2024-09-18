@@ -393,6 +393,11 @@ article.index-testimonial h2{
 /* Typography end */
 
 /* Style start */
+  /* index body start */
+body#index-body {
+  background-color: var(--main-color);
+}
+  /* index body end */
 
   /* index main start */
 main#index-main {
@@ -1353,3 +1358,170 @@ body#enhancement-body {
 }
 /* Hover State end */
 /* ----------enhancement.html end---------- */
+
+/* Responsive start */
+
+/* Tablet start */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+  /* general start */
+  html {
+    font-size: 14px;
+  }
+
+    /* footer start */
+  footer.index-footer .index-footer-description .index-footer__address p {
+    font-size: 1.1rem;
+  }
+  .social-media-links a img {
+    width: 40px;
+  }
+    /* footer end */
+
+  /* general end */
+
+  /* index.html start */
+  main#index-main {
+    height: 70vh;
+    font-size: 1.2rem;
+  }
+  .index-services .services {
+    padding: 1rem;
+  }
+  #software,#ai,#cloud {
+    width: 33%;
+  }
+  article.index-customers section.customers { 
+    animation: move 10s linear infinite;
+  }
+  .about-us-description {
+    font-size: 1.2rem;
+  }
+  article.index-about-us section.about-us-description p {
+    text-align: left;
+  }
+  a#about-learn-more {
+    width: 50%;
+  }
+  .about-us-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-us-image img {
+    width: 80%;
+  }
+  .testimonial-card-description p {
+    font-size: 1.1rem;
+  }
+ 
+  /* index.html end */
+
+  /* jobs.html start */
+  /* jobs.html end */ 
+
+  /* apply.html start */
+  /* apply.html end */ 
+  
+  /* about.html start */
+  /* about.html end */ 
+
+  /* enhancement.html start */
+  /* enhancement.html end */ 
+}
+/* Tablet end */
+
+/* Mobile start */
+@media screen and (max-width: 1023px){
+
+  /* general start */
+  html {
+    font-size: 12px;
+  }
+
+    /* navbar start */
+  header.navbar h1.company-name {
+    font-size: 2rem;
+  }
+  header.navbar nav {
+    width: 80%;
+  }
+  ul.navbar-list li::after{
+    bottom: -1rem
+  }
+    /* navbar end */
+
+    /* footer start */
+  footer.index-footer .index-footer-description {
+    width: 100%;
+  }
+  footer.index-footer .index-footer-description .index-footer__address p {
+    font-size: 0.9rem;
+  }
+  .social-media-links a img {
+    width: 23px;
+  }
+    /* footer end */
+  /* general end */
+
+  /* index.html start */
+  main#index-main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  main#index-main p {
+    font-size: 1.2rem;
+  }
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+  #software,#ai,#cloud {
+    width: 80%;
+  }
+  article.index-customers {
+    height: 25vh;
+  }
+  article.index-customers img {
+    height: 8rem;
+  }
+  article.index-customers section.customers { 
+    animation: move 8s linear infinite;
+  }
+  article.index-about-us {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  article.index-about-us .about-us-description {
+    width: 100%;
+  }
+  a#about-learn-more {
+    width: 25%;
+  }
+  a.about-us-image {
+    display: flex;
+    justify-content: center;
+  }
+  .about-us-image img {
+    width: 80%;
+  }
+  article.index-testimonial section.testimonial div.testimonial-card {
+    width: 100%;
+  }
+  /* index.html end */
+
+  /* jobs.html start */
+  /* jobs.html end */ 
+
+  /* apply.html start */
+  /* apply.html end */ 
+  
+  /* about.html start */
+  /* about.html end */ 
+
+  /* enhancement.html start */
+  /* enhancement.html end */  /* index.html end */ 
+}
+/* Mobile end */
+
+/* Responsive end */
