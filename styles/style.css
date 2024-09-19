@@ -401,6 +401,11 @@ article.index-testimonial h2{
 /* Typography end */
 
 /* Style start */
+  /* index body start */
+body#index-body {
+  background-color: var(--main-color);
+}
+  /* index body end */
 
   /* index main start */
 main#index-main {
@@ -633,7 +638,7 @@ aside#job-hunting-tips {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 30vh;
 }
 aside#job-hunting-tips .job-hunting-description{
   display: flex;
@@ -1089,7 +1094,7 @@ main#about-main {
 }
 dl {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   gap: 1rem;
 }
 #about-lists img {
@@ -1392,3 +1397,286 @@ body#enhancement-body {
 }
 /* Hover State end */
 /* ----------enhancement.html end---------- */
+
+/* Responsive start */
+
+/* Tablet start */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+  /* general start */
+  html {
+    font-size: 14px;
+  }
+
+    /* footer start */
+  footer.index-footer article.index-footer-description section h3 {
+    font-size: 1.5rem;
+  }
+  footer.index-footer article.index-footer-description .index-footer__address p {
+    font-size: 1.2rem;
+  }
+  div.social-media-links a img {
+    width: 40px;
+  }
+    /* footer end */
+
+  /* general end */
+
+  /* index.html start */
+  main#index-main {
+    height: 70vh;
+    font-size: 1.2rem;
+  }
+  .index-services .services {
+    padding: 1rem;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  div#software,div#ai,div#cloud {
+    width: 33%;
+  }
+  article.index-customers section.customers { 
+    animation: move 10s linear infinite;
+  }
+  .about-us-description {
+    font-size: 1.2rem;
+  }
+  article.index-about-us section.about-us-description p {
+    text-align: left;
+  }
+  a#about-learn-more {
+    width: 50%;
+  }
+  .about-us-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-us-image img {
+    width: 80%;
+  }
+  .testimonial-card-description p {
+    font-size: 1.1rem;
+  }
+  article.index-testimonial section.testimonial div.testimonial-card {
+    width: 100%;
+  } 
+  /* index.html end */
+
+  /* jobs.html start */
+  main.jobs-main {
+    grid-auto-rows: 20vh;
+  }
+  article.job .main-info-wrapper .job-main-info {
+    font-size: 1rem;
+  }
+  aside#job-hunting-tips {
+    height: 20vh;
+  }
+  .position-overview, .requirement {
+    width: 70%;
+  }
+  /* jobs.html end */ 
+
+  /* apply.html start */
+  #form-container {
+    flex-direction: column;
+    width: 90%;
+  }
+  #form-left, #form-right {
+    width: 100%;
+  }
+  #form-left {
+    height: 60vh;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    font-size: 1.3rem;
+  }
+  #form-right {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+  }
+  /* apply.html end */ 
+  
+  /* about.html start */
+  main#about-main {
+    align-items: center;
+  }
+  .group-and-course-info {
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+  }
+  .group-and-course-info #lecturers {
+    border-left: none;
+  }
+  dl {
+    justify-content: center;
+  }
+  #time-table table {
+    scale: 0.75;
+  }
+  #person-cards {
+    font-size: 0.7rem;
+    padding: 0 1rem;
+  }
+  #person-cards .person {
+    padding: 1rem;
+  }
+  /* about.html end */ 
+
+  /* enhancement.html start */
+  nav ul {
+    gap: 1.5rem;
+  }
+  body#enhancement-body header nav ul li a.navbar-list__link{
+    font-size: 1.6rem;
+  }
+  /* enhancement.html end */ 
+}
+/* Tablet end */
+
+/* Mobile start */
+@media screen and (max-width: 767px){
+
+  /* general start */
+  html {
+    font-size: 12px;
+  }
+
+    /* navbar start */
+  header.navbar h1.company-name {
+    font-size: 2rem;
+  }
+  header.navbar nav {
+    width: 80%;
+  }
+  ul.navbar-list li::after{
+    bottom: -1rem
+  }
+    /* navbar end */
+
+    /* footer start */ 
+  footer.index-footer .index-footer-description {
+    width: 100%;
+  }
+  footer.index-footer .index-footer-description section h3 {
+    font-size: 1.2rem;
+  }
+  footer.index-footer .index-footer-description .index-footer__address p {
+    font-size: 1rem;
+  }
+  .social-media-links a img {
+    width: 22px;
+  }
+    /* footer end */
+  /* general end */
+
+  /* index.html start */
+  main#index-main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  main#index-main p {
+    font-size: 1.2rem;
+  }
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+  #software,#ai,#cloud {
+    width: 80%;
+  }
+  article.index-customers {
+    height: 25vh;
+  }
+  article.index-customers img {
+    height: 8rem;
+  }
+  article.index-customers section.customers { 
+    animation: move 8s linear infinite;
+  }
+  article.index-about-us {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  article.index-about-us .about-us-description {
+    width: 100%;
+  }
+  a#about-learn-more {
+    width: 25%;
+  }
+  a.about-us-image {
+    display: flex;
+    justify-content: center;
+  }
+  .about-us-image img {
+    width: 80%;
+  }
+  article.index-testimonial section.testimonial div.testimonial-card {
+    width: 100%;
+  }
+  /* index.html end */
+
+  /* jobs.html start */
+  main.jobs-main {
+    grid-auto-rows: 20vh;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  }
+  aside#job-hunting-tips {
+    font-size: 1.2rem;
+    padding: 0 1.5rem;
+  }
+  /* jobs.html end */ 
+
+  /* apply.html start */
+  #form-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+  }
+  #form-left, #form-right {
+    width: 100%;
+  }
+  #form-left {
+    height: 100vh;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    font-size: 1.2rem;
+  }
+  #form-right {
+    height: 100vh;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+  }
+  /* apply.html end */ 
+  
+  /* about.html start */
+  .group-and-course-info {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #about-lists img {
+    width: 100%;
+    height: auto;
+  }
+  .group-and-course-info #lecturers {
+    border-left: none;
+  }
+  #time-table table {
+    transform: rotate(90deg);
+    scale: 0.4;
+  } 
+  #person-cards {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  /* about.html end */ 
+
+  /* enhancement.html start */
+
+  /* enhancement.html end */
+}
+/* Mobile end */
+
+/* Responsive end */
