@@ -655,6 +655,10 @@ article.job .main-info-wrapper .job-main-info {
 }
 article.job .main-info-wrapper .job-main-info .job-basic-info h2 {
   text-decoration: underline;
+  font-size: 1.3rem;
+}
+article.job .main-info-wrapper .job-main-info .job-basic-info h3 {
+  font-size: 1rem;
 }
 article.job .main-info-wrapper .job-main-info .job-basic-info p {
   font-size: 0.8rem;
