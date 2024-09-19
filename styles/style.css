@@ -1487,6 +1487,12 @@ body#enhancement-body {
   /* about.html end */ 
 
   /* enhancement.html start */
+  nav ul {
+    gap: 1.5rem;
+  }
+  body#enhancement-body header nav ul li a.navbar-list__link{
+    font-size: 1.6rem;
+  }
   /* enhancement.html end */ 
 }
 /* Tablet end */
@@ -1629,6 +1635,7 @@ body#enhancement-body {
   /* about.html end */ 
 
   /* enhancement.html start */
+
   /* enhancement.html end */
 }
 /* Mobile end */
