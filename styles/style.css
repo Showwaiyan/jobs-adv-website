@@ -1271,12 +1271,32 @@ div.hide{
   border: 2px solid var(--main-font-color);
   border-radius: 50%;
 }
+.person .person-description p:last-child{
+  justify-self: center;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  border: 2px solid var(--main-font-color);
+  text-align: center;
+}
+.person .person-description p a {
+  color: var(--main-font-color);
+  text-decoration: none;
+}
+
   /* person card end */
 /* Style end */
 
 /* Hover state start */
 #time-table td:hover{
   background-color: var(--main-font-color);
+  color: var(--main-color);
+}
+.person .person-description p:last-child:hover{
+  background-color: var(--main-font-color);
+  color: var(--main-color);
+}
+.person .person-description p:last-child:hover a{
   color: var(--main-color);
 }
 /* Hover state end */
