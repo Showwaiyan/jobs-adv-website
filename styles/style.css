@@ -712,7 +712,7 @@ article.job #job-apply-btn {
 
   /* Job hunting tips start */
 aside#job-hunting-tips {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--main-color);
 }
 aside#job-hunting-tips .job-hunting-description h3{
