@@ -96,14 +96,14 @@
                         <!-- Gender -->
                         <fieldset>
                             <legend>Gender</legend>
-                            <label>
-                                <input type="radio" name="gender" value="male" required> Male
+                            <label for="male">
+                                <input type="radio" id="male" name="gender" value="male" required> Male
                             </label>
-                            <label>
-                                <input type="radio" name="gender" value="female" required> Female
+                            <label for="female">
+                                <input type="radio" id="female" name="gender" value="female" required> Female
                             </label>
-                            <label>
-                                <input type="radio" name="gender" value="other" required> Other
+                            <label for="others">
+                                <input type="radio" id='others' name="gender" value="other" required> Other
                             </label>
                         </fieldset>
                     </section>
@@ -167,14 +167,14 @@
 
                     <fieldset>
                         <legend>Skills:</legend>
-                        <p><label><input type="checkbox" name="skills[]" value="projectmanagement" required> Project Management</label></p>
-                        <p><label><input type="checkbox" name="skills[]" value="design" required> Design</label></p>
-                        <p><label><input type="checkbox" name="skills[]" value="python" required> Python</label></p>
-                        <p><label><input type="checkbox" name="skills[]" value="reactjs" required> React.js</label></p>
-                        <p><label><input type="checkbox" name="skills[]" value="php/laravel" required> PHP/Laravel</label></p>
-                        <p><label><input type="checkbox" name="skills[]" value="Django" required> Django</label></p>
+                        <p><label for="pjm"><input type="checkbox" name="skills[]" value="projectmanagement" id="pjm"  required> Project Management</label></p>
+                        <p><label for="design"><input type="checkbox" name="skills[]" value="design" id="design" required> Design</label></p>
+                        <p><label for="python"><input type="checkbox" name="skills[]" value="python" id="python" required> Python</label></p>
+                        <p><label for="react"><input type="checkbox" name="skills[]" value="reactjs" id="react" required> React.js</label></p>
+                        <p><label for="php"><input type="checkbox" name="skills[]" value="php/laravel" id="php" required> PHP/Laravel</label></p>
+                        <p><label for="django"><input type="checkbox" name="skills[]" value="Django" id="django" required> Django</label></p>
                         
-                        <p><label><input type="checkbox" name="skills[]" value="otherSkills"> Other skills...</label></p>
+                        <p><label for="otherskills"><input type="checkbox" name="skills[]" value="otherSkills" id="otherskills"> Other skills...</label></p>
 
                     </fieldset>
 
