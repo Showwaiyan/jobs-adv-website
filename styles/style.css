@@ -501,6 +501,7 @@ a#about-learn-more {
 }
 a.about-us-image img{
   border-radius: 0.7rem;
+  border: 2px solid var(--main-font-color);
 }
   /* article about end */
 
