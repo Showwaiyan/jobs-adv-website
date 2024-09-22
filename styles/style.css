@@ -440,13 +440,13 @@ section.services{
   border-radius: 0.5rem;
 }
 .computer-image{
-  background-image: url("images/software.jpg");
+  background-image: url("../images/software.jpg");
 }
 .ai-image{
-  background-image: url("images/ai.jpg");
+  background-image: url("../images/ai.jpg");
 }
 .cloud-image{
-  background-image: url("images/cloud.jpg");
+  background-image: url("../images/cloud.jpg");
 }
 #software,#ai,#cloud{
   border-radius: 0.7rem;
@@ -501,7 +501,6 @@ a#about-learn-more {
 }
 a.about-us-image img{
   border-radius: 0.7rem;
-  border: 2px solid var(--main-font-color);
 }
   /* article about end */
 
@@ -974,7 +973,7 @@ body#apply-body {
 
   /* Form-left start */
 #form-left {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('styles/images/banner.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/styles/images/banner.jpg') no-repeat center center/cover;
   overflow: hidden;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
