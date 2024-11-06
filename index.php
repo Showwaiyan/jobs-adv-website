@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Byte Me</title>
     <link rel="shortcut icon" href="images/bytemefavicon.png" type="image/x-icon">
-    <link rel="stylesheet"  type="text/css" href="/styles/style.css">
+    <link rel="stylesheet"  type="text/css" href="styles/style.css">
 
     <!-- Font import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,46 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body id="index-body">
-   <header class="navbar">
-        <!-- Company Name -->
-        <h1 class="company-name"><a href="index.html">ByteMe<span>.</span></a></h1>
-
-        <!-- Navbar -->
-        <nav>
-            <ul class="navbar-list">
-                <li class="navbar-list__item active" >
-                    <a href="index.html" class="navbar-list__link ">
-                        Home
-                    </a>
-                </li>
-
-                <li class="navbar-list__item ">
-                    <a href="jobs.html" class="navbar-list__link">
-                        Jobs
-                    </a>
-                </li>
-
-                <li class="navbar-list__item">
-                    <a href="apply.html" class="navbar-list__link">
-                        Apply
-                    </a>
-                </li>
-
-                <li class="navbar-list__item">
-                    <a href="about.html" class="navbar-list__link">
-                        About
-                    </a>
-                </li>
-
-                <li class="navbar-list__item">
-                    <a href="enhancement.html" class="navbar-list__link">
-                        Enhancement
-                    </a>
-                </li>
-            </ul> 
-        </nav>
-   </header> 
-
+  <?php require_once('header.inc'); ?>
    <!-- Comapany logo and description Visual -->
    <main id="index-main">
         <img class="logo" src="images/bytemelogo.png" alt="company-logo">
@@ -201,41 +162,6 @@
     </article>
 
    <!-- Company detail and address -->
-   <footer class="index-footer">
-
-        <article class="index-footer-description">
-            <section class="index-footer__menu">
-                <h3>Menu</h3>
-                <ul class="menu-list">
-                    <li class="menu-list__item"><a href="index.html">Home</a></li>
-                    <li class="menu-list__item"><a href="jobs.html">Jobs</a></li>
-                    <li class="menu-list__item"><a href="apply.html">Apply</a></li>
-                    <li class="menu-list__item"><a href="about.html">About</a></li>
-                    <li class="menu-list__item"><a href="enhancement.html">Enhancement</a></li>
-                </ul>
-            </section>
-
-            <section class="index-footer__address">
-                <h3>Address</h3>
-                <p class="address">Jalan 15/8, SS15, Subang Jaya, Selengor</p>
-                <p class="phone-no">+60123456789</p>
-                <a href="mailto:into@byteme.net"><p class="mail-address">Contact Us</p></a>
-            </section>
-
-            <section class="index-footer__social-link">
-                    <h3>Social Links</h3>
-                    <div class="social-media-links">
-                        <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
-                        <a href="https://linkedin.com"><img src="images/linkedin.png" alt="Linkedin"></a>
-                        <a href="https://telegram.com"><img src="images/telegram.png" alt="Telegram"></a>
-                        <a href="https://twitter.com"><img src="images/twitter.png" alt="X"></a> 
-                    </div>
-          </section>
-        </article>
-
-        <hr>
-
-        <h4 class="index-footer__copy-right">&copy; All Rights Reserved. By ByteMe.</h4>
-   </footer>
+    <<?php include_once('footer.inc');?>
 </body>
 </html>
