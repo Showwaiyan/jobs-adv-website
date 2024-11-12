@@ -10,50 +10,12 @@
 </head>
 
 <body id="apply-body">
-    <header class="navbar">
-        <!-- Company Name -->
-        <h1 class="company-name"><a href="index.html">ByteMe<span>.</span></a></h1>
-
-        <!-- Navbar -->
-        <nav>
-            <ul class="navbar-list">
-                <li class="navbar-list__item">
-                    <a href="index.html" class="navbar-list__link">
-                        Home
-                    </a>
-                </li>
-
-                <li class="navbar-list__item">
-                    <a href="jobs.html" class="navbar-list__link">
-                        Jobs
-                    </a>
-                </li>
-
-                <li class="navbar-list__item active">
-                    <a href="apply.html" class="navbar-list__link">
-                        Apply
-                    </a>
-                </li>
-
-                <li class="navbar-list__item">
-                    <a href="about.html" class="navbar-list__link">
-                        About
-                    </a>
-                </li>
-
-                <li class="navbar-list__item">
-                    <a href="enhancement.html" class="navbar-list__link">
-                        Enhancement
-                    </a>
-                </li>
-            </ul> 
-        </nav>
-   </header> 
+    <?php include_once('header.inc');?>
 
    <article id="form-container">
         <section id="form-left">
             <section class="section-form-left">
-                <img src="/images/bytemelogo.png" alt="logo">
+                <img src="images/bytemelogo.png" alt="logo">
                 <h2>Ready to Join Us?</h2>
 
                 <p>We’re excited to have you apply!</p>

@@ -7,25 +7,25 @@
                 </li>
 
                 <li class="navbar-list__item ">
-                    <a href="jobs.html" class="navbar-list__link">
+                    <a href="jobs.php" class="navbar-list__link">
                         Jobs
                     </a>
                 </li>
 
                 <li class="navbar-list__item">
-                    <a href="apply.html" class="navbar-list__link">
+                    <a href="apply.php" class="navbar-list__link">
                         Apply
                     </a>
                 </li>
 
                 <li class="navbar-list__item">
-                    <a href="about.html" class="navbar-list__link">
+                    <a href="about.php" class="navbar-list__link">
                         About
                     </a>
                 </li>
 
                 <li class="navbar-list__item">
-                    <a href="enhancement.html" class="navbar-list__link">
+                    <a href="enhancement.php" class="navbar-list__link">
                         Enhancement
                     </a>
                 </li>

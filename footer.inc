@@ -4,10 +4,10 @@
                 <h3>Menu</h3>
                 <ul class="menu-list">
                     <li class="menu-list__item"><a href="index.php">Home</a></li>
-                    <li class="menu-list__item"><a href="jobs.html">Jobs</a></li>
-                    <li class="menu-list__item"><a href="apply.html">Apply</a></li>
-                    <li class="menu-list__item"><a href="about.html">About</a></li>
-                    <li class="menu-list__item"><a href="enhancement.html">Enhancement</a></li>
+                    <li class="menu-list__item"><a href="jobs.php">Jobs</a></li>
+                    <li class="menu-list__item"><a href="apply.php">Apply</a></li>
+                    <li class="menu-list__item"><a href="about.php">About</a></li>
+                    <li class="menu-list__item"><a href="enhancement.php">Enhancement</a></li>
                 </ul>
             </section>
 
