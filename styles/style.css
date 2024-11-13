@@ -1486,7 +1486,7 @@ select#action-select, select#status {
   font-size: 0.8rem;
 }
 
-input[type="text"] {
+main#manage-main input[type="text"] {
   font-family: var(--inter-font);
   color: var(--main-font-color);
   font-size: 0.8rem;
@@ -1525,7 +1525,7 @@ main#manage-main button{
   width: 50%;
 }
 
-input[type="text"] {
+main#manage-main input[type="text"] {
   width: 100%;                         
   padding: 10px;                         
   font-size: 16px;                      
