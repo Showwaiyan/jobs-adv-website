@@ -79,7 +79,36 @@
         </section> 
 
         <section class="display-eoi">
-
+        <table>
+                <tr>
+                    <th>EOI</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>D-o-b</th>
+                    <th>Gender</th>
+                    <th>Street Address</th>
+                    <th>Suburb</th>
+                    <th>State</th>
+                    <th>Postcode</th>
+                    <th>Phone</th>
+                    <th>Skills</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                <td>EOI</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>D-o-b</td>
+                    <td>Gender</td>
+                    <td>Street Address</td>
+                    <td>Suburb</td>
+                    <td>State</td>
+                    <td>Postcode</td>
+                    <td>Phone</td>
+                    <td>Skills</td>
+                    <td>Status</td>
+                </tr>
+            </table>
         </section>
     </main>
    
