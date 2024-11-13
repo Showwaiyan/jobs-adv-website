@@ -23,7 +23,7 @@
                         <option value="list_position" <?php if ($selectedAction == 'list_position') echo 'selected' ?>>List EOIs by Job Reference</option>
                         <option value="list_applicant" <?php if ($selectedAction == 'list_applicant') echo 'selected' ?>>List EOIs by Applicant Name</option>
                         <option value="delete_position" <?php if ($selectedAction == 'delete_position') echo 'selected' ?>>Delete EOIs by Job Reference</option>
-                        <option value="chagne_status" <?php if ($selectedAction == 'change_status') echo 'selected' ?>>Change Status of EOIs</option>
+                        <option value="change_status" <?php if ($selectedAction == 'change_status') echo 'selected' ?>>Change Status of EOIs</option>
                     </select>
                 </div>
                 <button type="submit">Select Action</button>
@@ -35,7 +35,7 @@
                 <h2>List EOIs by Job Reference</h2>
                 <input type="hidden" name="action" value="list_position">
                 <label for="job_reference">Job Reference Number:</label>
-                <input type="text" id="job_reference" name="job_reference" required>
+                <input type="text" id="job_reference" name="job_reference" placeholder="Enter Reference Number" required>
                 <button type="submit">Submit</button>
             </form>
 
@@ -44,9 +44,9 @@
                 <h2>List EOIs by Applicant Name</h2>
                 <input type="hidden" name="action" value="list_applicant">
                 <label for="first_name">First Name:</label>
-                <input type="text" id="first_name" name="first_name">
+                <input type="text" id="first_name" name="first_name" placeholder="Enter First Name">
                 <label for="last_name">Last Name:</label>
-                <input type="text" id="last_name" name="last_name">
+                <input type="text" id="last_name" name="last_name" placeholder="Enter Last Name">
                 <button type="submit">Submit</button>
             </form>
 
@@ -55,7 +55,7 @@
                 <h2>Delete EOIs by Job Reference</h2>
                 <input type="hidden" name="action" value="delete_position">
                 <label for="job_reference">Job Reference Number:</label>
-                <input type="text" id="job_reference" name="job_reference" required>
+                <input type="text" id="job_reference" name="job_reference" placeholder="Enter Reference Number" required>
                 <button type="submit">Delete</button>
             </form>
 
@@ -64,9 +64,13 @@
                 <h2>Change Status of an EOI</h2>
                 <input type="hidden" name="action" value="change_status">
                 <label for="eoi_id">EOI ID:</label>
-                <input type="text" id="eoi_id" name="eoi_id" required>
+                <input type="text" id="eoi_id" name="eoi_id" placeholder="Enter Job Reference" required>
                 <label for="status">New Status:</label>
-                <input type="text" id="status" name="status" required>
+                <select name="status" id="status">
+                    <option value="new">New</option>
+                    <option value="current">Current</option>
+                    <option value="final">Final</option>
+                </select>
                 <button type="submit">Change Status</button>
             </form>
 
