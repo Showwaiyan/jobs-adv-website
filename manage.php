@@ -1,4 +1,4 @@
-<?php include_once "auth.php";?>
+<?php #include_once "auth.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,7 +95,7 @@
                     <th>Status</th>
                 </tr>
                 <tr>
-                <td>EOI</td>
+                    <td>EOI</td>
                     <td>First Name</td>
                     <td>Last Name</td>
                     <td>D-o-b</td>
