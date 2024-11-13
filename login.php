@@ -14,7 +14,7 @@
             <!-- Navigation Menu -->
             <div class="login-card">
                 <h1>Administrative Login</h1>
-                <form class="login-form" method="post">
+                <form class="login-form" method="post" action="process_login.php">
                     <label for="user">Username</label>
                     <input type="text" name="user" id="user" maxlength="45" pattern="^[a-zA-Z0-9\s,.'-]{0,40}$" required>
 

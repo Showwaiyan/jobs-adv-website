@@ -30,7 +30,7 @@
             </section>
         </section>
         <section id="form-right">
-            <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST">
+            <form action="processEOI.php" method="POST">
                 <h2 id="applyhere">Apply Here</h2>
                 <!-- Job Reference Number -->
                 <section id="step1" class="apply-personal">
@@ -42,22 +42,22 @@
                         <!-- First Name -->
                         <p>
                             <label for="fn"> First Name: </label>
-                            <input type="text" id="fn" name="fn" maxlength="20" pattern="{A-Za-z0-9}{1,20}" required>
+                            <input type="text" id="fn" name="fname" maxlength="20" pattern="{A-Za-z0-9}{1,20}" required>
                         </p>
                         <p>
                             <!-- last Name -->
                             <label for="ln">Last Name: </label>
-                            <input type="text" id="ln" name="ln" maxlength="20" pattern="{A-Za-z0-9}{1,20}" required>
+                            <input type="text" id="ln" name="lname" maxlength="20" pattern="{A-Za-z0-9}{1,20}" required>
                         </p>
                         <!-- Date-of-birth -->
 
-                        <p><label for="dob">Date of Birth:</label>
-                            <input type="date" id="dob" name="dob" pattern="\d{2}/\d{2}/\d{4}" required>
+                        <p><label for="dob">Date of Birth(dd/mm/yyyy):</label>
+                            <input type="text" id="dob" name="dob" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" max="2005-11-13" required>
                         </p>
 
                         <!-- Gender -->
                         <fieldset>
-                            <legend>Gender</legend>
+                            <legend>Gender</legend> 
                             <label for="male">
                                 <input type="radio" id="male" name="gender" value="male" required> Male
                             </label>
@@ -78,13 +78,13 @@
                 <section id="step2" class="apply-contact">
                     <p>
                         <label for="sa">Street Address: </label>
-                        <input type="text" id="sa" name="sa" maxlength="40" required>
+                        <input type="text" id="sa" name="address" maxlength="40" required>
                     </p>
 
 
                     <!-- Suburb/town -->
                     <p><label for="st">Suburb/town: </label>
-                        <input type="text" id="st" name="st" maxlength="40" required>
+                        <input type="text" id="st" name="suburb" maxlength="40" required>
                     </p>
 
                     <!-- State -->
@@ -129,13 +129,12 @@
 
                     <fieldset>
                         <legend>Skills:</legend>
-                        <p><label for="pjm"><input type="checkbox" name="skills[]" value="projectmanagement" id="pjm"  required> Project Management</label></p>
-                        <p><label for="design"><input type="checkbox" name="skills[]" value="design" id="design" required> Design</label></p>
-                        <p><label for="python"><input type="checkbox" name="skills[]" value="python" id="python" required> Python</label></p>
-                        <p><label for="react"><input type="checkbox" name="skills[]" value="reactjs" id="react" required> React.js</label></p>
-                        <p><label for="php"><input type="checkbox" name="skills[]" value="php/laravel" id="php" required> PHP/Laravel</label></p>
-                        <p><label for="django"><input type="checkbox" name="skills[]" value="Django" id="django" required> Django</label></p>
-                        
+                        <p><label for="pjm"><input type="checkbox" name="skills[]" value="projectmanagement" id="pjm"> Project Management</label></p>
+                        <p><label for="design"><input type="checkbox" name="skills[]" value="design" id="design" > Design</label></p>
+                        <p><label for="python"><input type="checkbox" name="skills[]" value="python" id="python"> Python</label></p>
+                        <p><label for="react"><input type="checkbox" name="skills[]" value="reactjs" id="react" > React.js</label></p>
+                        <p><label for="php"><input type="checkbox" name="skills[]" value="php/laravel" id="php"> PHP/Laravel</label></p>
+                        <p><label for="django"><input type="checkbox" name="skills[]" value="Django" id="django"> Django</label></p>
                         <p><label for="otherskills"><input type="checkbox" name="skills[]" value="otherSkills" id="otherskills"> Other skills...</label></p>
 
                     </fieldset>
