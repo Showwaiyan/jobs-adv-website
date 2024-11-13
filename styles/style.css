@@ -1588,6 +1588,9 @@ input[type="text"]:focus {
 
 /* Login card */
 .login-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   background-color: var(--main-color);
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -1664,6 +1667,10 @@ input[type="text"]:focus {
   text-decoration: none;
 }
 
+a.register {
+  color: var(--third-color);
+  font-family: var(--poppins-font);
+}
 /* ----------login.php end---------- */
 
 /* Responsive start */

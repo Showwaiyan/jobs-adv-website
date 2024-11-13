@@ -23,6 +23,7 @@
 
                     <input class="login-button" type="submit" name="login" value="Log In">
                 </form>
+                <a href="register.php" class="register">register?</a>
             </div>
         </div>
     </section>
