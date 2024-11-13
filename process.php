@@ -22,4 +22,8 @@ function show_result($result){
         echo "<td>No records found</td>";
     }
 }
+
+function show_jobs($result){
+    
+}
 ?>
