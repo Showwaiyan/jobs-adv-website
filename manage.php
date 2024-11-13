@@ -1,3 +1,4 @@
+<?php include_once "auth.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage</title>
 
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body id="manage-body">
     <?php require_once('header.inc');?>
