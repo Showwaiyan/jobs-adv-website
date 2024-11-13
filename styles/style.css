@@ -1563,6 +1563,109 @@ input[type="text"]:focus {
 
 /* ----------manage.php end---------- */
 
+/* ----------login.php start---------- */
+/* Main page container */
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: url("/styles/images/banner.jpg");
+  background: linear-gradient(0deg, rgba(60, 61, 55, 0.5), rgba(60, 61, 55, 0.7)), url("images/banner.jpg");
+  background-size: cover;
+}
+
+/* Login container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* Login card */
+.login-card {
+  background-color: var(--main-color);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Heading */
+.login-card h1 {
+  color: var(--main-font-color);
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: var(--roboto-font);
+}
+
+/* Login form */
+.login-form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: var(--main-font-color);
+  text-align: left;
+  font-family: var(--inter-font);
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: border-color 0.2s;
+  background: var(--main-font-color);
+}
+
+/* Input hover effect */
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Login button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+/* Error and back-to-home message */
+.error-message,
+.back-to-home {
+  color: #d9534f;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.back-to-home a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* ----------login.php end---------- */
+
 /* Responsive start */
 
 /* Tablet start */
