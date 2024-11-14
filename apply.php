@@ -43,7 +43,7 @@
                                 $jrn = "";   
                             }?>
                             <label for="jrn"> Job Reference Number: </label>
-                            <input type="text" id="jrn" name="jrn" maxlength="5" pattern="[A-Za-z0-9]{5}" value="<?php echo $jrn; ?>" required>
+                            <input type="text" id="jrn" name="jrn" maxlength="5" pattern="[A-Za-z0-9]{5}" value="<?php echo $jrn;?>" autocomplete="off" required>
                         </p>
                         <!-- First Name -->
                         <p>
