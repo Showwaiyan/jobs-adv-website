@@ -102,6 +102,7 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                     <th>Postcode</th>
                     <th>Phone</th>
                     <th>Skills</th>
+                    <th>Other Skills</th>
                     <th>Status</th>
                 </tr>
                 <?php if($conn){ 
