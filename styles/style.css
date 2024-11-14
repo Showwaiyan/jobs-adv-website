@@ -1636,7 +1636,7 @@ input[type="text"]:focus {
 }
 
 /* Login button */
-.login-button {
+.login-button, .signin-button {
   width: 100%;
   padding: 12px;
   background-color: var(--secondary-color);
@@ -1650,7 +1650,7 @@ input[type="text"]:focus {
 }
 
 /* Button hover effect */
-.login-button:hover {
+.login-button:hover, .signin-button:hover {
   background-color: #0056b3;
 }
 
