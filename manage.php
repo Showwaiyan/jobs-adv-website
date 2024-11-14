@@ -121,7 +121,7 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                         $result = mysqli_query($conn, $sql);
                         $all = "SELECT * FROM eoi";
                         $all_list = mysqli_query($conn, $all);
-                        show_result($all_list);
+                        show_result($all_list,$conn);
                         exit();
                     }elseif(isset($_POST['statueChange'])){
                         $eoi_id = $_POST['eoi_id'];
@@ -130,11 +130,11 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                         $result = mysqli_query($conn, $sql);
                         $all = "SELECT * FROM eoi";
                         $all_list = mysqli_query($conn, $all);
-                        show_result($all_list);
+                        show_result($all_list,$conn);
                         exit();
                     }
                     $result = mysqli_query($conn, $sql);
-                    show_result($result);
+                    show_result($result,$conn);
                     ?>
                 <?php }else { ?>
                     <p>Error</p>
