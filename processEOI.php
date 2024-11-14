@@ -161,13 +161,8 @@ if (!empty($errors)) {
         $eoinumber = mysqli_insert_id($conn);
         if (isset($skills)) {
             for ($i = 0; $i < count($skills); $i++) {
-                $column_name = "Skill".($i+1);
                 // echo count($skills). '<br>';
-                if ($i == 0){
-                    $skill_query = "INSERT INTO skills(EOInumber, $column_name) values  ('$eoinumber','$skills[$i]')";
-                }else{
-                    $skill_query = "UPDATE skills SET $column_name = '$skills[$i]' WHERE EOInumber = '$eoinumber'";
-                }
+                $skill_query = "INSERT INTO skills(EOInumber,skill) values  ('$eoinumber','$skills[$i]')";
                 echo ($skill_query);
                 $skill_result = mysqli_query($conn, $skill_query);
         } 
