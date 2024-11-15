@@ -10,7 +10,7 @@
 <?php include_once 'header.inc';?>
     <h1>Job Registeration</h1>
     <main id="job-create-main">
-        <form action="" method="POST">
+        <form method="POST" action="job_register.php">
             <fieldset class="job-description">
                 <legend>Job Discription</legend>
                 <p>
@@ -27,9 +27,9 @@
                     <label for="jt">Job Type: </label>
                     <select name="jt" id="jt" required>
                         <option value="">Select Job Type</option>
-                        <option value="ft">Full Time</option>
-                        <option value="pt">Part Time</option>
-                        <option value="it">Intern</option>
+                        <option value="Permanent/Full Time">Full Time</option>
+                        <option value="Temporary/Part Time">Part Time</option>
+                        <option value="Intern">Intern</option>
                     </select>
                 </p>
 
@@ -49,7 +49,7 @@
                 </p>
 
                 <p>
-                    <label for="reprot">Report To: </label>
+                    <label for="report">Report To: </label>
                     <input type="text" name="report" id="report" required>
                 </p>
             </fieldset>
@@ -57,22 +57,27 @@
             <fieldset class="job-requirement">
                 <legend>Job Requirement</legend>
                 <p>
+                    <label for="des">Job Description</label>
+                    <textarea name="des" id="des" cols="30" rows="10" required></textarea>
+                </p>
+
+                <p>
                     <label for="key_res">Key Responsibility</label>
-                    <textarea name="key_res" id="key_res" cols="30" rows="10" required></textarea>
+                    <textarea name="key_res" id="key_res" cols="30" rows="10" placeholder="Enter the points line by line." required></textarea>
                 </p>
 
                 <p>
                     <label for="essentials">Essentials</label>
-                    <textarea name="essentials" id="essentials" cols="30" rows="10" required></textarea>
+                    <textarea name="essentials" id="essentials" cols="30" rows="10" placeholder="Enter the points line by line." required></textarea>
                 </p>
 
                 <p>
                     <label for="preferable">Preferable</label>
-                    <textarea name="preferable" id="preferable" cols="30" rows="10"></textarea>
+                    <textarea name="preferable" id="preferable" cols="30" rows="10" placeholder="Enter the points line by line."></textarea>
                 </p>
             </fieldset>
 
-            <button type="submit">Submit</button>
+            <button type="submit" name="jobregister">Submit</button>
         </form>
     </main>
 </body>
