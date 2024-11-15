@@ -1426,13 +1426,14 @@ body#job-create-body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   gap: 1rem ;
 }
 
 main#job-create-main {
   width: 50%;
   background-color: white;
+  margin: auto;
 }
 
 main#job-create-main form fieldset.job-description p {
@@ -1458,6 +1459,7 @@ main#job-create-main button[type="submit"] {
 
 /* Typography start */
 body#job-create-body h1{
+  text-align: center;
   font-family: var(--roboto-font);
   color: var(--main-font-color);
 }
@@ -1494,7 +1496,7 @@ body#job-create-body h1{
 /* Style start */
 body#job-create-body {
   background:linear-gradient(45deg,var(--main-color), var(--secondary-color));
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 #job-create-main {

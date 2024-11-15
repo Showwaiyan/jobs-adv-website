@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body id="job-create-body">
+<?php include_once 'header.inc';?>
     <h1>Job Registeration</h1>
     <main id="job-create-main">
         <form action="" method="POST">
