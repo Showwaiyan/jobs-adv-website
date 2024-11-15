@@ -1669,6 +1669,7 @@ input[type="text"]:focus {
 
 a.register {
   color: var(--third-color);
+  text-decoration: none;
   font-family: var(--poppins-font);
 }
 /* ----------login.php end---------- */

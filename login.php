@@ -20,7 +20,7 @@
 
                     <label for="pass">Password</label>
                     <input type="password" name="pass" id="pass" maxlength="45" pattern="^[a-zA-Z0-9\s,.'-]{0,40}$" required>
-                    <?php if (isset($_SESSION['error_message'])){ echo "<p style = 'color:red'>".$_SESSION['error_message']."</p>";}unset($_SESSION['error_message']);?>
+                    <?php if (isset($_SESSION['error_message'])){ echo "<p style = 'color:red; font-family:\"Inter\", sans-serif;margin:0.5rem 0;'>".$_SESSION['error_message']."</p>";}unset($_SESSION['error_message']);?>
                     <input class="login-button" type="submit" name="login" value="Log In">
                 </form>
                 <a href="register.php" class="register">Don't have an acccount? <br>Register Here!</a>

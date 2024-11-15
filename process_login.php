@@ -16,12 +16,14 @@ if (isset($_POST['login'])) {
         $attempt_data = mysqli_fetch_assoc($attempt_result);
         $login_attempts = $attempt_data['login_attempts'];
         $last_attempt_time = strtotime($attempt_data['last_attempt']);
-        $current_time = time();
-        // echo $current_time - $last_attempt_time;
+        date_default_timezone_set('Asia/Kuala_Lumpur');
+        $current_time = time() + (8*60*60);
+        
         // Check if the user is in timeout
         if ($login_attempts >= 3 && ($current_time - $last_attempt_time) < 60) {
-            $_SESSION['error_message'] = "Too many failed attempts. Please try again in 1 minute.";
+            $_SESSION['error_message'] = "You enter wrong password 3 times. Please try again in 1 minute.";
             header('Location: login.php');
+            exit();
         } else {
             // Reset login attempts after 1 minute if timeout has passed
             if ($login_attempts >= 3 && ($current_time - $last_attempt_time) >= 60) {
@@ -40,6 +42,7 @@ if (isset($_POST['login'])) {
                     $_SESSION['username'] = $row['username'];
 
                     // Reset login attempts
+                    
                     $reset_query = "UPDATE users SET login_attempts=0, last_attempt=NOW() WHERE username='$username'";
                     mysqli_query($con, $reset_query);
 
@@ -79,14 +82,15 @@ if (isset($_POST['login'])) {
 }
 
 if (isset($_POST['signup'])) {
+    session_start();
     $username = mysqli_real_escape_string($con, $_POST['user']);
     $password = mysqli_real_escape_string($con, $_POST['pass']);
     $confpass = mysqli_real_escape_string($con, $_POST['confpass']);
     $query = "SELECT * FROM users WHERE username='$username'";
     $result = mysqli_query($con, $query);
     if ($result and mysqli_num_rows($result) > 0) {
-        echo '<p class="error-message">Username already exists.</p>';
-        echo '<p class="back-to-home">Already have an account? <a href="login.php">Login</a></p>';
+        $_SESSION['error_message'] = "Username already exists.";
+        header('Location: register.php');
     } else {
         if ($password == $confpass) {
             $password = md5($password);
@@ -98,11 +102,11 @@ if (isset($_POST['signup'])) {
                 echo '<p class="success-message">Account created successfully.</p>';
                 header('Location: login.php');
             } else {
-                echo '<p class="error-message">Error creating account.</p>';
+                $_SESSION['error_message'] = "Error creating account.";
                 header('Location: register.php');
             }
         } else {
-            echo '<p class="error-message">Passwords do not match.</p>';
+            $_SESSION['error_message'] = "Password does not match.";
             header('Location: register.php');
         }
     }
