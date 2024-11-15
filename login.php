@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <?php require_once("header.inc")?>
+    <?php require_once("header.inc");session_start()?>
     <section class="page-container">
         <div class="login-container">
             <!-- Navigation Menu -->
@@ -20,10 +20,10 @@
 
                     <label for="pass">Password</label>
                     <input type="password" name="pass" id="pass" maxlength="45" pattern="^[a-zA-Z0-9\s,.'-]{0,40}$" required>
-
+                    <?php if (isset($_SESSION['error_message'])){ echo "<p style = 'color:red'>".$_SESSION['error_message']."</p>";}unset($_SESSION['error_message']);?>
                     <input class="login-button" type="submit" name="login" value="Log In">
                 </form>
-                <a href="register.php" class="register">register?</a>
+                <a href="register.php" class="register">Don't have an acccount? <br>Register Here!</a>
             </div>
         </div>
     </section>
