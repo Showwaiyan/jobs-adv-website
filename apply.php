@@ -10,7 +10,7 @@
 </head>
 
 <body id="apply-body">
-    <?php include_once('header.inc');?>
+    <?php include_once('header.inc');session_start();?>
 
    <article id="form-container">
         <section id="form-left">
@@ -71,6 +71,14 @@
                     </section>
                     <section class="navigation">
                         <a href="#step2">Next</a>
+                        <?php if(isset($_SESSION['error'])){
+                                echo "<p style='color:red'>{$_SESSION['error']}</p>";
+                                unset($_SESSION['error']);
+                            }elseif(isset($_SESSION['success'])){
+                                echo "<p style='color:green'>{$_SESSION['success']}</p>";
+                                unset($_SESSION['success']);
+                            }
+                            ?>
                     </section>
                 </section>
 
