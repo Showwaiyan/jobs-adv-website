@@ -1457,6 +1457,13 @@ main#manage-main form:not(#eoi-filter) {
   width: 75%;
 }
 
+main#manage-main section.display-eoi {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
 /* Layout end */
 
 /* Typography start */
@@ -1541,7 +1548,46 @@ main#manage-main input::placeholder {
   color: var(--main-font-color);
 }
 
+main#manage-main section.display-eoi {
+  padding: 1rem;
+  
+}
 /* Style end */
+
+/* Query table start */
+/* Targeting the main section with the specific ID */
+main#manage-main table {
+  width: 100%;                 /* Makes the table full-width */
+  border-collapse: collapse;   /* Removes gaps between cells */
+  font-family: Arial, sans-serif; /* Sets a clean font */
+}
+
+/* Styling the table headers */
+main#manage-main table th {
+  background-color: var(--main-color);   /* Header background color */
+  color: white;                /* Header text color */
+  padding: 10px;               /* Adds padding to headers */
+  text-align: left;            /* Aligns text to the left */
+  border: 1px solid #ddd;      /* Adds border to header cells */
+  font-weight: bold;           /* Makes header text bold */
+}
+
+/* Styling the table rows */
+main#manage-main table tr td {
+  background-color: var(--main-font-color);   /* Light grey for even rows */
+}
+
+
+/* Styling the table data cells */
+main#manage-main table td {
+  padding: 10px;               /* Adds padding to cells */
+  border: 1px solid #ddd;      /* Adds border to cells */
+  text-align: left;            /* Aligns text to the left */
+  color: var(--main-color);
+}
+
+
+/* Query table end
 
 /* Hover State start */
 select:focus {

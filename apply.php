@@ -36,8 +36,14 @@
                 <section id="step1" class="apply-personal">
                     <section class="form-section">
                         <p>
+                            <?php if (isset($_GET['jrn'])){
+                                $jrn = $_GET['jrn'];
+                                // echo "<p style='color:red;'>Job Reference Number: $jrn not found.</p>";
+                            } else{
+                                $jrn = "";   
+                            }?>
                             <label for="jrn"> Job Reference Number: </label>
-                            <input type="text" id="jrn" name="jrn" maxlength="5" pattern="[A-Za-z0-9]{5}" required>
+                            <input type="text" id="jrn" name="jrn" maxlength="5" pattern="[A-Za-z0-9]{5}" value="<?php echo $jrn;?>" autocomplete="off" required>
                         </p>
                         <!-- First Name -->
                         <p>

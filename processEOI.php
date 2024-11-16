@@ -1,6 +1,21 @@
 <?php
 include_once 'settings.php';
-
+$conn = mysqli_connect($host, $user, $pwd, $sql_db);
+if (!$conn) {
+    echo "<p>Database connection failure</p>";
+} else {
+    $query = "SELECT JobReferenceNumber from job_description";
+    $result = mysqli_query($conn, $query);
+    $jrn_array = [];
+    $exist = false;
+    while ($row = mysqli_fetch_assoc($result)) {
+        $jrn_array[] = $row['JobReferenceNumber'];
+        if ($row['JobReferenceNumber'] == $_POST['jrn']) {
+            $exist = true;
+        }
+    }
+    $conn->close();
+}
 // Define an array to collect error messages
 $errors = [];
 
@@ -11,8 +26,10 @@ function sanitize_input($data)
 }
 
 // Job Reference Number validation
-if (empty($_POST['jrn']) || !preg_match('/^[A-Za-z0-9]{5}$/', $_POST['jrn'])) {
+if (empty($_POST['jrn']) || !preg_match('/^[A-Za-z0-9]{5}$/', $_POST['jrn']) ) {
     $errors[] = "Job Reference Number must be exactly 5 alphanumeric characters.";
+} else if (!$exist) {
+    $errors[] = "Job Reference Number does not exists.";
 } else {
     $jrn = sanitize_input($_POST['jrn']);
 }

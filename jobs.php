@@ -1,5 +1,9 @@
+<?php require_once "settings.php";
+$conn = @mysqli_connect($host, $user, $pwd, $sql_db);
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,77 +11,116 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="images/bytemefavicon.png" type="image/x-icon">
 </head>
+
 <body id="jobs-body">
-    <?php include_once('header.inc');?>
-    
-   <main class="jobs-main">
-<!-- System Administrator Position Description -->
-        <article class="job">
-           
-            <div class="main-info-wrapper">
-                <section class="job-main-info">
-                    <section class="job-basic-info">
-                        <h2>System Administrator</h2>
-                        <h3>Position Reference: <em>SA123</em></h3>
-                        <p><strong>Company:</strong> Byte Me Sdn Bhd.</p>
-                        <p><strong>Salary Range:</strong> RM 6000 - RM 8000</p>
-                        <p><strong>Reports To:</strong> IT Manager</p>
-                    </section>
+    <?php include_once('header.inc'); ?>
 
-                    <div class="job-btn-wrapper">
-                        <a href="#pos-overview-sa123" class="job-info-btn">Overview</a>
-                        <a href="#requirement-sa123" class="job-info-btn">Requirement</a> 
-                        <a href="apply.html" id="job-apply-btn">Apply Now</a>
-                    </div>
-               </section>
-            </div>
+    <main class="jobs-main">
+        <!-- System Administrator Position Description -->
+        <?php if ($conn) {
+            $description = "SELECT * FROM job_description";
+            $result_des = mysqli_query($conn, $description);
+            if (mysqli_num_rows($result_des) > 0) {
+                while ($row_des = mysqli_fetch_assoc($result_des)) {
+                    $jobReferenceNumber = $row_des['JobReferenceNumber'];
+                    ?>
+                    <article class="job">
+
+                        <div class="main-info-wrapper">
+                            <section class="job-main-info">
+                                <section class="job-basic-info">
+                                    <h2><?php echo ($row_des['JobTitle']) ?></h2>
+                                    <h3>Position Reference: <em><?php echo ($row_des['JobReferenceNumber']) ?></em></h3>
+                                    <p><strong>Company:</strong> <?php echo ($row_des['company']) ?></p>
+                                    <p><strong>Salary Range:</strong> <?php echo ($row_des['salary']) ?></p>
+                                    <p><strong>Reports To:</strong> <?php echo ($row_des['report_to']) ?></p>
+                                </section>
+
+                                <div class="job-btn-wrapper">
+                                    <a href="#pos-overview-<?php echo $row_des['JobReferenceNumber'];?>" class="job-info-btn">Overview</a>
+                                    <a href="#requirement-<?php echo $row_des['JobReferenceNumber'];?>" class="job-info-btn">Requirement</a>
+                                    <a href="apply.php?jrn=<?php echo $row_des['JobReferenceNumber']; ?>" id="job-apply-btn">Apply
+                                        Now</a>
+                                </div>
+                            </section>
+                        </div>
 
 
-            <section class="position-overview" id="pos-overview-sa123">
-                <a href="#" class="info-close-btn">&times;</a>
-                <h3>Position Overview</h3>
-                <p>The System Administrator will be responsible for managing and maintaining the company’s server infrastructure, ensuring optimal performance, security, and stability across all systems.</p>
+                        <section class="position-overview" id="pos-overview-<?php echo $row_des['JobReferenceNumber'];?>">
+                            <a href="#" class="info-close-btn">&times;</a>
+                            <h3>Position Overview</h3>
+                            <p><?php echo ($row_des['JobDescription']) ?></p>
 
-                <hr>
+                            <hr>
 
-                <h3>Key Responsibilities</h3>
-                <ul>
-                    <li>Manage and monitor all installed systems and infrastructure.</li>
+                            <h3>Key Responsibilities</h3>
+                            <ul>
+                                <?php
+                                $requirements ="SELECT key_responsibility FROM job_requirements 
+                                                WHERE key_responsibility IS NOT NULL
+                                                AND key_responsibility <> ''
+                                                AND jrn='" . mysqli_real_escape_string($conn, $jobReferenceNumber) . "'";
+                                $result_req = mysqli_query($conn, $requirements);
+                                while ($row_req = mysqli_fetch_assoc($result_req)) { ?>
+                                    <li><?php echo ($row_req['key_responsibility']) ?></li>
+                                <?php } ?>
+                                <!-- <li>Manage and monitor all installed systems and infrastructure.</li>
                     <li>Install, configure, test, and maintain operating systems, application software, and system management tools.</li>
                     <li>Ensure security through access controls, backups, and firewalls.</li>
                     <li>Troubleshoot hardware and software issues as they arise.</li>
                     <li>Monitor system performance and ensure reliability and availability.</li>
-                    <li>Perform regular backup operations and implement appropriate processes for data protection and disaster recovery.</li>
-                </ul>
+                    <li>Perform regular backup operations and implement appropriate processes for data protection and disaster recovery.</li> -->
+                            </ul>
 
-            </section>
+                        </section>
 
-            <section class="requirement" id="requirement-sa123">
-                <a href="#" class="info-close-btn">&times;</a>
-                <h3>Required Qualifications, Skills, and Knowledge</h3>
-                <br>
-                <h4>Essential</h4>
+                        <section class="requirement" id="requirement-<?php echo $row_des['JobReferenceNumber'];?>">
+                            <a href="#" class="info-close-btn">&times;</a>
+                            <h3>Required Qualifications, Skills, and Knowledge</h3>
+                            <br>
+                            <h4>Essential</h4>
 
-                <ol>
-                    <li>Bachelor’s degree in Computer Science or a related field.</li>
-                    <li>At least 3 years of experience in system administration.</li>
+                            <ol>
+                                <?php
+                                $essentails ="SELECT essentials FROM job_requirements
+                                             WHERE essentials IS NOT NULL
+                                             AND essentials <> ''
+                                             AND jrn='" . mysqli_real_escape_string($conn, $jobReferenceNumber) . "'";
+                                $result_ess = mysqli_query($conn, $essentails);
+                                while ($row_ess = mysqli_fetch_assoc($result_ess)) { ?>
+                                    <li><?php echo ($row_ess['essentials']) ?></li>
+                                <?php } ?>
+                                <!-- <li>At least 3 years of experience in system administration.</li>
                     <li>Proficiency in Linux and Windows server environments.</li>
                     <li>Experience with virtualization (e.g., VMware or Hyper-V).</li>
-                    <li>Strong understanding of network infrastructure and security.</li>
-                </ol>
-                <br> 
-                <h4>Preferable</h4>
-                <ul>
-                    <li>Experience with cloud platforms (AWS, Azure).</li>
+                    <li>Strong understanding of network infrastructure and security.</li> -->
+                            </ol>
+                            <br>
+                            <h4>Preferable</h4>
+                            <ul>
+                                <?php
+                                $preferables = "SELECT preferable FROM job_requirements
+                                                WHERE preferable IS NOT NULL
+                                                AND preferable <> ''
+                                                AND jrn='" . mysqli_real_escape_string($conn, $jobReferenceNumber) . "'";
+                                $result_pre = mysqli_query($conn, $preferables);
+                                while ($row_pre = mysqli_fetch_assoc($result_pre)) { ?>
+                                    <li><?php echo ($row_pre['preferable']) ?></li>
+                                <?php } ?>
+                                <!-- <li>Experience with cloud platforms (AWS, Azure).</li>
                     <li>Certifications such as LFCSA, RHCSA, CompTIA, MCSE, or AWS Certified Solutions Architect.</li>
-                    <li>Knowledge of scripting and programming languages such as Bash,Python, C#.</li>
-                </ul>
+                    <li>Knowledge of scripting and programming languages such as Bash,Python, C#.</li> -->
+                            </ul>
 
-            </section>
-       </article>
-
-<!-- DevOps Engineer Position Description -->
-        <article class="job">
+                        </section>
+                    </article>
+                <?php }
+            }
+        } else {
+            echo "<p>Unable to connect to the database.</p>";
+        } ?>
+        <!-- DevOps Engineer Position Description -->
+        <!-- <article class="job">
            
             <div class="main-info-wrapper">
                 <section class="job-main-info">
@@ -136,10 +179,10 @@
                         <li>Familiarity with scripting and programming languages like Python, Ruby, or Shell.</li>
                     </ul>           
             </section>
-       </article>
+       </article> -->
 
-<!-- Software Engineer Position Description -->
-        <article class="job">
+        <!-- Software Engineer Position Description -->
+        <!-- <article class="job">
            
             <div class="main-info-wrapper">
                 <section class="job-main-info">
@@ -198,10 +241,10 @@
                     <li>Familiarity with containerization tools like Docker and Kubernetes.</li>
                 </ul>           
             </section>
-        </article>
+        </article> -->
 
-<!-- Web Developer Position Description -->
-        <article class="job">
+        <!-- Web Developer Position Description -->
+        <!-- <article class="job">
    
             <div class="main-info-wrapper">
                 <section class="job-main-info">
@@ -224,7 +267,10 @@
             <section class="position-overview" id="pos-overview-wd123">
                 <a href="#" class="info-close-btn">&times;</a>
                 <h3>Position Overview</h3>
-                <p>The Web Developer will be responsible for designing, coding, and modifying websites, from layout to function and according to client specifications. The role involves working closely with design and development teams to create visually appealing, user-friendly, and responsive web applications.</p>
+                <p>The Web Developer will be responsible for designing, coding, and modifying websites, 
+                    from layout to function and according to client specifications. 
+                    The role involves working closely with design and development teams to create visually appealing, 
+                    user-friendly, and responsive web applications.</p>
                 <hr>
         
                 <h3>Key Responsibilities</h3>
@@ -262,10 +308,10 @@
                         <li>Understanding of SEO principles.</li>
                     </ul>           
             </section>
-        </article>
+        </article> -->
 
-<!-- UI/UX Position Description -->
-        <article class="job">
+        <!-- UI/UX Position Description -->
+        <!-- <article class="job">
    
             <div class="main-info-wrapper">
                 <section class="job-main-info">
@@ -288,7 +334,10 @@
             <section class="position-overview" id="pos-overview-ux301">
                 <a href="#" class="info-close-btn">&times;</a>
                 <h3>Position Overview</h3>
-                <p>The UI/UX Designer will be responsible for creating and improving the user experience and interface for web and mobile applications. The role involves understanding user needs, conducting research, and working closely with developers and product teams to design visually appealing and user-friendly interfaces.</p>
+                <p>The UI/UX Designer will be responsible for creating and improving the user experience and 
+                    interface for web and mobile applications. The role involves understanding user needs,
+                     conducting research, and working closely with developers and product teams to design visually 
+                     appealing and user-friendly interfaces.</p>
                 <hr>
         
                 <h3>Key Responsibilities</h3>
@@ -325,11 +374,11 @@
                         <li>Knowledge of design systems and branding guidelines.</li>
                     </ul>           
             </section>
-        </article>
+        </article> -->
 
 
-<!-- Database Administrator Position Description -->
-        <article class="job">
+        <!-- Database Administrator Position Description -->
+        <!-- <article class="job">
    
             <div class="main-info-wrapper">
                 <section class="job-main-info">
@@ -352,7 +401,10 @@
             <section class="position-overview" id="pos-overview-dba501">
                 <a href="#" class="info-close-btn">&times;</a>
                 <h3>Position Overview</h3>
-                <p>The Database Administrator (DBA) will be responsible for the installation, configuration, management, and maintenance of databases. The role includes performance tuning, backup and recovery, and ensuring database security and availability. The DBA will work closely with system administrators and development teams to support enterprise applications.</p>
+                <p>The Database Administrator (DBA) will be responsible for the installation, 
+                    configuration, management, and maintenance of databases. 
+                    The role includes performance tuning, backup and recovery, and ensuring database security and availability.
+                     The DBA will work closely with system administrators and development teams to support enterprise applications.</p>
                 <hr>
         
                 <h3>Key Responsibilities</h3>
@@ -391,10 +443,10 @@
                         <li>Experience with other database systems (e.g., MySQL, PostgreSQL) is a plus.</li>
                     </ul>           
             </section>
-        </article>
+        </article> -->
 
-<!-- IT Support Position Description -->
-        <article class="job">
+        <!-- IT Support Position Description -->
+        <!-- <article class="job">
    
             <div class="main-info-wrapper">
                 <section class="job-main-info">
@@ -453,11 +505,11 @@
                         <li>Familiarity with ITIL practices.</li>
                     </ul>           
             </section>
-        </article>
+        </article> -->
 
-   </main>
+    </main>
 
-<!-- Aside for additional job hunting tips -->
+    <!-- Aside for additional job hunting tips -->
     <aside id="job-hunting-tips">
         <section class="job-hunting-description">
             <h3>Job Hunting Tips</h3>
@@ -467,12 +519,13 @@
                 <li>Stay updated with the latest industry trends and technologies.</li>
                 <li>Build a portfolio showcasing your projects and skills.</li>
                 <li>Network with professionals in the industry.</li>
-            </ul> 
+            </ul>
         </section>
-   </aside>
+    </aside>
 
-   <!-- Company detail and address -->
-   <?php include_once('footer.inc');?>
+    <!-- Company detail and address -->
+    <?php include_once('footer.inc'); ?>
 
 </body>
+
 </html>
