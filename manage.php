@@ -1,7 +1,7 @@
 <?php #include_once "auth.php";
 error_reporting(E_ALL); // Report all types of errors
 ini_set('display_errors', 1);
-
+session_start();
 require_once "settings.php";
 require_once 'process.php';
 
@@ -111,7 +111,14 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                     <input type="text" id="edit_job" name="edit_job" placeholder="Enter Reference Number" required>
                     <button type="submit" name="editJob">Edit</button>
                 </form>
-            <?php } ?>
+            <?php }
+                if(isset($_SESSION['message'])){
+                    echo "<p style='color:red'>".$_SESSION['message']."</p>";
+                    unset($_SESSION['message']);
+                }
+            
+            ?>
+
         </section>
 
         <section class="display-eoi">
@@ -210,10 +217,11 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                         <form action="process_jobregister.php" method="POST">
                             <fieldset class="job-description">
                                 <legend>Job Discription</legend>
+                                
                                 <p>
                                     <label for="jrn"> Job Reference Number: </label>
                                     <input type="text" id="jrn" name="jrn" maxlength="5" pattern="[A-Za-z0-9]{5}"
-                                        value="<?php echo $jobDes['JobReferenceNumber'] ?>" required>
+                                        value="<?php echo $jobDes['JobReferenceNumber'] ?>" readonly >
                                 </p>
 
                                 <p>
@@ -265,6 +273,11 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                             <fieldset class="job-requirement">
                                 <legend>Job Requirement</legend>
                                 <p>
+                                    <label for="des">Key Responsibility</label>
+                                    <textarea name="des" id="des" cols="30" rows="10"
+                                        required><?php echo $jobDes['JobDescription'];?></textarea>
+                                </p>
+                                <p>
                                     <label for="key_res">Key Responsibility</label>
                                     <textarea name="key_res" id="key_res" cols="30" rows="10"
                                         required><?php if (!empty($jobReq)) {echo $jobReq;}?></textarea>
@@ -283,7 +296,7 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                                 </p>
                             </fieldset>
 
-                            <button type="submit" name="editDone">Submit</button>
+                            <button type="submit" name="editDone">Update</button>
                         </form>
 
                     <?php }
