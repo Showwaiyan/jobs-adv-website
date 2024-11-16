@@ -235,13 +235,13 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                                     <label for="jt">Job Type: </label>
                                     <select name="jt" id="jt">
                                         <option value="">Select Job Type</option>
-                                        <option value="ft" <?php if ($jobDes['JobType'] == 'ft')
+                                        <option value="FullTime" <?php if ($jobDes['JobType'] == 'FullTime')
                                             echo 'selected' ?>>Full Time
                                             </option>
-                                            <option value="pt" <?php if ($jobDes['JobType'] == 'pt')
+                                            <option value="PartTime" <?php if ($jobDes['JobType'] == 'PartTime')
                                             echo 'selected' ?>>Part Time
                                             </option>
-                                            <option value="it" <?php if ($jobDes['JobType'] == 'it')
+                                            <option value="Intern" <?php if ($jobDes['JobType'] == 'Intern')
                                             echo 'selected' ?>>Intern
                                             </option>
                                         </select>
