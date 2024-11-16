@@ -1437,11 +1437,14 @@ main#job-create-main {
 }
 
 main#job-create-main form fieldset.job-description p {
-  width: 50%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+main#job-create-main form fieldset.job-description p input {
+  width: 50%;
 }
 main#job-create-main form p label {
   width: 50%;
@@ -1451,6 +1454,7 @@ main#job-create-main form p select#jt {
 }
 main#job-create-main button[type="submit"] {
   width: 30%;
+  display: block;
 }
   /* Layout end */
 
@@ -1473,6 +1477,13 @@ body#job-create-body h1{
   color: var(--main-color);
   font-family: var(--poppins-font);
 }
+
+#job-create-main form select {
+  color: var(--secondary-color);
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
 #job-create-main button[type="submit"] {
   color: var(--main-font-color);
   font-size: 16px;
@@ -1496,13 +1507,14 @@ body#job-create-body h1{
 /* Style start */
 body#job-create-body {
   background:linear-gradient(45deg,var(--main-color), var(--secondary-color));
-  /* padding: 2rem; */
+  padding-bottom: 2rem;
 }
 
 #job-create-main {
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
 }
 
 #job-create-main form {
@@ -1536,8 +1548,8 @@ body#job-create-body {
   border-radius: 5px;
   padding: 12px 20px;
   cursor: pointer;
-  margin-top: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
 }
 main#job-create-main form fieldset{
   padding: 2rem 1rem;
