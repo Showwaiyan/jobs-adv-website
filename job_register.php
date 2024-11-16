@@ -55,12 +55,15 @@
                         VALUES ('$jrn', '$pref')";
                     $result = mysqli_query($conn, $sql);
                 }
+                $_SESSION['success'] = "Job registered successfully";
+                header("Location: job_create.php");
             }else{
-                echo $sql;
-                echo "Job registration failed";
+                $_SESSION['error'] = "Job registration failed";
+                header("Location: job_create.php");
             }
         }else{
             echo "Invalid request";
+            header("Location: job_create.php");
         }
     }
 

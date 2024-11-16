@@ -10,6 +10,15 @@
 <?php include_once 'header.inc';?>
     <h1>Job Registeration</h1>
     <main id="job-create-main">
+        <?php session_start();
+        if(isset($_SESSION['error'])){
+            echo "<p style='color:red'>{$_SESSION['error']}</p>";
+            unset($_SESSION['error']);
+        }elseif(isset($_SESSION['success'])){
+            echo "<p style='color:green'>{$_SESSION['success']}</p>";
+            unset($_SESSION['success']);
+        }        
+        ?>
         <form method="POST" action="job_register.php">
             <fieldset class="job-description">
                 <legend>Job Discription</legend>
@@ -27,8 +36,8 @@
                     <label for="jt">Job Type: </label>
                     <select name="jt" id="jt" required>
                         <option value="">Select Job Type</option>
-                        <option value="Permanent/Full Time">Full Time</option>
-                        <option value="Temporary/Part Time">Part Time</option>
+                        <option value="FullTime">Full Time</option>
+                        <option value="PartTime">Part Time</option>
                         <option value="Intern">Intern</option>
                     </select>
                 </p>
