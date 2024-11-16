@@ -41,25 +41,19 @@ if (!$conn) {
         $sql = "DELETE FROM job_requirements WHERE jrn = '$jrn'";
         $result = mysqli_query($conn, $sql);
             foreach($res_array as $res){
-                if($res == ""){
-                    continue;
-                }
+                if($res == ""){continue;}
                 $sql = "INSERT INTO job_requirements(jrn,key_responsibility) VALUE ('$jrn','$res')";
                 $result = mysqli_query($conn, $sql);
                 echo $sql."<br>";
             }
             foreach($ess_array as $ess){
-                if($ess == ""){
-                    continue;
-                }
+                if($ess == ""){continue;}
                 $sql = "INSERT INTO job_requirements(jrn,essentials) VALUE ('$jrn','$ess')";
                 $result = mysqli_query($conn, $sql);
                 echo $sql."<br>";
             }
             foreach($pref_array as $pref){
-                if($pref == ""){
-                    continue;
-                }
+                if($pref == ""){continue;}
                 $sql = "INSERT INTO job_requirements(jrn,preferable) VALUE ('$jrn','$pref')";
                 $result = mysqli_query($conn, $sql);
                 echo $sql."<br>";

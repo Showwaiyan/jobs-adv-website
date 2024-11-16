@@ -10,9 +10,10 @@
 </head>
 
 <body id="apply-body">
-    <?php include_once('header.inc');session_start();?>
+    <?php include_once('header.inc');
+    session_start(); ?>
 
-   <article id="form-container">
+    <article id="form-container">
         <section id="form-left">
             <section class="section-form-left">
                 <img src="images/bytemelogo.png" alt="logo">
@@ -36,14 +37,11 @@
                 <section id="step1" class="apply-personal">
                     <section class="form-section">
                         <p>
-                            <?php if (isset($_GET['jrn'])){
-                                $jrn = $_GET['jrn'];
-                                // echo "<p style='color:red;'>Job Reference Number: $jrn not found.</p>";
-                            } else{
-                                $jrn = "";   
-                            }?>
+                        <?php if (isset($_GET['jrn'])) {$jrn = $_GET['jrn'];}
+                         else {$jrn = "";} ?>
                             <label for="jrn"> Job Reference Number: </label>
-                            <input type="text" id="jrn" name="jrn" maxlength="5" pattern="[A-Za-z0-9]{5}" value="<?php echo $jrn;?>" autocomplete="off" required>
+                            <input type="text" id="jrn" name="jrn" maxlength="5" pattern="[A-Za-z0-9]{5}"
+                                value="<?php echo $jrn; ?>" autocomplete="off" required>
                         </p>
                         <!-- First Name -->
                         <p>
@@ -58,12 +56,13 @@
                         <!-- Date-of-birth -->
 
                         <p><label for="dob">Date of Birth(dd/mm/yyyy):</label>
-                            <input type="text" id="dob" name="dob" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" max="2005-11-13" required>
+                            <input type="text" id="dob" name="dob"
+                                pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" max="2005-11-13" required>
                         </p>
 
                         <!-- Gender -->
                         <fieldset>
-                            <legend>Gender</legend> 
+                            <legend>Gender</legend>
                             <label for="male">
                                 <input type="radio" id="male" name="gender" value="male" required> Male
                             </label>
@@ -77,14 +76,14 @@
                     </section>
                     <section class="navigation">
                         <a href="#step2">Next</a>
-                        <?php if(isset($_SESSION['error'])){
-                                echo "<p style='color:red'>{$_SESSION['error']}</p>";
-                                unset($_SESSION['error']);
-                            }elseif(isset($_SESSION['success'])){
-                                echo "<p style='color:green'>{$_SESSION['success']}</p>";
-                                unset($_SESSION['success']);
-                            }
-                            ?>
+                        <?php if (isset($_SESSION['error'])) {
+                            echo "<p style='color:red'>{$_SESSION['error']}</p>";
+                            unset($_SESSION['error']);
+                        } elseif (isset($_SESSION['success'])) {
+                            echo "<p style='color:green'>{$_SESSION['success']}</p>";
+                            unset($_SESSION['success']);
+                        }
+                        ?>
                     </section>
                 </section>
 
@@ -143,13 +142,20 @@
 
                     <fieldset>
                         <legend>Skills:</legend>
-                        <p><label for="pjm"><input type="checkbox" name="skills[]" value="projectmanagement" id="pjm"> Project Management</label></p>
-                        <p><label for="design"><input type="checkbox" name="skills[]" value="design" id="design" > Design</label></p>
-                        <p><label for="python"><input type="checkbox" name="skills[]" value="python" id="python"> Python</label></p>
-                        <p><label for="react"><input type="checkbox" name="skills[]" value="reactjs" id="react" > React.js</label></p>
-                        <p><label for="php"><input type="checkbox" name="skills[]" value="php/laravel" id="php"> PHP/Laravel</label></p>
-                        <p><label for="django"><input type="checkbox" name="skills[]" value="Django" id="django"> Django</label></p>
-                        <p><label for="otherskills"><input type="checkbox" name="skills[]" value="otherSkills" id="otherskills"> Other skills...</label></p>
+                        <p><label for="pjm"><input type="checkbox" name="skills[]" value="projectmanagement" id="pjm">
+                                Project Management</label></p>
+                        <p><label for="design"><input type="checkbox" name="skills[]" value="design" id="design">
+                                Design</label></p>
+                        <p><label for="python"><input type="checkbox" name="skills[]" value="python" id="python">
+                                Python</label></p>
+                        <p><label for="react"><input type="checkbox" name="skills[]" value="reactjs" id="react">
+                                React.js</label></p>
+                        <p><label for="php"><input type="checkbox" name="skills[]" value="php/laravel" id="php">
+                                PHP/Laravel</label></p>
+                        <p><label for="django"><input type="checkbox" name="skills[]" value="Django" id="django">
+                                Django</label></p>
+                        <p><label for="otherskills"><input type="checkbox" name="skills[]" value="otherSkills"
+                                    id="otherskills"> Other skills...</label></p>
 
                     </fieldset>
 

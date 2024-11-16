@@ -16,7 +16,6 @@ function show_result($result,$conn){
                     <td>". $row['postcode']."</td>
                     <td>". $row['phnumber']."</td>
                     <td><ol style='list-style-type: none;'>". show_skills($eoi,$conn)."</ol></td>
-                    <td><ol style='list-style-type: none;'>". show_skills($eoi,$conn)."</ol></td>
                     <td>". $row['otherskills']."</td>
                     <td>". $row['Status']."</td>  
                 </tr>";
@@ -71,7 +70,7 @@ function show_responsibility($jrn,$conn){
                                     WHERE key_responsibility IS NOT NULL
                                     AND key_responsibility <> ''
                                     AND jrn= '$jrn'";
-                        // echo $respon ."<br>";;
+                        
     $result = mysqli_query($conn, $sql);
     if(mysqli_num_rows($result) > 0){
         while($row = mysqli_fetch_assoc($result)){ 
@@ -86,7 +85,7 @@ function show_essentials($jrn,$conn){
                                     WHERE essentials IS NOT NULL
                                     AND essentials <> ''
                                     AND jrn= '$jrn'";
-                        // echo $respon ."<br>";;
+                        
     $result = mysqli_query($conn, $sql);
     if(mysqli_num_rows($result) > 0){
         while($row = mysqli_fetch_assoc($result)){ 

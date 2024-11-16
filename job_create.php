@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body id="job-create-body">
-<?php include_once 'header.inc';?>
+<?php 
+session_start();
+include_once 'header.inc';?>
     <h1>Job Registeration</h1>
     <main id="job-create-main">
-        <?php session_start();
+        <?php
         if(isset($_SESSION['error'])){
             echo "<p style='color:red'>{$_SESSION['error']}</p>";
             unset($_SESSION['error']);

@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include_once('settings.php');
 $con = @mysqli_connect($host, $user, $pwd, $sql_db);
 if (isset($_POST['login'])) {

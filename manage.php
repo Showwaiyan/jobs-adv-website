@@ -1,13 +1,8 @@
-<?php #include_once "auth.php";
-error_reporting(E_ALL); // Report all types of errors
-ini_set('display_errors', 1);
-session_start();
+<?php
+include_once "auth.php";
 require_once "settings.php";
 require_once 'process.php';
-
-
 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -167,29 +162,36 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                     } ?>
 
                     <!-- Job Table Header Goes Here -->
-                    <?php if (isset($_POST['listAll']) || $selectedAction != 'edit_job') {
+                    <?php if (isset($_POST['listAll']) || isset($_POST['itemSelected'])) {
                         $sql = "SELECT * FROM eoi";
                         $result = mysqli_query($conn, $sql);
                         show_result($result, $conn);
-                        exit();
+                        
                     } elseif (isset($_POST['position'])) {
                         $job_reference = $_POST['job_reference'];
                         $sql = "SELECT * FROM eoi WHERE JRN = '$job_reference'";
                         $result = mysqli_query($conn, $sql);
-                        show_result($result, $conn);
+                        $all = "SELECT * FROM eoi";
+                        echo $sql;
+                        $all_list = mysqli_query($conn, $all);
+                        show_result($all_list, $conn);
                         exit();
                     } elseif (isset($_POST['applicantName'])) {
                         $first_name = $_POST['first_name'];
                         $last_name = $_POST['last_name'];
                         $sql = "SELECT * FROM eoi WHERE fname = '$first_name' AND lname = '$last_name'";
                         $result = mysqli_query($conn, $sql);
-                        show_result($result, $conn);
+                        $all = "SELECT * FROM eoi";
+                        // echo $sql;
+                        $all_list = mysqli_query($conn, $all);
+                        show_result($all_list, $conn);
                         exit();
                     } elseif (isset($_POST['deleteJrn'])) {
                         $job_reference = $_POST['job_reference'];
                         $sql = "DELETE FROM eoi WHERE JRN = '$job_reference'";
                         $result = mysqli_query($conn, $sql);
                         $all = "SELECT * FROM eoi";
+                        // echo $sql;
                         $all_list = mysqli_query($conn, $all);
                         show_result($all_list, $conn);
                         exit();
@@ -200,9 +202,15 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                         $result = mysqli_query($conn, $sql);
                         $all = "SELECT * FROM eoi";
                         $all_list = mysqli_query($conn, $all);
+                        // echo $sql;
                         show_result($all_list, $conn);
                         exit();
-                    } elseif (isset($_POST['editJob'])) {
+                    } 
+                    
+                    ?>
+                    </table>   
+
+                     <?php if (isset($_POST['editJob'])) {
                         $jrn_edit = mysqli_real_escape_string($conn, $_POST['edit_job']);
                         $sql = "SELECT * FROM job_description WHERE JobReferenceNumber = '$jrn_edit'";
                         // echo $sql ."<br>";
@@ -215,7 +223,7 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                         $jobEss= show_essentials($jrn_edit,$conn);
                         $jobPref = show_preferable($jrn_edit,$conn); 
                         ?>
-                        </table>
+                        
                         <form action="process_jobregister.php" method="POST">
                             <fieldset class="job-description">
                                 <legend>Job Discription</legend>
@@ -275,7 +283,7 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                             <fieldset class="job-requirement">
                                 <legend>Job Requirement</legend>
                                 <p>
-                                    <label for="des">Key Responsibility</label>
+                                    <label for="des">job Description</label>
                                     <textarea name="des" id="des" cols="30" rows="10"
                                         required><?php echo $jobDes['JobDescription'];?></textarea>
                                 </p>
@@ -302,6 +310,7 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                         </form>
 
                     <?php }
+                     
                 } else { ?>
                     <p>Error</p>
                 <?php } ?>

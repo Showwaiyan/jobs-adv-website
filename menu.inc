@@ -34,7 +34,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </li>
 
         <li class="navbar-list__item  <?php echo ($current_page == 'logout.php') ? 'active' : '';?>">
-            <a href="login.php" class="navbar-list__link">
+            <a href="logout.php" class="navbar-list__link">
                 Logout
             </a>
         </li>
