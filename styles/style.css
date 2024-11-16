@@ -1602,7 +1602,7 @@ main#manage-main section.manage-eoi button{
   width: 50%;
 }
 
-section.manage-eoi main#manage-main input[type="text"] {
+section.manage-eoi input[type="text"] {
   width: 100%;                         
   padding: 10px;                         
   font-size: 16px;                      
