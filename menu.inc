@@ -22,19 +22,19 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <!-- Admin User Nav -->
 
         <li class="navbar-list__item  <?php echo ($current_page == 'job_create.php') ? 'active' : '';?>">
-            <a href="jobs.php" class="navbar-list__link">
+            <a href="job_create.php" class="navbar-list__link">
                 Job Create
             </a>
         </li> 
 
         <li class="navbar-list__item  <?php echo ($current_page == 'manage.php') ? 'active' : '';?>">
-            <a href="jobs.php" class="navbar-list__link">
+            <a href="manage.php" class="navbar-list__link">
                 Manage
             </a>
         </li>
 
         <li class="navbar-list__item  <?php echo ($current_page == 'logout.php') ? 'active' : '';?>">
-            <a href="jobs.php" class="navbar-list__link">
+            <a href="login.php" class="navbar-list__link">
                 Logout
             </a>
         </li>

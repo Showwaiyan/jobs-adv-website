@@ -8,7 +8,7 @@
     <title>About Us</title>
 </head>
 <body id="about-body">
-    <?php include_once('header.inc');?> 
+    <?php include_once('header.inc');session_start();?> 
     <main id="about-main">
         <article class="group-and-course-info">
             <section id="about-lists">
