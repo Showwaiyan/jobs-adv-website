@@ -1425,16 +1425,18 @@ body#enhancement-body {
 main#manage-main {
   display: flex;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  overflow-y: scroll;
+  position: relative;
 }
 
 section.manage-eoi {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100vh;
   gap: 1rem;
 
-  width: 25%;
+  width: 30%;
 }
 
 form#eoi-filter {
@@ -1459,9 +1461,31 @@ main#manage-main form:not(#eoi-filter) {
 
 main#manage-main section.display-eoi {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* justify-content: center; */
   width: 100%;
+  overflow-y: scroll;
+}
+
+section.display-eoi form fieldset.job-description p {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+section.display-eoi input[type="text"] {
+  width: 50%;
+}
+section.display-eoi form p label {
+  width: 50%;
+}
+section.display-eoi form p select#jt {
+  width: 50%;
+}
+section.display-eoi button[type="submit"] {
+  width: 50%;
 }
 
 /* Layout end */
@@ -1476,7 +1500,7 @@ main#manage-main h2 {
   color: var(--main-font-color);
   font-size: 0.9rem;
 }
-main#manage-main label {
+main#manage-main section.manage-eoi label {
   font-family: var(--inter-font);
   color: var(--main-font-color);
   font-size: 0.7rem;
@@ -1493,12 +1517,57 @@ select#action-select, select#status {
   font-size: 0.8rem;
 }
 
-main#manage-main input[type="text"] {
+section.manage-eoi main#manage-main input[type="text"] {
   font-family: var(--inter-font);
   color: var(--main-font-color);
   font-size: 0.8rem;
 }
+section.display-eoi input[type="text"], section.display-eoi textarea {
+  font-weight: bold;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-family: var(--inter-font);
+}
 
+section.display-eoi form select {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: bold;;
+}
+
+section.display-eoi form p {
+  text-align: left;
+  color: var(--main-color);
+}
+section.display-eoi fieldset legend{
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--main-color);
+  font-family: var(--poppins-font);
+}
+section.display-eoi button[type="submit"] {
+  color: var(--main-font-color);
+  font-size: 1rem ;
+}
+section.display-eoi fieldset.job-description label {
+  font-weight: bold;
+  color: var(--main-color);
+  font-family: var(--inter-font);
+  font-size: 0.9rem;
+}
+
+section.display-eoi fieldset.job-requirement label {
+  font-weight: bold;
+  color: var(--main-color);
+  font-family: var(--inter-font);
+  font-size: 1rem;
+}
+
+main#manage-main section.manage-eoi  select option{
+  font-family: var(--inter-font);
+  color: var(--main-font-color);
+  font-size: 0.8rem;
+}
 
 /* Typography end */
 
@@ -1512,9 +1581,10 @@ main#manage-main section.manage-eoi {
   padding: 1rem;
   background-color: var(--main-color);
   border-right: 3px solid var(--main-font-color);
+  border-bottom: 3px solid var(--main-font-color);
 }
 
-main#manage-main select {
+main#manage-main section.manage-eoi  select {
     background-color: var(--main-color);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
     border: 1px solid #ccc;                     /* Optional: adds a border */
@@ -1523,7 +1593,7 @@ main#manage-main select {
     outline: none;                              /* Removes the default outline */
 }
 
-main#manage-main button{
+main#manage-main section.manage-eoi button{
   background-color: var(--main-color);
   padding: 0.3rem;
   border: 1px solid var(--main-font-color);
@@ -1532,7 +1602,7 @@ main#manage-main button{
   width: 50%;
 }
 
-main#manage-main input[type="text"] {
+section.manage-eoi main#manage-main input[type="text"] {
   width: 100%;                         
   padding: 10px;                         
   font-size: 16px;                      
@@ -1544,14 +1614,56 @@ main#manage-main input[type="text"] {
   background-color: var(--secondary-color);
 }
 
-main#manage-main input::placeholder {
+main#manage-main section.manage-eoi input::placeholder {
   color: var(--main-font-color);
 }
 
 main#manage-main section.display-eoi {
   padding: 1rem;
-  
+  background:linear-gradient(45deg,var(--main-color), var(--secondary-color));
 }
+
+section.display-eoi  form {
+  margin: auto;
+  padding: 1rem 1rem;
+  background-color: #fff;
+  border-radius: 30px;
+}
+section.display-eoi form p {
+  margin-bottom: 1rem;
+}
+section.display-eoi label {
+  margin-bottom: 8px;
+}
+section.display-eoi input[type="text"],section.display-eoi select,section.display-eoi textarea {
+  border: none;
+  padding: 0.7rem;
+  border-bottom: 3px solid var(--secondary-color);
+}
+section.display-eoi select{
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+}
+section.display-eoi fieldset{
+  border: 2px solid var(--main-color);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+section.display-eoi button[type="submit"] {
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  cursor: pointer;
+  /* margin-top: 20px; */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+section.display-eoi  form fieldset{
+  padding: 2rem 1rem;
+}
+
 /* Style end */
 
 /* Query table start */
@@ -1595,11 +1707,14 @@ select:focus {
   border-color: #666; /* Optional: Changes the border color on focus */
 }
 
-main#manage-main button:hover {
+main#manage-main section.manage-eoi button:hover {
   background-color: var(--third-color);
   color: var(--main-color);
 }
-
+main#manage-main section.display-eoi button:hover {
+  background-color: var(--third-color);
+  color: var(--main-color);
+}
 input[type="text"]:focus {
   border-color: var(--third-color);                  
   box-shadow: 0 2px 8px rgba(102, 175, 233, 0.5); 

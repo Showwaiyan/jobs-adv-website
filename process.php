@@ -16,6 +16,7 @@ function show_result($result,$conn){
                     <td>". $row['postcode']."</td>
                     <td>". $row['phnumber']."</td>
                     <td><ol style='list-style-type: none;'>". show_skills($eoi,$conn)."</ol></td>
+                    <td><ol style='list-style-type: none;'>". show_skills($eoi,$conn)."</ol></td>
                     <td>". $row['otherskills']."</td>
                     <td>". $row['Status']."</td>  
                 </tr>";
@@ -24,6 +25,7 @@ function show_result($result,$conn){
         echo "<td>No records found</td>";
     }
 }
+
 function show_skills($eoinumber,$conn){
     $output = '';
     $query = "SELECT * FROM skills where EOInumber = '$eoinumber'";

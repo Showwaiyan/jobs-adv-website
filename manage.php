@@ -5,6 +5,7 @@ session_start();
 require_once "settings.php";
 require_once 'process.php';
 
+
 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 
 ?>
@@ -201,7 +202,7 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                         $all_list = mysqli_query($conn, $all);
                         show_result($all_list, $conn);
                         exit();
-                    } elseif (isset($_POST['edit_job'])) {
+                    } elseif (isset($_POST['editJob'])) {
                         $jrn_edit = mysqli_real_escape_string($conn, $_POST['edit_job']);
                         $sql = "SELECT * FROM job_description WHERE JobReferenceNumber = '$jrn_edit'";
                         // echo $sql ."<br>";
@@ -214,6 +215,7 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                         $jobEss= show_essentials($jrn_edit,$conn);
                         $jobPref = show_preferable($jrn_edit,$conn); 
                         ?>
+                        </table>
                         <form action="process_jobregister.php" method="POST">
                             <fieldset class="job-description">
                                 <legend>Job Discription</legend>
@@ -234,13 +236,13 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                                     <label for="jt">Job Type: </label>
                                     <select name="jt" id="jt">
                                         <option value="">Select Job Type</option>
-                                        <option value="ft" <?php if ($jobDes['JobType'] == 'ft')
+                                        <option value="FullTime" <?php if ($jobDes['JobType'] == 'FullTime')
                                             echo 'selected' ?>>Full Time
                                             </option>
-                                            <option value="pt" <?php if ($jobDes['JobType'] == 'pt')
+                                            <option value="PartTime" <?php if ($jobDes['JobType'] == 'PartTime')
                                             echo 'selected' ?>>Part Time
                                             </option>
-                                            <option value="it" <?php if ($jobDes['JobType'] == 'it')
+                                            <option value="Intern" <?php if ($jobDes['JobType'] == 'Intern')
                                             echo 'selected' ?>>Intern
                                             </option>
                                         </select>
@@ -303,7 +305,7 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                 } else { ?>
                     <p>Error</p>
                 <?php } ?>
-            </table>
+            
         </section>
     </main>
 
