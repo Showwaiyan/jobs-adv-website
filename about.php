@@ -217,7 +217,7 @@
         <section id="person-cards">
             <div class="person">
                 <div class="person-image">
-                    <img src="/images/kaung.jpeg" alt="khn">
+                    <img src="images/kaung.jpeg" alt="khn">
                 </div>
                 <div class="person-description">
                     <h2>Kaung Htet Nyein</h2>
@@ -235,7 +235,7 @@
             </div>
             <div class="person">
                 <div class="person-image">
-                    <img src="/images/kta.jpg" alt="kta">
+                    <img src="images/kta.jpg" alt="kta">
                 </div>
                 <div class="person-description">
                     <h2>Khant Thu Aung</h2>
@@ -253,7 +253,7 @@
             </div>
             <div class="person">
                 <div class="person-image">
-                    <img src="/images/show.jpeg" alt="swy">
+                    <img src="images/show.jpeg" alt="swy">
                 </div>
                 <div class="person-description">
                     <h2>Show Wai Yan</h2>

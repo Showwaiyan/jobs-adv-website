@@ -6,6 +6,7 @@
     <title>Register</title>
 
     <link rel="stylesheet" href="styles/style.css">
+<link rel="shortcut icon" href="images/bytemefavicon.png" type="image/x-icon">
 </head>
 <body>
    <?php require_once("header.inc");session_start();?> 

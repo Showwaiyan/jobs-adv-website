@@ -5,6 +5,7 @@
     <meta name="description" content="Login page">
     <title>Manager Login | ByteMe</title>
     <link rel="stylesheet" href="styles/style.css">
+<link rel="shortcut icon" href="images/bytemefavicon.png" type="image/x-icon">
 </head>
 
 <body>

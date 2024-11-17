@@ -974,7 +974,7 @@ body#apply-body {
 
   /* Form-left start */
 #form-left {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/styles/images/banner.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../styles/images/banner.jpg') no-repeat center center/cover;
   overflow: hidden;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;

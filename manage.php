@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once "auth.php";
 require_once "settings.php";
 require_once 'process.php';
@@ -13,6 +14,7 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
     <title>Manage</title>
 
     <link rel="stylesheet" href="styles/style.css">
+<link rel="shortcut icon" href="images/bytemefavicon.png" type="image/x-icon">
 </head>
 
 <body id="manage-body">
@@ -162,29 +164,22 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                     } ?>
 
                     <!-- Job Table Header Goes Here -->
-                    <?php if (isset($_POST['listAll']) || isset($_POST['itemSelected'])) {
+                    <?php if (isset($_POST['listAll']) || (isset($_POST['itemSelected']) && $selectedAction!='edit_job')) {
                         $sql = "SELECT * FROM eoi";
                         $result = mysqli_query($conn, $sql);
                         show_result($result, $conn);
-                        
                     } elseif (isset($_POST['position'])) {
                         $job_reference = $_POST['job_reference'];
                         $sql = "SELECT * FROM eoi WHERE JRN = '$job_reference'";
                         $result = mysqli_query($conn, $sql);
-                        $all = "SELECT * FROM eoi";
-                        echo $sql;
-                        $all_list = mysqli_query($conn, $all);
-                        show_result($all_list, $conn);
+                        show_result($result, $conn);
                         exit();
                     } elseif (isset($_POST['applicantName'])) {
                         $first_name = $_POST['first_name'];
                         $last_name = $_POST['last_name'];
                         $sql = "SELECT * FROM eoi WHERE fname = '$first_name' AND lname = '$last_name'";
                         $result = mysqli_query($conn, $sql);
-                        $all = "SELECT * FROM eoi";
-                        // echo $sql;
-                        $all_list = mysqli_query($conn, $all);
-                        show_result($all_list, $conn);
+                        show_result($result, $conn);
                         exit();
                     } elseif (isset($_POST['deleteJrn'])) {
                         $job_reference = $_POST['job_reference'];

@@ -96,8 +96,8 @@
                 </p>
                 <a href="about.html" class="service-button" id="about-learn-more">Learn More</a>
         </section>
-        <a href="https://www.youtube.com/watch?v=36dQkKNm6c0" target="blank" class="about-us-image" alt="youtube thumbnail">
-            <img src="https://img.youtube.com/vi/36dQkKNm6c0/hqdefault.jpg
+        <a href="https://www.youtube.com/watch?v=L5NAQ_HtADA" target="blank" class="about-us-image" alt="youtube thumbnail">
+            <img src="https://img.youtube.com/vi/L5NAQ_HtADA/hqdefault.jpg
                 " alt="youtube thuumbnail">
         </a>
    </article>

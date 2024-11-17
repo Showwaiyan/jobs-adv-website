@@ -33,12 +33,19 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </a>
         </li>
 
+        <li class="navbar-list__item  <?php echo ($current_page == 'enhancement2.php') ? 'active' : '';?>">
+            <a href="enhancement2.php" class="navbar-list__link">
+                Enhancement-2
+            </a>
+        </li>
+
         <li class="navbar-list__item  <?php echo ($current_page == 'logout.php') ? 'active' : '';?>">
             <a href="logout.php" class="navbar-list__link">
                 Logout
             </a>
         </li>
 
+        
         <?php 
         } else {
         ?>
