@@ -226,7 +226,7 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
                         
                         <form action="process_jobregister.php" method="POST">
                             <fieldset class="job-description">
-                                <legend>Job Discription</legend>
+                                <legend>Job Info</legend>
                                 
                                 <p>
                                     <label for="jrn"> Job Reference Number: </label>

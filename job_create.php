@@ -23,7 +23,7 @@ include_once 'header.inc';?>
         ?>
         <form method="POST" action="job_register.php">
             <fieldset class="job-description">
-                <legend>Job Discription</legend>
+                <legend>Job Info</legend>
                 <p>
                     <label for="jrn"> Job Reference Number: </label>
                     <input type="text" id="jrn" name="jrn" maxlength="5" pattern="[A-Za-z0-9]{5}" required>
